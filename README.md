@@ -15,6 +15,8 @@ services. GitHub Pages publishes the `docs/` folder of the `main` branch.
 - `src/build.py` puts the pages in the frame, writes `docs/` with the sitemap and `robots.txt`, and
   checks the result: one main heading per page, unique titles and descriptions, alt text on images,
   internal links that resolve, valid structured data.
+- `src/root/` holds files copied to the site's root unchanged, such as
+  `googlefdcfea98ac17e55a.html`, which proves to Google Search Console that the site is ours. Keep it.
 - `src/make-assets.swift` makes the screenshots, icons and link-preview card in
   `src/assets/generated/` from the app's screenshots.
 

@@ -77,6 +77,9 @@ def build():
     open(os.path.join(OUT, "assets", "style.css"), "wb").write(css)
     for name in os.listdir(os.path.join(SRC, "assets", "generated")):
         shutil.copy2(os.path.join(SRC, "assets", "generated", name), os.path.join(OUT, "assets", name))
+    # Files that must sit at the site's root as they are, such as search engines' verification files.
+    for name in os.listdir(os.path.join(SRC, "root")):
+        shutil.copy2(os.path.join(SRC, "root", name), os.path.join(OUT, name))
     layout = open(os.path.join(SRC, "layout.html"), encoding="utf-8").read()
     common = {"site": SITE, "version": VERSION, "download_url": DOWNLOAD_URL, "releases_url": RELEASES_URL,
               "kofi_url": KOFI_URL, "support_email": SUPPORT_EMAIL, "zip_sha256": ZIP_SHA256}
