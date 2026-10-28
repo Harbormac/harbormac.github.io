@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harbor FAQ – Windows Games on a Mac, Answered</title>
+<meta name="description" content="Is Harbor free? Which Macs and games does it support? Do you need Windows, and is it safe? Answers about playing Windows games on a Mac with Harbor.">
+<link rel="canonical" href="https://harbormac.github.io/faq/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#111b20">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/assets/icon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="stylesheet" href="/assets/style.css?v=02abe5e2dd">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Harbor">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Harbor FAQ – Windows Games on a Mac, Answered">
+<meta property="og:description" content="Is Harbor free? Which Macs and games does it support? Do you need Windows, and is it safe? Answers about playing Windows games on a Mac with Harbor.">
+<meta property="og:url" content="https://harbormac.github.io/faq/">
+<meta property="og:image" content="https://harbormac.github.io/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Harbor: Windows games on your Mac">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Harbor FAQ – Windows Games on a Mac, Answered">
+<meta name="twitter:description" content="Is Harbor free? Which Macs and games does it support? Do you need Windows, and is it safe? Answers about playing Windows games on a Mac with Harbor.">
+<meta name="twitter:image" content="https://harbormac.github.io/assets/og-image.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Harbor",
+     "item": "https://harbormac.github.io/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "FAQ",
+     "item": "https://harbormac.github.io/faq/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Is Harbor free?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Harbor is free and open-source software under the MIT licence, made by Built by Argo. You can support its development on Ko-fi if you like; donations are optional and unlock nothing, so every feature is for everyone."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What does Harbor do?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Harbor runs Windows games and game launchers on a Mac. It uses Wine, which provides the parts of Windows that programs rely on, and a renderer that translates the games' DirectX graphics to Apple's Metal. Harbor sets all of this up for you, recommends settings per game, and keeps your games in a library."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do I need a copy of Windows?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Wine is not Windows and needs no Windows licence. You only need the games themselves, from Steam, EA, Ubisoft or elsewhere."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Which Macs does Harbor run on?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Macs with Apple silicon (M1 or later) running macOS 14.6 or later. Intel Macs are not supported. Harbor also needs Rosetta, which it tells you how to install if it is missing."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is a bottle?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A bottle is a separate Windows environment with its own programs, settings and renderer. Harbor keeps each launcher, or a game that needs different settings, in its own bottle, so they don't affect each other."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Which games work?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Many Windows games using DirectX 9, 10, 11 or 12 can run, but every game is different. Harbor has been tested most with Assassin's Creed III Remastered through Ubisoft Connect, which plays through missions at about 60 fps on an M4 Pro. Games with kernel-level anti-cheat do not run."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Which launchers does Harbor support?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Steam, the EA app and Ubisoft Connect are set up in a few clicks. Any other Windows installer (.exe or .msi) can be run in a bottle with Install from File."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do online games with anti-cheat work?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Games with kernel-level anti-cheat, such as EA Sports FC and Battlefield, do not run under Wine, in Harbor or elsewhere. Some online games also don't allow Wine in their terms, so check a game's rules before playing it online."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Which renderer should I choose?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Usually the one Harbor recommends: it reads each game's files and suggests DXMT for most 64-bit DirectX 11 games, D3DMetal for DirectX 12, DXVK for 32-bit DirectX 10 and 11 games, and Wine's own renderer for older games. The renderer applies to a whole bottle."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I use a game controller?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Harbor recognises Xbox, PlayStation, Switch and most other controllers through SDL and shows them to games as an Xbox controller, which most games expect."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How fast are games?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "That depends on the game, the renderer and your Mac. Harbor records the average and low frame rate of every session you start from its library, so you can compare renderers. MetalFX upscaling can help in demanding games."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Why does macOS stop Harbor the first time I open it?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Harbor is not notarized by Apple yet. Open System Settings, then Privacy and Security, and choose Open Anyway next to the message about Harbor. After that it opens normally."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is Harbor safe?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Harbor contains only its own code and downloads Wine and the renderers from their makers' public releases on GitHub, checking each download against a published SHA-256 checksum. Launchers come from their publishers and Windows components from Microsoft. Bottles keep Windows programs apart from each other and away from your Mac's own folders, but they are not a security sandbox: only run Windows programs you trust."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does Harbor collect any data?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Harbor has no account, no analytics and no tracking. It connects to the internet only to download what you ask for and, when you open Component Updates, to ask GitHub what is new. See the privacy page for details."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Where are my games and saves stored?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Inside your bottles, in the Harbor folder in your Library: ~/Library/Application Support/Harbor. Save backups you make go to Harbor Backups in your Documents folder."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I uninstall Harbor?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Move Harbor from Applications to the Trash. To remove your bottles and games too, also move ~/Library/Application Support/Harbor to the Trash."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I get help?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Email builtbyargo@proton.me, or in Harbor choose Help, then Email Built by Argo Support. For a problem, attach a report from Diagnostics, Export diagnostics, and say what you were doing."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How can I support Harbor?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "By telling others about it, reporting problems, and if you like, a donation on Ko-fi. Donations are optional and unlock nothing."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="nav wrap" aria-label="Main">
+    <a class="brand" href="/"><img src="/assets/icon-512.png" width="30" height="30" alt=""><span>Harbor</span></a>
+    <ul class="nav-links">
+      <li><a href="/#features">Features</a></li>
+      <li><a href="/guides/">Guides</a></li>
+      <li><a href="/faq/" aria-current="page">FAQ</a></li>
+      <li><a class="button primary" href="/download/">Download</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main">
+<div class="page-head">
+  <div class="wrap narrow">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Harbor</a></li><li aria-current="page">FAQ</li></ol></nav>
+    <h1>Questions and answers</h1>
+    <p class="lead">About playing Windows games on a Mac with Harbor. Not answered here? Email <a href="mailto:builtbyargo@proton.me">builtbyargo@proton.me</a>.</p>
+  </div>
+</div>
+
+<article class="prose">
+  <div class="wrap narrow">
+    <h2 id="basics">The basics</h2>
+    <details id="free"><summary>Is Harbor free?</summary><p>Yes. Harbor is free and open-source software under the MIT licence, made by Built by Argo. You can support its development on Ko-fi if you like; donations are optional and unlock nothing, so every feature is for everyone.</p></details>
+    <details id="what-is-harbor"><summary>What does Harbor do?</summary><p>Harbor runs Windows games and game launchers on a Mac. It uses Wine, which provides the parts of Windows that programs rely on, and a renderer that translates the games' DirectX graphics to Apple's Metal. Harbor sets all of this up for you, recommends settings per game, and keeps your games in a library.</p></details>
+    <details id="windows-licence"><summary>Do I need a copy of Windows?</summary><p>No. Wine is not Windows and needs no Windows licence. You only need the games themselves, from Steam, EA, Ubisoft or elsewhere.</p></details>
+    <details id="which-macs"><summary>Which Macs does Harbor run on?</summary><p>Macs with Apple silicon (M1 or later) running macOS 14.6 or later. Intel Macs are not supported. Harbor also needs Rosetta, which it tells you how to install if it is missing.</p></details>
+    <details id="bottle"><summary>What is a bottle?</summary><p>A bottle is a separate Windows environment with its own programs, settings and renderer. Harbor keeps each launcher, or a game that needs different settings, in its own bottle, so they don't affect each other.</p></details>
+
+    <h2 id="games">Games</h2>
+    <details id="which-games"><summary>Which games work?</summary><p>Many Windows games using DirectX 9, 10, 11 or 12 can run, but every game is different. Harbor has been tested most with Assassin's Creed III Remastered through Ubisoft Connect, which plays through missions at about 60 fps on an M4 Pro. Games with kernel-level anti-cheat do not run.</p></details>
+    <details id="launchers"><summary>Which launchers does Harbor support?</summary><p>Steam, the EA app and Ubisoft Connect are set up in a few clicks. Any other Windows installer (.exe or .msi) can be run in a bottle with Install from File.</p></details>
+    <details id="anti-cheat"><summary>Do online games with anti-cheat work?</summary><p>Games with kernel-level anti-cheat, such as EA Sports FC and Battlefield, do not run under Wine, in Harbor or elsewhere. Some online games also don't allow Wine in their terms, so check a game's rules before playing it online.</p></details>
+    <details id="renderer"><summary>Which renderer should I choose?</summary><p>Usually the one Harbor recommends: it reads each game's files and suggests DXMT for most 64-bit DirectX 11 games, D3DMetal for DirectX 12, DXVK for 32-bit DirectX 10 and 11 games, and Wine's own renderer for older games. The renderer applies to a whole bottle.</p></details>
+    <details id="controllers"><summary>Can I use a game controller?</summary><p>Yes. Harbor recognises Xbox, PlayStation, Switch and most other controllers through SDL and shows them to games as an Xbox controller, which most games expect.</p></details>
+    <details id="performance"><summary>How fast are games?</summary><p>That depends on the game, the renderer and your Mac. Harbor records the average and low frame rate of every session you start from its library, so you can compare renderers. MetalFX upscaling can help in demanding games.</p></details>
+
+    <h2 id="safety">Installing, safety and privacy</h2>
+    <details id="blocked"><summary>Why does macOS stop Harbor the first time I open it?</summary><p>Harbor is not notarized by Apple yet. Open System Settings, then Privacy and Security, and choose Open Anyway next to the message about Harbor. After that it opens normally.</p></details>
+    <details id="safe"><summary>Is Harbor safe?</summary><p>Harbor contains only its own code and downloads Wine and the renderers from their makers' public releases on GitHub, checking each download against a published SHA-256 checksum. Launchers come from their publishers and Windows components from Microsoft. Bottles keep Windows programs apart from each other and away from your Mac's own folders, but they are not a security sandbox: only run Windows programs you trust.</p></details>
+    <details id="data"><summary>Does Harbor collect any data?</summary><p>No. Harbor has no account, no analytics and no tracking. It connects to the internet only to download what you ask for and, when you open Component Updates, to ask GitHub what is new. See the privacy page for details.</p></details>
+    <details id="storage"><summary>Where are my games and saves stored?</summary><p>Inside your bottles, in the Harbor folder in your Library: ~/Library/Application Support/Harbor. Save backups you make go to Harbor Backups in your Documents folder.</p></details>
+    <details id="uninstall"><summary>How do I uninstall Harbor?</summary><p>Move Harbor from Applications to the Trash. To remove your bottles and games too, also move ~/Library/Application Support/Harbor to the Trash.</p></details>
+
+    <h2 id="help">Help and support</h2>
+    <details id="get-help"><summary>How do I get help?</summary><p>Email builtbyargo@proton.me, or in Harbor choose Help, then Email Built by Argo Support. For a problem, attach a report from Diagnostics, Export diagnostics, and say what you were doing.</p></details>
+    <details id="support"><summary>How can I support Harbor?</summary><p>By telling others about it, reporting problems, and if you like, a donation on Ko-fi. Donations are optional and unlock nothing.</p></details>
+    <p style="margin-top:24px"><a class="button kofi" href="https://ko-fi.com/A2H229BWWV" rel="noopener">Support Harbor on Ko-fi</a></p>
+  </div>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="/"><img src="/assets/icon-512.png" width="30" height="30" alt=""><span>Harbor</span></a>
+        <p>Play Windows games on your Mac. Free and open source, made by Built by Argo.</p>
+      </div>
+      <nav aria-label="Harbor">
+        <h2>Harbor</h2>
+        <ul>
+          <li><a href="/download/">Download</a></li>
+          <li><a href="/#features">Features</a></li>
+          <li><a href="/faq/">FAQ</a></li>
+          <li><a href="/privacy/">Privacy</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Guides">
+        <h2>Guides</h2>
+        <ul>
+          <li><a href="/guides/steam-on-mac/">Steam on Mac</a></li>
+          <li><a href="/guides/ubisoft-connect-on-mac/">Ubisoft Connect on Mac</a></li>
+          <li><a href="/guides/ea-app-on-mac/">EA app on Mac</a></li>
+          <li><a href="/guides/">All guides</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Support</h2>
+        <ul>
+          <li><a href="mailto:builtbyargo@proton.me">builtbyargo@proton.me</a></li>
+          <li><a href="https://ko-fi.com/A2H229BWWV" rel="noopener">Support Harbor on Ko-fi</a></li>
+          <li><a href="https://github.com/BuiltByArgo/Harbor/releases" rel="noopener">Releases on GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="legal">© 2026 Built by Argo. Harbor is an independent project, not affiliated with or endorsed by Apple, Valve, Electronic Arts, Ubisoft, Microsoft, CodeWeavers, Highball or Sikarugir. Steam, EA, Ubisoft Connect, Assassin's Creed, Apple, Mac, macOS, Metal and MetalFX are trademarks of their owners.</p>
+  </div>
+</footer>
+</body>
+</html>

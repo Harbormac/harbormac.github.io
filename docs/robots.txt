@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://harbormac.github.io/sitemap.xml
