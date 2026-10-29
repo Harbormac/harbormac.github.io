@@ -59,7 +59,8 @@ write(card, "og-image.png", jpeg: false)
 // A card per guide: its title beside the screenshot that fits it best.
 let guides = [("steam-on-mac", "Steam games on a Mac", "game-settings"),
               ("ubisoft-connect-on-mac", "Ubisoft Connect games on a Mac", "library"),
-              ("ea-app-on-mac", "The EA app on a Mac", "component-updates")]
+              ("ea-app-on-mac", "The EA app on a Mac", "component-updates"),
+              ("dxmt-vs-d3dmetal-vs-dxvk", "DXMT, D3DMetal or DXVK?", "bottles")]
 for (slug, title, shot) in guides {
     let image = load(shots.appendingPathComponent("\(shot).png"))
     let guideCard = render(width: 1200, height: 630, background: page) { ctx in

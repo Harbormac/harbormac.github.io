@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DXMT vs D3DMetal vs DXVK: Which Renderer for Mac Games? – Harbor</title>
+<meta name="description" content="DXMT, D3DMetal, DXVK or Wine&#x27;s own: what each renderer does for Windows games on an Apple silicon Mac, which DirectX versions it covers, and which to pick.">
+<link rel="canonical" href="https://harbormac.github.io/guides/dxmt-vs-d3dmetal-vs-dxvk/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#111b20">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-512.png" type="image/png" sizes="512x512">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="stylesheet" href="/assets/style.css?v=da2816df3e">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Harbor">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="DXMT vs D3DMetal vs DXVK: which renderer for Windows games on a Mac">
+<meta property="og:description" content="DXMT, D3DMetal, DXVK or Wine&#x27;s own: what each renderer does for Windows games on an Apple silicon Mac, which DirectX versions it covers, and which to pick.">
+<meta property="og:url" content="https://harbormac.github.io/guides/dxmt-vs-d3dmetal-vs-dxvk/">
+<meta property="og:image" content="https://harbormac.github.io/assets/og-dxmt-vs-d3dmetal-vs-dxvk.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Harbor guide: DXMT, D3DMetal or DXVK?">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DXMT vs D3DMetal vs DXVK: which renderer for Windows games on a Mac">
+<meta name="twitter:description" content="DXMT, D3DMetal, DXVK or Wine&#x27;s own: what each renderer does for Windows games on an Apple silicon Mac, which DirectX versions it covers, and which to pick.">
+<meta name="twitter:image" content="https://harbormac.github.io/assets/og-dxmt-vs-d3dmetal-vs-dxvk.jpg">
+<meta name="twitter:image:alt" content="Harbor guide: DXMT, D3DMetal or DXVK?">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "TechArticle",
+   "@id": "https://harbormac.github.io/guides/dxmt-vs-d3dmetal-vs-dxvk/#article",
+   "headline": "DXMT vs D3DMetal vs DXVK: which renderer to use for Windows games on a Mac",
+   "url": "https://harbormac.github.io/guides/dxmt-vs-d3dmetal-vs-dxvk/",
+   "inLanguage": "en",
+   "datePublished": "2026-10-29",
+   "dateModified": "2026-10-29",
+   "image": [
+    "https://harbormac.github.io/assets/og-dxmt-vs-d3dmetal-vs-dxvk.jpg",
+    "https://harbormac.github.io/assets/bottles-1600.jpg"
+   ],
+   "author": {
+    "@id": "https://harbormac.github.io/#builtbyargo"
+   },
+   "publisher": {
+    "@id": "https://harbormac.github.io/#builtbyargo"
+   },
+   "about": {
+    "@id": "https://harbormac.github.io/#app"
+   },
+   "isPartOf": {
+    "@id": "https://harbormac.github.io/#website"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Harbor",
+     "item": "https://harbormac.github.io/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Guides",
+     "item": "https://harbormac.github.io/guides/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "DXMT vs D3DMetal vs DXVK",
+     "item": "https://harbormac.github.io/guides/dxmt-vs-d3dmetal-vs-dxvk/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Is DXMT better than D3DMetal?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "For 64-bit DirectX 10 and 11 games, DXMT is usually the first choice, and it is the renderer Harbor has tested most. D3DMetal is the one for DirectX 12 games, and the one to try when a DirectX 11 game misbehaves on DXMT."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does DXVK work on a Mac?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, through MoltenVK, which runs Vulkan on Metal. Harbor uses DXVK for macOS for DirectX 10 and 11 and D9VK for DirectX 9. It is the fast option for 32-bit games, which DXMT and D3DMetal don't cover."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can a Mac run DirectX 12 games?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "That is what D3DMetal, Apple's translation from the Game Porting Toolkit, is for, and Harbor picks it for 64-bit DirectX 12 games. How well a particular game runs depends on the game; Harbor hasn't tested a DirectX 12 game in depth yet. Games with kernel-level anti-cheat don't run under Wine at all, whichever renderer you choose."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Which renderer is best for older games?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Wine's own Direct3D for DirectX 9 and older; it is the most compatible. Some DirectX 9 games run faster on DXVK, so it is worth comparing the two."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="nav wrap" aria-label="Main">
+    <a class="brand" href="/"><img src="/assets/icon-512.png" width="30" height="30" alt=""><span>Harbor</span></a>
+    <ul class="nav-links">
+      <li><a href="/#features">Features</a></li>
+      <li><a href="/guides/">Guides</a></li>
+      <li><a href="/faq/">FAQ</a></li>
+      <li><a class="button primary" href="/download/">Download</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main">
+<div class="page-head">
+  <div class="wrap narrow">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Harbor</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">DXMT vs D3DMetal vs DXVK</li></ol></nav>
+    <h1>DXMT vs D3DMetal vs DXVK: which renderer to use</h1>
+    <p class="lead">Windows games draw with Microsoft's DirectX, and a Mac only draws with Apple's Metal. A renderer translates one into the other. Harbor ships four of them, and which one suits a game depends on its DirectX version and on whether it is 32-bit or 64-bit.</p>
+    <p class="tested">Tested with Harbor 0.7.0 on macOS 27.2 · Updated 29 October 2026</p>
+  </div>
+</div>
+
+<article class="prose">
+  <div class="wrap narrow">
+    <h2 id="short-answer">The short answer</h2>
+    <p>These are the rules Harbor itself uses when it recommends a renderer for a game:</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th scope="col">The game uses</th><th scope="col">64-bit game</th><th scope="col">32-bit game</th></tr></thead>
+        <tbody>
+          <tr><td><strong>DirectX 12</strong></td><td>D3DMetal</td><td>Wine's own (none of the fast renderers covers it)</td></tr>
+          <tr><td><strong>DirectX 10 or 11</strong></td><td>DXMT, or D3DMetal if a game misbehaves</td><td>DXVK</td></tr>
+          <tr><td><strong>DirectX 9</strong></td><td colspan="2">Wine's own; DXVK is faster in some games</td></tr>
+          <tr><td><strong>DirectX 8 or older, OpenGL</strong></td><td colspan="2">Wine's own</td></tr>
+          <tr><td><strong>Vulkan</strong></td><td colspan="2">Any: Vulkan games run on MoltenVK whichever renderer the bottle uses</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Most current Windows games are 64-bit DirectX 11 or 12, so in practice the choice is usually between <strong>DXMT</strong> and <strong>D3DMetal</strong>.</p>
+
+    <h2 id="what-a-renderer-does">What a renderer does</h2>
+    <p>Wine lets a Mac run Windows programs, but a game's graphics calls still need somewhere to go. A renderer takes the game's Direct3D calls and turns them into something macOS can draw. The renderers differ in how many steps that takes:</p>
+    <ul>
+      <li><strong>DXMT</strong> and <strong>D3DMetal</strong> translate Direct3D to Metal in one step.</li>
+      <li><strong>DXVK</strong> translates Direct3D to Vulkan, and <strong>MoltenVK</strong> then translates Vulkan to Metal: two steps.</li>
+      <li><strong>Wine's own Direct3D</strong> (wined3d) translates to OpenGL, which macOS still runs but Apple deprecated in 2018.</li>
+    </ul>
+
+    <h2 id="dxmt">DXMT</h2>
+    <p>DXMT is an open-source project that translates <strong>DirectX 10 and 11</strong> straight to Metal. It is Harbor's first choice for 64-bit DirectX 11 games, the largest group of current Windows games.</p>
+    <ul>
+      <li><strong>64-bit programs only.</strong> In a DXMT bottle, 32-bit programs, such as some launchers, keep using Wine's own Direct3D.</li>
+      <li><strong>Tested most:</strong> Assassin's Creed III Remastered plays through missions at about 60 fps on DXMT on an M4 Pro. Harbor adds a small fix for a Metal crash that game hit, so it runs without workarounds.</li>
+      <li><strong>MetalFX upscaling</strong> is available in DXMT bottles: the game renders at a lower resolution and MetalFX scales it up 2×, which helps in demanding games.</li>
+    </ul>
+
+    <h2 id="d3dmetal">D3DMetal</h2>
+    <p>D3DMetal is Apple's own translation, from its Game Porting Toolkit. It covers <strong>DirectX 11 and 12</strong>, so it is the renderer for DirectX 12 games.</p>
+    <ul>
+      <li><strong>64-bit programs only,</strong> like DXMT. 32-bit programs in a D3DMetal bottle use Wine's own Direct3D.</li>
+      <li><strong>New Steam and EA app bottles start on D3DMetal,</strong> because it covers both DirectX 11 and 12. Once you install a game, Harbor recommends a renderer for that game.</li>
+      <li><strong>It is not open source.</strong> Apple allows it to be passed on only unchanged and for non-commercial purposes, so Harbor downloads Apple's files as they are and stays free. See <a href="/download/#what-harbor-downloads">what Harbor downloads, and from whom</a>.</li>
+    </ul>
+
+    <h2 id="dxvk">DXVK</h2>
+    <p>DXVK translates <strong>DirectX 9, 10 and 11</strong> to Vulkan, and MoltenVK runs that Vulkan on Metal. Harbor uses DXVK for macOS for DirectX 10 and 11, and D9VK for DirectX 9.</p>
+    <ul>
+      <li><strong>32-bit and 64-bit programs.</strong> That makes it the only fast option for 32-bit DirectX 10 and 11 games.</li>
+      <li><strong>Two translation steps</strong> instead of one, so for 64-bit DirectX 11 games DXMT is usually the better start.</li>
+      <li><strong>Not for Ubisoft Connect bottles.</strong> DXVK also takes over Connect's 32-bit sign-in browser, and Ubisoft's sign-in is known to work only while that browser stays on Wine's own Direct3D. See the <a href="/guides/ubisoft-connect-on-mac/#renderer">Ubisoft Connect guide</a>.</li>
+    </ul>
+
+    <h2 id="wined3d">Wine's own Direct3D (wined3d)</h2>
+    <p>Wine's built-in Direct3D covers <strong>Direct3D 1 to 11</strong> over OpenGL. It has the widest compatibility and is the slowest for modern games.</p>
+    <ul>
+      <li>Harbor's choice for <strong>DirectX 9 and older</strong> games, OpenGL games, and programs whose graphics Harbor can't identify.</li>
+      <li>It is also what <strong>32-bit programs</strong> use inside DXMT and D3DMetal bottles, which is why Ubisoft Connect's sign-in works there.</li>
+    </ul>
+
+    <img class="shot" src="/assets/bottles-1600.jpg" srcset="/assets/bottles-800.jpg 800w, /assets/bottles-1600.jpg 1600w" sizes="(max-width: 1080px) 100vw, 1040px" width="1600" height="1203" alt="A Harbor bottle&#x27;s Graphics section: the renderer list with DXMT selected, Harbor&#x27;s recommendation, and the MetalFX upscaling and DLSS switches" loading="lazy" decoding="async">
+
+    <h2 id="how-harbor-chooses">How Harbor chooses for you</h2>
+    <p>When you add or install a game, Harbor reads its program files to see which DirectX version it uses and whether it is 32-bit or 64-bit, then applies the rules in the table above. You'll see the recommendation, with the reason, in the bottle's <strong>Graphics</strong> section and next to the game in the library.</p>
+    <p>The renderer applies to a <strong>whole bottle</strong>. If two games in one launcher want different renderers, give one of them a bottle of its own.</p>
+
+    <h2 id="compare">Switch and compare</h2>
+    <ol>
+      <li><strong>Play a while on the recommended renderer.</strong> Harbor records every session you start from its library: average and low frame rate, GPU time per frame, and the delay to the screen.</li>
+      <li><strong>Switch.</strong> Pick another renderer in the bottle's Graphics section, or use the <strong>Not tried yet</strong> buttons in the game's Performance panel.</li>
+      <li><strong>Play the same part again</strong> and compare the numbers side by side in the Performance panel.</li>
+    </ol>
+    <p>If a game crashes or shows a black screen, trying the other renderer that Harbor lists for it is the first thing to do.</p>
+
+    <h2 id="metalfx-dlss">MetalFX and DLSS</h2>
+    <p><strong>MetalFX upscaling</strong> (in DXMT bottles) lets a game render fewer pixels and scales the image up with Apple's MetalFX, for a higher frame rate at a small cost in sharpness.</p>
+    <p><strong>DLSS</strong> (in DXMT and D3DMetal bottles) lets games that support NVIDIA's DLSS use MetalFX in its place. This is new: Harbor has checked it with Steam's interface, but not yet in a game.</p>
+
+    <h2 id="faq">Questions</h2>
+    <details>
+      <summary>Is DXMT better than D3DMetal?</summary>
+      <p>For 64-bit DirectX 10 and 11 games, DXMT is usually the first choice, and it is the renderer Harbor has tested most. D3DMetal is the one for DirectX 12 games, and the one to try when a DirectX 11 game misbehaves on DXMT.</p>
+    </details>
+    <details>
+      <summary>Does DXVK work on a Mac?</summary>
+      <p>Yes, through MoltenVK, which runs Vulkan on Metal. Harbor uses DXVK for macOS for DirectX 10 and 11 and D9VK for DirectX 9. It is the fast option for 32-bit games, which DXMT and D3DMetal don't cover.</p>
+    </details>
+    <details>
+      <summary>Can a Mac run DirectX 12 games?</summary>
+      <p>That is what D3DMetal, Apple's translation from the Game Porting Toolkit, is for, and Harbor picks it for 64-bit DirectX 12 games. How well a particular game runs depends on the game; Harbor hasn't tested a DirectX 12 game in depth yet. Games with kernel-level anti-cheat don't run under Wine at all, whichever renderer you choose.</p>
+    </details>
+    <details>
+      <summary>Which renderer is best for older games?</summary>
+      <p>Wine's own Direct3D for DirectX 9 and older; it is the most compatible. Some DirectX 9 games run faster on DXVK, so it is worth comparing the two.</p>
+    </details>
+
+    <p>Next: <a href="/guides/steam-on-mac/">Steam on Mac</a> · <a href="/guides/ubisoft-connect-on-mac/">Ubisoft Connect on Mac</a> · <a href="/guides/ea-app-on-mac/">the EA app on Mac</a> · <a href="/faq/">FAQ</a></p>
+  </div>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="/"><img src="/assets/icon-512.png" width="30" height="30" alt=""><span>Harbor</span></a>
+        <p>Play Windows games on your Mac. Free and open source, made by Built by Argo.</p>
+      </div>
+      <nav aria-label="Harbor">
+        <p class="footer-title">Harbor</p>
+        <ul>
+          <li><a href="/download/">Download</a></li>
+          <li><a href="/#features">Features</a></li>
+          <li><a href="/faq/">FAQ</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/privacy/">Privacy</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Guides">
+        <p class="footer-title">Guides</p>
+        <ul>
+          <li><a href="/guides/steam-on-mac/">Steam on Mac</a></li>
+          <li><a href="/guides/ubisoft-connect-on-mac/">Ubisoft Connect on Mac</a></li>
+          <li><a href="/guides/ea-app-on-mac/">EA app on Mac</a></li>
+          <li><a href="/guides/dxmt-vs-d3dmetal-vs-dxvk/" aria-current="page">DXMT vs D3DMetal vs DXVK</a></li>
+          <li><a href="/guides/">All guides</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="footer-title">Support</p>
+        <ul>
+          <li><a href="mailto:builtbyargo@proton.me">builtbyargo@proton.me</a></li>
+          <li><a href="https://ko-fi.com/A2H229BWWV" rel="noopener">Support Harbor on Ko-fi</a></li>
+          <li><a href="https://github.com/BuiltByArgo/Harbor" rel="noopener">Source code on GitHub</a></li>
+          <li><a href="https://github.com/BuiltByArgo/Harbor/releases" rel="noopener">Releases on GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="legal">© 2026 Built by Argo. Harbor is an independent project, not affiliated with or endorsed by Apple, Valve, Electronic Arts, Ubisoft, Microsoft, CodeWeavers, Highball or Sikarugir. Steam, EA, Ubisoft Connect, Assassin's Creed, Apple, Mac, macOS, Metal and MetalFX are trademarks of their owners.</p>
+  </div>
+</footer>
+</body>
+</html>
