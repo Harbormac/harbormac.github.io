@@ -1,6 +1,6 @@
 // Makes the site's images in src/assets/generated from the app's screenshots and icon:
 // screenshots as JPEG at 1600 and 800 px on the page colour, icons at 32, 180 and 512 px, and the
-// 1200x630 card that link previews show. Run: swift src/make-assets.swift <screenshots folder>
+// 1200x630 cards that link previews show (one for the site, one per guide). Run: swift src/make-assets.swift <screenshots folder>
 import AppKit
 import ImageIO
 import UniformTypeIdentifiers
@@ -39,16 +39,41 @@ for size in [32, 180, 512] {
     write(render(width: size, height: size, background: size == 180 ? page : nil) { $0.draw(icon, in: CGRect(x: 0, y: 0, width: size, height: size)) }, "icon-\(size).png", jpeg: false)
 }
 
+func font(_ size: CGFloat, _ weight: NSFont.Weight, serif: Bool) -> NSFont {
+    let base = NSFont.systemFont(ofSize: size, weight: weight)
+    return serif ? NSFont(descriptor: base.fontDescriptor.withDesign(.serif)!, size: size)! : base
+}
+let accent = NSColor(srgbRed: 0.93, green: 0.59, blue: 0.35, alpha: 1)
+let muted = NSColor(srgbRed: 0.57, green: 0.66, blue: 0.68, alpha: 1)
+
 // Link preview card: icon, name and line on the page colour.
 let card = render(width: 1200, height: 630, background: page) { ctx in
     ctx.draw(icon, in: CGRect(x: 110, y: 175, width: 280, height: 280))
     NSGraphicsContext.current = NSGraphicsContext(cgContext: ctx, flipped: false)
-    func font(_ size: CGFloat, _ weight: NSFont.Weight, serif: Bool) -> NSFont {
-        let base = NSFont.systemFont(ofSize: size, weight: weight)
-        return serif ? NSFont(descriptor: base.fontDescriptor.withDesign(.serif)!, size: size)! : base
-    }
     NSAttributedString(string: "Harbor", attributes: [.font: font(108, .medium, serif: true), .foregroundColor: NSColor.white]).draw(at: CGPoint(x: 450, y: 330))
-    NSAttributedString(string: "Windows games on your Mac.", attributes: [.font: font(44, .regular, serif: false), .foregroundColor: NSColor(srgbRed: 0.93, green: 0.59, blue: 0.35, alpha: 1)]).draw(at: CGPoint(x: 454, y: 262))
-    NSAttributedString(string: "Free for Apple silicon · harbormac.github.io", attributes: [.font: font(28, .regular, serif: false), .foregroundColor: NSColor(srgbRed: 0.57, green: 0.66, blue: 0.68, alpha: 1)]).draw(at: CGPoint(x: 456, y: 205))
+    NSAttributedString(string: "Windows games on your Mac.", attributes: [.font: font(44, .regular, serif: false), .foregroundColor: accent]).draw(at: CGPoint(x: 454, y: 262))
+    NSAttributedString(string: "Free for Apple silicon · harbormac.github.io", attributes: [.font: font(28, .regular, serif: false), .foregroundColor: muted]).draw(at: CGPoint(x: 456, y: 205))
 }
 write(card, "og-image.png", jpeg: false)
+
+// A card per guide: its title beside the screenshot that fits it best.
+let guides = [("steam-on-mac", "Steam games on a Mac", "game-settings"),
+              ("ubisoft-connect-on-mac", "Ubisoft Connect games on a Mac", "library"),
+              ("ea-app-on-mac", "The EA app on a Mac", "component-updates")]
+for (slug, title, shot) in guides {
+    let image = load(shots.appendingPathComponent("\(shot).png"))
+    let guideCard = render(width: 1200, height: 630, background: page) { ctx in
+        let frame = CGRect(x: 620, y: 105, width: 540, height: 540 * CGFloat(image.height) / CGFloat(image.width))
+        ctx.saveGState()
+        ctx.addPath(CGPath(roundedRect: frame, cornerWidth: 14, cornerHeight: 14, transform: nil))
+        ctx.clip()
+        ctx.draw(image, in: frame)
+        ctx.restoreGState()
+        ctx.draw(icon, in: CGRect(x: 72, y: 486, width: 64, height: 64))
+        NSGraphicsContext.current = NSGraphicsContext(cgContext: ctx, flipped: false)
+        NSAttributedString(string: "Harbor guide", attributes: [.font: font(30, .semibold, serif: false), .foregroundColor: accent]).draw(at: CGPoint(x: 152, y: 498))
+        NSAttributedString(string: title, attributes: [.font: font(62, .medium, serif: true), .foregroundColor: NSColor.white]).draw(with: CGRect(x: 72, y: 190, width: 510, height: 250), options: [.usesLineFragmentOrigin])
+        NSAttributedString(string: "Free for Apple silicon · harbormac.github.io", attributes: [.font: font(24, .regular, serif: false), .foregroundColor: muted]).draw(at: CGPoint(x: 74, y: 80))
+    }
+    write(guideCard, "og-\(slug).jpg", jpeg: true)
+}

@@ -105,6 +105,9 @@ def build():
             "description": html.escape(fill(page["description"], common), quote=True),
             "canonical": SITE + (path if path != "/404.html" else "/"),
             "robots": "noindex" if page.get("noindex") else "index, follow, max-image-preview:large",
+            # Link-preview card: the site's own, unless the page names one (1200x630, like the default).
+            "image": page.get("image", "/assets/og-image.png"),
+            "image_alt": html.escape(page.get("image_alt", "Harbor: Windows games on your Mac"), quote=True),
             "verification": ('<meta name="google-site-verification" content="%s">\n' % GOOGLE_VERIFICATION) if GOOGLE_VERIFICATION else "",
             "css_version": hashlib.sha256(css).hexdigest()[:10],
             "jsonld": fill(json.dumps(graph, indent=1, ensure_ascii=False), common),

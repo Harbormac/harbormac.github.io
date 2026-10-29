@@ -18,7 +18,7 @@ services. GitHub Pages publishes the `docs/` folder of the `main` branch.
 - `src/root/` holds files copied to the site's root unchanged: `favicon.ico`, `built-by-argo.png` (the
   logo in the structured data), and `googlefdcfea98ac17e55a.html`, which proves to Google Search
   Console that the site is ours. Keep it.
-- `src/make-assets.swift` makes the screenshots, icons and link-preview card in
+- `src/make-assets.swift` makes the screenshots, icons and link-preview cards (the site's and one per guide) in
   `src/assets/generated/` from the app's screenshots.
 
 After changing anything in `src/`, run:
