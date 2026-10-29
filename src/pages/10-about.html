@@ -1,0 +1,40 @@
+<!--page
+{"path": "/about/",
+ "title": "About Harbor – Free, Open-Source Windows Game Launcher for Mac",
+ "description": "Who makes Harbor, why it is free and open source, and the open-source projects it builds on to run Windows games on Apple silicon Macs.",
+ "jsonld": [
+  {"@type": "AboutPage", "@id": "{{site}}/about/#page", "url": "{{site}}/about/", "name": "About Harbor", "isPartOf": {"@id": "{{site}}/#website"}, "about": {"@id": "{{site}}/#app"}, "dateModified": "2026-10-29"},
+  {"@type": "BreadcrumbList", "itemListElement": [
+   {"@type": "ListItem", "position": 1, "name": "Harbor", "item": "{{site}}/"},
+   {"@type": "ListItem", "position": 2, "name": "About", "item": "{{site}}/about/"}]}
+ ]}
+-->
+<div class="page-head">
+  <div class="wrap narrow">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Harbor</a></li><li aria-current="page">About</li></ol></nav>
+    <h1>About Harbor</h1>
+    <p class="lead">Harbor is a free Mac app for playing Windows games on Apple silicon. It is made by Built by Argo and is open source under the MIT licence.</p>
+  </div>
+</div>
+
+<article class="prose">
+  <div class="wrap narrow">
+    <h2 id="why">Why Harbor exists</h2>
+    <p>Many games, and the launchers that sell them, only come for Windows. Running them on a Mac usually means setting up Wine by hand. Harbor does that setup for you: it keeps each launcher in its own bottle, recommends a renderer for each game, and lets you snapshot a bottle before you change anything.</p>
+
+    <h2 id="open-source">Free and open source</h2>
+    <p>Harbor costs nothing and has no accounts, ads or tracking. Its <a href="{{source_url}}" rel="noopener">source code is on GitHub</a>, so anyone can check what it does, report a problem or suggest a change. If Harbor is useful to you, you can <a href="{{kofi_url}}" rel="noopener">support it on Ko-fi</a>.</p>
+
+    <h2 id="built-on">What Harbor builds on</h2>
+    <p>Harbor is the app around a set of open-source projects, each under its own licence:</p>
+    <ul>
+      <li><strong>Wine</strong> runs Windows programs on macOS.</li>
+      <li><strong>DXMT</strong>, Apple's <strong>D3DMetal</strong> and <strong>DXVK</strong> with <strong>MoltenVK</strong> translate DirectX graphics to Metal.</li>
+      <li><strong>GStreamer</strong> plays in-game video, and <strong>SDL</strong> handles controllers.</li>
+    </ul>
+    <p>Harbor downloads these when you prepare it. The <a href="/download/#what-harbor-downloads">download page</a> lists where each one comes from and its licence.</p>
+
+    <h2 id="who">Who makes Harbor</h2>
+    <p>Harbor is made by Built by Argo, an independent developer. It is not affiliated with Apple, Valve, Electronic Arts, Ubisoft or Microsoft. Questions, bug reports and ideas go to <a href="mailto:{{support_email}}">{{support_email}}</a>.</p>
+  </div>
+</article>

@@ -24,6 +24,7 @@ SITE = "https://harbormac.github.io"
 VERSION = "0.7.0"
 RELEASES_URL = "https://github.com/BuiltByArgo/Harbor/releases"
 DOWNLOAD_URL = "https://github.com/BuiltByArgo/Harbor/releases/latest"
+SOURCE_URL = "https://github.com/BuiltByArgo/Harbor"
 KOFI_URL = "https://ko-fi.com/A2H229BWWV"
 SUPPORT_EMAIL = "builtbyargo@proton.me"
 ZIP_SHA256 = "bcb76a69bde68e041b3b3b583e9b0936284622a4e5187b8e0c6dcf73fe7dbf4a"
@@ -81,7 +82,7 @@ def build():
     for name in os.listdir(os.path.join(SRC, "root")):
         shutil.copy2(os.path.join(SRC, "root", name), os.path.join(OUT, name))
     layout = open(os.path.join(SRC, "layout.html"), encoding="utf-8").read()
-    common = {"site": SITE, "version": VERSION, "download_url": DOWNLOAD_URL, "releases_url": RELEASES_URL,
+    common = {"site": SITE, "version": VERSION, "download_url": DOWNLOAD_URL, "releases_url": RELEASES_URL, "source_url": SOURCE_URL,
               "kofi_url": KOFI_URL, "support_email": SUPPORT_EMAIL, "zip_sha256": ZIP_SHA256}
     pages = read_pages()
     for page in pages:
