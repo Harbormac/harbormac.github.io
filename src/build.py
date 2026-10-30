@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Builds Harbor's website from src/ into docs/, the folder GitHub Pages publishes, then checks it.
+"""Builds Portnaut's website from src/ into docs/, the folder GitHub Pages publishes, then checks it.
 
     python3 src/build.py
 
@@ -20,22 +20,22 @@ To move to a custom domain, change SITE and rebuild.
 import datetime, hashlib, html, json, os, re, shutil, sys
 from html.parser import HTMLParser
 
-SITE = "https://harbormac.github.io"
-VERSION = "0.7.0"
-RELEASES_URL = "https://github.com/BuiltByArgo/Harbor/releases"
-DOWNLOAD_URL = "https://github.com/BuiltByArgo/Harbor/releases/latest"
-SOURCE_URL = "https://github.com/BuiltByArgo/Harbor"
+SITE = "https://portnaut.com"
+VERSION = "0.8.0"
+RELEASES_URL = "https://github.com/BuiltByArgo/Portnaut/releases"
+DOWNLOAD_URL = "https://github.com/BuiltByArgo/Portnaut/releases/latest"
+SOURCE_URL = "https://github.com/BuiltByArgo/Portnaut"
 KOFI_URL = "https://ko-fi.com/A2H229BWWV"
 SUPPORT_EMAIL = "builtbyargo@proton.me"
-ZIP_SHA256 = "bcb76a69bde68e041b3b3b583e9b0936284622a4e5187b8e0c6dcf73fe7dbf4a"
+ZIP_SHA256 = "1e5f14000a7438b7224a69842ae75f1e138571ec32b02fa8a6f46bf8fe7ea2b3"
 # Google Search Console's HTML-tag verification code, once there is one (only the content="…" value).
 GOOGLE_VERIFICATION = ""
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "src")
 OUT = os.path.join(ROOT, "docs")
-SHOT_SIZES = {"library": (1600, 1203), "bottles": (1600, 1203), "game-settings": (1600, 1203),
-              "snapshots": (1600, 1203), "component-updates": (1600, 1203)}
+SHOT_SIZES = {"library": (1600, 1166), "bottles": (1600, 1166), "game-settings": (1600, 1166),
+              "snapshots": (1600, 1166), "component-updates": (1600, 1166)}
 
 
 def shot(match):
@@ -107,7 +107,7 @@ def build():
             "robots": "noindex" if page.get("noindex") else "index, follow, max-image-preview:large",
             # Link-preview card: the site's own, unless the page names one (1200x630, like the default).
             "image": page.get("image", "/assets/og-image.png"),
-            "image_alt": html.escape(page.get("image_alt", "Harbor: Windows games on your Mac"), quote=True),
+            "image_alt": html.escape(page.get("image_alt", "Portnaut: Windows games on your Mac"), quote=True),
             "verification": ('<meta name="google-site-verification" content="%s">\n' % GOOGLE_VERIFICATION) if GOOGLE_VERIFICATION else "",
             "css_version": hashlib.sha256(css).hexdigest()[:10],
             "jsonld": fill(json.dumps(graph, indent=1, ensure_ascii=False), common),

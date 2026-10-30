@@ -1,58 +1,58 @@
 <!--page
 {"path": "/guides/steam-on-mac/",
- "title": "How to Play Steam Games on a Mac (Apple Silicon) – Harbor",
+ "title": "How to Play Steam Games on a Mac (Apple Silicon) – Portnaut",
  "social_title": "How to play Windows Steam games on a Mac",
  "image": "/assets/og-steam-on-mac.jpg",
- "image_alt": "Harbor guide: Steam games on a Mac",
- "description": "Run the Windows version of Steam on an Apple silicon Mac with Harbor, for free: install Steam, sign in, and play Windows games from your Steam library.",
+ "image_alt": "Portnaut guide: Steam games on a Mac",
+ "description": "Run the Windows version of Steam on an Apple silicon Mac with Portnaut, for free: install Steam, sign in, and play Windows games from your Steam library.",
  "jsonld": [
-  {"@type": "TechArticle", "@id": "{{site}}/guides/steam-on-mac/#article", "headline": "How to play Steam games on a Mac with Harbor", "url": "{{site}}/guides/steam-on-mac/", "inLanguage": "en", "datePublished": "2026-10-28", "dateModified": "2026-10-29", "image": "{{site}}/assets/og-steam-on-mac.jpg", "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}, "about": {"@id": "{{site}}/#app"}, "isPartOf": {"@id": "{{site}}/#website"}},
+  {"@type": "TechArticle", "@id": "{{site}}/guides/steam-on-mac/#article", "headline": "How to play Steam games on a Mac with Portnaut", "url": "{{site}}/guides/steam-on-mac/", "inLanguage": "en", "datePublished": "2026-10-28", "dateModified": "2026-10-29", "image": "{{site}}/assets/og-steam-on-mac.jpg", "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}, "about": {"@id": "{{site}}/#app"}, "isPartOf": {"@id": "{{site}}/#website"}},
   {"@type": "BreadcrumbList", "itemListElement": [
-   {"@type": "ListItem", "position": 1, "name": "Harbor", "item": "{{site}}/"},
+   {"@type": "ListItem", "position": 1, "name": "Portnaut", "item": "{{site}}/"},
    {"@type": "ListItem", "position": 2, "name": "Guides", "item": "{{site}}/guides/"},
    {"@type": "ListItem", "position": 3, "name": "Steam on Mac", "item": "{{site}}/guides/steam-on-mac/"}]}
  ]}
 -->
 <div class="page-head">
   <div class="wrap narrow">
-    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Harbor</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">Steam on Mac</li></ol></nav>
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Portnaut</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">Steam on Mac</li></ol></nav>
     <h1>How to play Steam games on a Mac</h1>
-    <p class="lead">Steam's Mac app only shows games made for macOS. With Harbor, you can run the Windows version of Steam on an Apple silicon Mac and play Windows games from your library, for free.</p>
-    <p class="tested">Tested with Harbor {{version}} on macOS 27.2 · Updated 29 October 2026</p>
+    <p class="lead">Steam's Mac app only shows games made for macOS. With Portnaut, you can run the Windows version of Steam on an Apple silicon Mac and play Windows games from your library, for free.</p>
+    <p class="tested">Tested with Portnaut {{version}} on macOS 27.2 · Updated 29 October 2026</p>
   </div>
 </div>
 
 <article class="prose">
   <div class="wrap narrow">
     <h2 id="before-you-start">Before you start</h2>
-    <p><a href="/download/">Download and install Harbor</a>, open it, and choose <strong>Prepare Harbor</strong>. That needs a Mac with Apple silicon, macOS 14.6 or later, and Rosetta.</p>
+    <p><a href="/download/">Download and install Portnaut</a>, open it, and choose <strong>Prepare Portnaut</strong>. That needs a Mac with Apple silicon, macOS 14.6 or later, and Rosetta.</p>
 
-    <h2 id="steps">Install Steam in Harbor</h2>
+    <h2 id="steps">Install Steam in Portnaut</h2>
     <ol>
       <li><strong>Create a Steam bottle.</strong> Choose <strong>Bottles › New Bottle…</strong>, select <strong>Steam</strong>, keep the recommended renderer, and choose <strong>Create</strong>. A bottle is a separate Windows environment, so Steam and its games stay apart from your other launchers.</li>
-      <li><strong>Install Steam.</strong> Choose <strong>Install Steam</strong>. Harbor downloads Valve's own installer and installs Steam without further questions.</li>
-      <li><strong>Sign in.</strong> Choose <strong>Open Steam</strong> and sign in in Steam's window. Your password goes to Valve; Harbor never sees or stores it. On first start Steam updates itself, which takes a while.</li>
-      <li><strong>Install a game</strong> in Steam as you would on a PC. When it finishes, it appears in Harbor's library by itself.</li>
-      <li><strong>Play</strong> from Harbor's library, or from Steam. Harbor starts Steam games through Steam, also while Steam is already open.</li>
+      <li><strong>Install Steam.</strong> Choose <strong>Install Steam</strong>. Portnaut downloads Valve's own installer and installs Steam without further questions.</li>
+      <li><strong>Sign in.</strong> Choose <strong>Open Steam</strong> and sign in in Steam's window. Your password goes to Valve; Portnaut never sees or stores it. On first start Steam updates itself, which takes a while.</li>
+      <li><strong>Install a game</strong> in Steam as you would on a PC. When it finishes, it appears in Portnaut's library by itself.</li>
+      <li><strong>Play</strong> from Portnaut's library, or from Steam. Portnaut starts Steam games through Steam, also while Steam is already open.</li>
     </ol>
 
     <h2 id="renderer">Which renderer to use</h2>
-    <p>A Steam bottle starts on <strong>D3DMetal</strong>, Apple's translation for DirectX 11 and 12, because most Steam games use one of those. Once a game is installed, Harbor reads its files and recommends a renderer for it: often <strong>DXMT</strong> for 64-bit DirectX 11 games and D3DMetal for DirectX 12. You'll see the recommendation in the bottle's Graphics section and next to the game.</p>
+    <p>A Steam bottle starts on <strong>D3DMetal</strong>, Apple's translation for DirectX 11 and 12, because most Steam games use one of those. Once a game is installed, Portnaut reads its files and recommends a renderer for it: often <strong>DXMT</strong> for 64-bit DirectX 11 games and D3DMetal for DirectX 12. You'll see the recommendation in the bottle's Graphics section and next to the game.</p>
     <p>The renderer applies to the whole bottle. If two games want different renderers, give one of them a second Steam bottle. <a href="/guides/dxmt-vs-d3dmetal-vs-dxvk/">Compare the renderers</a>.</p>
 
     <h2 id="tips">Tips</h2>
     <ul>
       <li><strong>Steam's own window is drawn in software.</strong> That's deliberate and keeps it from going black; your games still use the renderer.</li>
-      <li><strong>Launch options:</strong> a game's <strong>Settings…</strong> in Harbor take launch arguments, which Harbor passes to the game through Steam.</li>
+      <li><strong>Launch options:</strong> a game's <strong>Settings…</strong> in Portnaut take launch arguments, which Portnaut passes to the game through Steam.</li>
       <li><strong>Controllers</strong> appear to games as Xbox controllers, and Steam Input works on top.</li>
       <li><strong>A game that needs AVX</strong> and won't start: turn on <strong>Advertise AVX instructions</strong> in the bottle's Performance section.</li>
-      <li><strong>Compare renderers:</strong> Harbor records the frame rate of every session you start from its library, so you can try a game on two renderers and see which is faster.</li>
+      <li><strong>Compare renderers:</strong> Portnaut records the frame rate of every session you start from its library, so you can try a game on two renderers and see which is faster.</li>
     </ul>
 
     <h2 id="limits">What doesn't work</h2>
     <ul>
-      <li>Games with kernel-level anti-cheat do not run under Wine, in Harbor or elsewhere. Some online games also forbid Wine in their terms.</li>
-      <li>Harbor is early access. Steam installs and runs in Harbor; how well a particular game runs depends on the game.</li>
+      <li>Games with kernel-level anti-cheat do not run under Wine, in Portnaut or elsewhere. Some online games also forbid Wine in their terms.</li>
+      <li>Portnaut is early access. Steam installs and runs in Portnaut; how well a particular game runs depends on the game.</li>
     </ul>
 
     <h2 id="troubleshooting">If something goes wrong</h2>

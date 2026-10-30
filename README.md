@@ -1,6 +1,6 @@
-# harbormac.github.io
+# portnaut.com
 
-The website of [Harbor](https://harbormac.github.io), the free Mac app for playing Windows games,
+The website of [Portnaut](https://portnaut.com), the free Mac app for playing Windows games,
 made by Built by Argo.
 
 ## How it is built
@@ -32,5 +32,5 @@ set at the top of `src/build.py`; so is the site's address, for moving to a cust
 
 ## Licence
 
-© 2026 Built by Argo. Harbor is not affiliated with or endorsed by Apple, Valve, Electronic Arts,
+© 2026 Built by Argo. Portnaut is not affiliated with or endorsed by Apple, Valve, Electronic Arts,
 Ubisoft, Microsoft, CodeWeavers, Highball or Sikarugir; their names are trademarks of their owners.

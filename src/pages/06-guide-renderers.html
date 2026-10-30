@@ -1,32 +1,32 @@
 <!--page
 {"path": "/guides/dxmt-vs-d3dmetal-vs-dxvk/",
- "title": "DXMT vs D3DMetal vs DXVK: Which Renderer for Mac Games? – Harbor",
+ "title": "DXMT vs D3DMetal vs DXVK: Which Renderer on a Mac? – Portnaut",
  "social_title": "DXMT vs D3DMetal vs DXVK: which renderer for Windows games on a Mac",
  "image": "/assets/og-dxmt-vs-d3dmetal-vs-dxvk.jpg",
- "image_alt": "Harbor guide: DXMT, D3DMetal or DXVK?",
+ "image_alt": "Portnaut guide: DXMT, D3DMetal or DXVK?",
  "description": "DXMT, D3DMetal, DXVK or Wine's own: what each renderer does for Windows games on an Apple silicon Mac, which DirectX versions it covers, and which to pick.",
  "faq": true,
  "jsonld": [
   {"@type": "TechArticle", "@id": "{{site}}/guides/dxmt-vs-d3dmetal-vs-dxvk/#article", "headline": "DXMT vs D3DMetal vs DXVK: which renderer to use for Windows games on a Mac", "url": "{{site}}/guides/dxmt-vs-d3dmetal-vs-dxvk/", "inLanguage": "en", "datePublished": "2026-10-29", "dateModified": "2026-10-29", "image": ["{{site}}/assets/og-dxmt-vs-d3dmetal-vs-dxvk.jpg", "{{site}}/assets/bottles-1600.jpg"], "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}, "about": {"@id": "{{site}}/#app"}, "isPartOf": {"@id": "{{site}}/#website"}},
   {"@type": "BreadcrumbList", "itemListElement": [
-   {"@type": "ListItem", "position": 1, "name": "Harbor", "item": "{{site}}/"},
+   {"@type": "ListItem", "position": 1, "name": "Portnaut", "item": "{{site}}/"},
    {"@type": "ListItem", "position": 2, "name": "Guides", "item": "{{site}}/guides/"},
    {"@type": "ListItem", "position": 3, "name": "DXMT vs D3DMetal vs DXVK", "item": "{{site}}/guides/dxmt-vs-d3dmetal-vs-dxvk/"}]}
  ]}
 -->
 <div class="page-head">
   <div class="wrap narrow">
-    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Harbor</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">DXMT vs D3DMetal vs DXVK</li></ol></nav>
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Portnaut</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">DXMT vs D3DMetal vs DXVK</li></ol></nav>
     <h1>DXMT vs D3DMetal vs DXVK: which renderer to use</h1>
-    <p class="lead">Windows games draw with Microsoft's DirectX, and a Mac only draws with Apple's Metal. A renderer translates one into the other. Harbor ships four of them, and which one suits a game depends on its DirectX version and on whether it is 32-bit or 64-bit.</p>
-    <p class="tested">Tested with Harbor {{version}} on macOS 27.2 · Updated 29 October 2026</p>
+    <p class="lead">Windows games draw with Microsoft's DirectX, and a Mac only draws with Apple's Metal. A renderer translates one into the other. Portnaut ships four of them, and which one suits a game depends on its DirectX version and on whether it is 32-bit or 64-bit.</p>
+    <p class="tested">Tested with Portnaut {{version}} on macOS 27.2 · Updated 29 October 2026</p>
   </div>
 </div>
 
 <article class="prose">
   <div class="wrap narrow">
     <h2 id="short-answer">The short answer</h2>
-    <p>These are the rules Harbor itself uses when it recommends a renderer for a game:</p>
+    <p>These are the rules Portnaut itself uses when it recommends a renderer for a game:</p>
     <div class="table-wrap">
       <table>
         <thead><tr><th scope="col">The game uses</th><th scope="col">64-bit game</th><th scope="col">32-bit game</th></tr></thead>
@@ -50,10 +50,10 @@
     </ul>
 
     <h2 id="dxmt">DXMT</h2>
-    <p>DXMT is an open-source project that translates <strong>DirectX 10 and 11</strong> straight to Metal. It is Harbor's first choice for 64-bit DirectX 11 games, the largest group of current Windows games.</p>
+    <p>DXMT is an open-source project that translates <strong>DirectX 10 and 11</strong> straight to Metal. It is Portnaut's first choice for 64-bit DirectX 11 games, the largest group of current Windows games.</p>
     <ul>
       <li><strong>64-bit programs only.</strong> In a DXMT bottle, 32-bit programs, such as some launchers, keep using Wine's own Direct3D.</li>
-      <li><strong>Tested most:</strong> Assassin's Creed III Remastered plays through missions at about 60 fps on DXMT on an M4 Pro. Harbor adds a small fix for a Metal crash that game hit, so it runs without workarounds.</li>
+      <li><strong>Tested most:</strong> Assassin's Creed III Remastered plays through missions at about 60 fps on DXMT on an M4 Pro. Portnaut adds a small fix for a Metal crash that game hit, so it runs without workarounds.</li>
       <li><strong>MetalFX upscaling</strong> is available in DXMT bottles: the game renders at a lower resolution and MetalFX scales it up 2×, which helps in demanding games.</li>
     </ul>
 
@@ -61,12 +61,12 @@
     <p>D3DMetal is Apple's own translation, from its Game Porting Toolkit. It covers <strong>DirectX 11 and 12</strong>, so it is the renderer for DirectX 12 games.</p>
     <ul>
       <li><strong>64-bit programs only,</strong> like DXMT. 32-bit programs in a D3DMetal bottle use Wine's own Direct3D.</li>
-      <li><strong>New Steam and EA app bottles start on D3DMetal,</strong> because it covers both DirectX 11 and 12. Once you install a game, Harbor recommends a renderer for that game.</li>
-      <li><strong>It is not open source.</strong> Apple allows it to be passed on only unchanged and for non-commercial purposes, so Harbor downloads Apple's files as they are and stays free. See <a href="/download/#what-harbor-downloads">what Harbor downloads, and from whom</a>.</li>
+      <li><strong>New Steam and EA app bottles start on D3DMetal,</strong> because it covers both DirectX 11 and 12. Once you install a game, Portnaut recommends a renderer for that game.</li>
+      <li><strong>It is not open source.</strong> Apple allows it to be passed on only unchanged and for non-commercial purposes, so Portnaut downloads Apple's files as they are and stays free. See <a href="/download/#what-portnaut-downloads">what Portnaut downloads, and from whom</a>.</li>
     </ul>
 
     <h2 id="dxvk">DXVK</h2>
-    <p>DXVK translates <strong>DirectX 9, 10 and 11</strong> to Vulkan, and MoltenVK runs that Vulkan on Metal. Harbor uses DXVK for macOS for DirectX 10 and 11, and D9VK for DirectX 9.</p>
+    <p>DXVK translates <strong>DirectX 9, 10 and 11</strong> to Vulkan, and MoltenVK runs that Vulkan on Metal. Portnaut uses DXVK for macOS for DirectX 10 and 11, and D9VK for DirectX 9.</p>
     <ul>
       <li><strong>32-bit and 64-bit programs.</strong> That makes it the only fast option for 32-bit DirectX 10 and 11 games.</li>
       <li><strong>Two translation steps</strong> instead of one, so for 64-bit DirectX 11 games DXMT is usually the better start.</li>
@@ -76,40 +76,40 @@
     <h2 id="wined3d">Wine's own Direct3D (wined3d)</h2>
     <p>Wine's built-in Direct3D covers <strong>Direct3D 1 to 11</strong> over OpenGL. It has the widest compatibility and is the slowest for modern games.</p>
     <ul>
-      <li>Harbor's choice for <strong>DirectX 9 and older</strong> games, OpenGL games, and programs whose graphics Harbor can't identify.</li>
+      <li>Portnaut's choice for <strong>DirectX 9 and older</strong> games, OpenGL games, and programs whose graphics Portnaut can't identify.</li>
       <li>It is also what <strong>32-bit programs</strong> use inside DXMT and D3DMetal bottles, which is why Ubisoft Connect's sign-in works there.</li>
     </ul>
 
-    {{shot bottles "A Harbor bottle's Graphics section: the renderer list with DXMT selected, Harbor's recommendation, and the MetalFX upscaling and DLSS switches"}}
+    {{shot bottles "A Portnaut bottle's Graphics section: the renderer list with DXMT selected, Portnaut's recommendation, and the MetalFX upscaling and DLSS switches"}}
 
-    <h2 id="how-harbor-chooses">How Harbor chooses for you</h2>
-    <p>When you add or install a game, Harbor reads its program files to see which DirectX version it uses and whether it is 32-bit or 64-bit, then applies the rules in the table above. You'll see the recommendation, with the reason, in the bottle's <strong>Graphics</strong> section and next to the game in the library.</p>
+    <h2 id="how-portnaut-chooses">How Portnaut chooses for you</h2>
+    <p>When you add or install a game, Portnaut reads its program files to see which DirectX version it uses and whether it is 32-bit or 64-bit, then applies the rules in the table above. You'll see the recommendation, with the reason, in the bottle's <strong>Graphics</strong> section and next to the game in the library.</p>
     <p>The renderer applies to a <strong>whole bottle</strong>. If two games in one launcher want different renderers, give one of them a bottle of its own.</p>
 
     <h2 id="compare">Switch and compare</h2>
     <ol>
-      <li><strong>Play a while on the recommended renderer.</strong> Harbor records every session you start from its library: average and low frame rate, GPU time per frame, and the delay to the screen.</li>
+      <li><strong>Play a while on the recommended renderer.</strong> Portnaut records every session you start from its library: average and low frame rate, GPU time per frame, and the delay to the screen.</li>
       <li><strong>Switch.</strong> Pick another renderer in the bottle's Graphics section, or use the <strong>Not tried yet</strong> buttons in the game's Performance panel.</li>
       <li><strong>Play the same part again</strong> and compare the numbers side by side in the Performance panel.</li>
     </ol>
-    <p>If a game crashes or shows a black screen, trying the other renderer that Harbor lists for it is the first thing to do.</p>
+    <p>If a game crashes or shows a black screen, trying the other renderer that Portnaut lists for it is the first thing to do.</p>
 
     <h2 id="metalfx-dlss">MetalFX and DLSS</h2>
     <p><strong>MetalFX upscaling</strong> (in DXMT bottles) lets a game render fewer pixels and scales the image up with Apple's MetalFX, for a higher frame rate at a small cost in sharpness.</p>
-    <p><strong>DLSS</strong> (in DXMT and D3DMetal bottles) lets games that support NVIDIA's DLSS use MetalFX in its place. This is new: Harbor has checked it with Steam's interface, but not yet in a game.</p>
+    <p><strong>DLSS</strong> (in DXMT and D3DMetal bottles) lets games that support NVIDIA's DLSS use MetalFX in its place. This is new: Portnaut has checked it with Steam's interface, but not yet in a game.</p>
 
     <h2 id="faq">Questions</h2>
     <details>
       <summary>Is DXMT better than D3DMetal?</summary>
-      <p>For 64-bit DirectX 10 and 11 games, DXMT is usually the first choice, and it is the renderer Harbor has tested most. D3DMetal is the one for DirectX 12 games, and the one to try when a DirectX 11 game misbehaves on DXMT.</p>
+      <p>For 64-bit DirectX 10 and 11 games, DXMT is usually the first choice, and it is the renderer Portnaut has tested most. D3DMetal is the one for DirectX 12 games, and the one to try when a DirectX 11 game misbehaves on DXMT.</p>
     </details>
     <details>
       <summary>Does DXVK work on a Mac?</summary>
-      <p>Yes, through MoltenVK, which runs Vulkan on Metal. Harbor uses DXVK for macOS for DirectX 10 and 11 and D9VK for DirectX 9. It is the fast option for 32-bit games, which DXMT and D3DMetal don't cover.</p>
+      <p>Yes, through MoltenVK, which runs Vulkan on Metal. Portnaut uses DXVK for macOS for DirectX 10 and 11 and D9VK for DirectX 9. It is the fast option for 32-bit games, which DXMT and D3DMetal don't cover.</p>
     </details>
     <details>
       <summary>Can a Mac run DirectX 12 games?</summary>
-      <p>That is what D3DMetal, Apple's translation from the Game Porting Toolkit, is for, and Harbor picks it for 64-bit DirectX 12 games. How well a particular game runs depends on the game; Harbor hasn't tested a DirectX 12 game in depth yet. Games with kernel-level anti-cheat don't run under Wine at all, whichever renderer you choose.</p>
+      <p>That is what D3DMetal, Apple's translation from the Game Porting Toolkit, is for, and Portnaut picks it for 64-bit DirectX 12 games. How well a particular game runs depends on the game; Portnaut hasn't tested a DirectX 12 game in depth yet. Games with kernel-level anti-cheat don't run under Wine at all, whichever renderer you choose.</p>
     </details>
     <details>
       <summary>Which renderer is best for older games?</summary>

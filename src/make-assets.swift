@@ -5,7 +5,7 @@ import AppKit
 import ImageIO
 import UniformTypeIdentifiers
 
-let page = NSColor(srgbRed: 0x11 / 255.0, green: 0x1B / 255.0, blue: 0x20 / 255.0, alpha: 1)
+let page = NSColor(srgbRed: 0x0B / 255.0, green: 0x10 / 255.0, blue: 0x26 / 255.0, alpha: 1)
 let root = URL(fileURLWithPath: CommandLine.arguments[0]).deletingLastPathComponent()
 let out = root.appendingPathComponent("assets/generated")
 try? FileManager.default.createDirectory(at: out, withIntermediateDirectories: true)
@@ -39,20 +39,20 @@ for size in [32, 180, 512] {
     write(render(width: size, height: size, background: size == 180 ? page : nil) { $0.draw(icon, in: CGRect(x: 0, y: 0, width: size, height: size)) }, "icon-\(size).png", jpeg: false)
 }
 
-func font(_ size: CGFloat, _ weight: NSFont.Weight, serif: Bool) -> NSFont {
+func font(_ size: CGFloat, _ weight: NSFont.Weight, display: Bool) -> NSFont {
     let base = NSFont.systemFont(ofSize: size, weight: weight)
-    return serif ? NSFont(descriptor: base.fontDescriptor.withDesign(.serif)!, size: size)! : base
+    return display ? NSFont(descriptor: base.fontDescriptor.withDesign(.rounded)!, size: size)! : base
 }
-let accent = NSColor(srgbRed: 0.93, green: 0.59, blue: 0.35, alpha: 1)
-let muted = NSColor(srgbRed: 0.57, green: 0.66, blue: 0.68, alpha: 1)
+let accent = NSColor(srgbRed: 1.0, green: 0.541, blue: 0.239, alpha: 1)
+let muted = NSColor(srgbRed: 0.604, green: 0.639, blue: 0.780, alpha: 1)
 
 // Link preview card: icon, name and line on the page colour.
 let card = render(width: 1200, height: 630, background: page) { ctx in
     ctx.draw(icon, in: CGRect(x: 110, y: 175, width: 280, height: 280))
     NSGraphicsContext.current = NSGraphicsContext(cgContext: ctx, flipped: false)
-    NSAttributedString(string: "Harbor", attributes: [.font: font(108, .medium, serif: true), .foregroundColor: NSColor.white]).draw(at: CGPoint(x: 450, y: 330))
-    NSAttributedString(string: "Windows games on your Mac.", attributes: [.font: font(44, .regular, serif: false), .foregroundColor: accent]).draw(at: CGPoint(x: 454, y: 262))
-    NSAttributedString(string: "Free for Apple silicon · harbormac.github.io", attributes: [.font: font(28, .regular, serif: false), .foregroundColor: muted]).draw(at: CGPoint(x: 456, y: 205))
+    NSAttributedString(string: "Portnaut", attributes: [.font: font(108, .bold, display: true), .foregroundColor: NSColor.white]).draw(at: CGPoint(x: 450, y: 330))
+    NSAttributedString(string: "Windows games on your Mac.", attributes: [.font: font(44, .regular, display: false), .foregroundColor: accent]).draw(at: CGPoint(x: 454, y: 262))
+    NSAttributedString(string: "Free for Apple silicon · portnaut.com", attributes: [.font: font(28, .regular, display: false), .foregroundColor: muted]).draw(at: CGPoint(x: 456, y: 205))
 }
 write(card, "og-image.png", jpeg: false)
 
@@ -72,9 +72,9 @@ for (slug, title, shot) in guides {
         ctx.restoreGState()
         ctx.draw(icon, in: CGRect(x: 72, y: 486, width: 64, height: 64))
         NSGraphicsContext.current = NSGraphicsContext(cgContext: ctx, flipped: false)
-        NSAttributedString(string: "Harbor guide", attributes: [.font: font(30, .semibold, serif: false), .foregroundColor: accent]).draw(at: CGPoint(x: 152, y: 498))
-        NSAttributedString(string: title, attributes: [.font: font(62, .medium, serif: true), .foregroundColor: NSColor.white]).draw(with: CGRect(x: 72, y: 190, width: 510, height: 250), options: [.usesLineFragmentOrigin])
-        NSAttributedString(string: "Free for Apple silicon · harbormac.github.io", attributes: [.font: font(24, .regular, serif: false), .foregroundColor: muted]).draw(at: CGPoint(x: 74, y: 80))
+        NSAttributedString(string: "Portnaut guide", attributes: [.font: font(30, .semibold, display: false), .foregroundColor: accent]).draw(at: CGPoint(x: 152, y: 498))
+        NSAttributedString(string: title, attributes: [.font: font(62, .bold, display: true), .foregroundColor: NSColor.white]).draw(with: CGRect(x: 72, y: 190, width: 510, height: 250), options: [.usesLineFragmentOrigin])
+        NSAttributedString(string: "Free for Apple silicon · portnaut.com", attributes: [.font: font(24, .regular, display: false), .foregroundColor: muted]).draw(at: CGPoint(x: 74, y: 80))
     }
     write(guideCard, "og-\(slug).jpg", jpeg: true)
 }

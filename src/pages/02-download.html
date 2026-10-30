@@ -1,23 +1,23 @@
 <!--page
 {"path": "/download/",
- "title": "Download Harbor for Mac – Free Windows Game Launcher",
- "description": "Download Harbor {{version}}, the free app for playing Windows games on Apple silicon Macs. Requirements, install steps, first launch, and how to uninstall.",
+ "title": "Download Portnaut for Mac – Free Windows Game Launcher",
+ "description": "Download Portnaut {{version}}, the free app for playing Windows games on Apple silicon Macs. Requirements, install steps, first launch, and how to uninstall.",
  "jsonld": [
-  {"@type": "WebPage", "@id": "{{site}}/download/#page", "url": "{{site}}/download/", "name": "Download Harbor for Mac", "isPartOf": {"@id": "{{site}}/#website"}, "about": {"@id": "{{site}}/#app"}},
+  {"@type": "WebPage", "@id": "{{site}}/download/#page", "url": "{{site}}/download/", "name": "Download Portnaut for Mac", "isPartOf": {"@id": "{{site}}/#website"}, "about": {"@id": "{{site}}/#app"}},
   {"@type": "BreadcrumbList", "itemListElement": [
-   {"@type": "ListItem", "position": 1, "name": "Harbor", "item": "{{site}}/"},
+   {"@type": "ListItem", "position": 1, "name": "Portnaut", "item": "{{site}}/"},
    {"@type": "ListItem", "position": 2, "name": "Download", "item": "{{site}}/download/"}]}
  ]}
 -->
 <div class="page-head">
   <div class="wrap narrow">
-    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Harbor</a></li><li aria-current="page">Download</li></ol></nav>
-    <h1>Download Harbor for Mac</h1>
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Portnaut</a></li><li aria-current="page">Download</li></ol></nav>
+    <h1>Download Portnaut for Mac</h1>
     <p class="lead">The free app for playing Windows games on Apple silicon. Version {{version}}, early access.</p>
     <div class="download-card">
       <div>
-        <div class="version">Harbor {{version}}</div>
-        <p>Harbor-{{version}}.zip · 1.8 MB · macOS 14.6 or later · Apple silicon</p>
+        <div class="version">Portnaut {{version}}</div>
+        <p>Portnaut-{{version}}.zip · 3.0 MB · macOS 14.6 or later · Apple silicon</p>
       </div>
       <div class="actions">
         <a class="button primary" href="{{download_url}}" rel="noopener">Download from GitHub</a>
@@ -34,39 +34,39 @@
     <ul class="checks">
       <li>A Mac with Apple silicon: M1 or later. Intel Macs are not supported.</li>
       <li>macOS 14.6 or later.</li>
-      <li>Rosetta, which Harbor's Wine runs through. Harbor tells you if it is missing (<a href="#rosetta">how to install it</a>).</li>
+      <li>Rosetta, which Portnaut's Wine runs through. Portnaut tells you if it is missing (<a href="#rosetta">how to install it</a>).</li>
       <li>About 3 GB of free space to set up, plus room for your games, and an internet connection.</li>
     </ul>
 
-    <h2 id="install">Install Harbor</h2>
+    <h2 id="install">Install Portnaut</h2>
     <ol>
-      <li><strong>Download</strong> <code>Harbor-{{version}}.zip</code> from the <a href="{{download_url}}" rel="noopener">latest release on GitHub</a>.</li>
-      <li><strong>Open the zip</strong> and move <strong>Harbor</strong> to your Applications folder.</li>
-      <li><strong>Open Harbor.</strong> The first time, macOS stops it; see <a href="#open-anyway">the next section</a>.</li>
-      <li><strong>Choose Prepare Harbor.</strong> Harbor downloads Wine and the renderers once (a few hundred MB), checks each against its SHA-256 checksum, and sets them up in <code>~/Library/Application Support/Harbor</code>.</li>
+      <li><strong>Download</strong> <code>Portnaut-{{version}}.zip</code> from the <a href="{{download_url}}" rel="noopener">latest release on GitHub</a>.</li>
+      <li><strong>Open the zip</strong> and move <strong>Portnaut</strong> to your Applications folder.</li>
+      <li><strong>Open Portnaut.</strong> The first time, macOS stops it; see <a href="#open-anyway">the next section</a>.</li>
+      <li><strong>Choose Prepare Portnaut.</strong> Portnaut downloads Wine and the renderers once (a few hundred MB), checks each against its SHA-256 checksum, and sets them up in <code>~/Library/Application Support/Portnaut</code>.</li>
       <li><strong>Choose Bottles › New Bottle…</strong>, pick Steam, the EA app, Ubisoft Connect or an empty bottle, and follow the <a href="/guides/">guide for your launcher</a>.</li>
     </ol>
 
-    <h2 id="open-anyway">“Harbor” can't be opened: allowing it the first time</h2>
-    <p>Harbor is not notarized by Apple yet, so the first time you open it, macOS says it can't check the app and doesn't open it. You allow it once:</p>
+    <h2 id="open-anyway">“Portnaut” can't be opened: allowing it the first time</h2>
+    <p>Portnaut is not notarized by Apple yet, so the first time you open it, macOS says it can't check the app and doesn't open it. You allow it once:</p>
     <ol>
-      <li>Try to open Harbor, then close the message.</li>
+      <li>Try to open Portnaut, then close the message.</li>
       <li>Open <strong>System Settings › Privacy &amp; Security</strong> and scroll down to <strong>Security</strong>.</li>
-      <li>Next to the message about Harbor, choose <strong>Open Anyway</strong>, then confirm with your password or Touch ID.</li>
+      <li>Next to the message about Portnaut, choose <strong>Open Anyway</strong>, then confirm with your password or Touch ID.</li>
     </ol>
-    <p>From then on Harbor opens like any other app.</p>
+    <p>From then on Portnaut opens like any other app.</p>
 
     <h2 id="rosetta">Installing Rosetta</h2>
-    <p>Rosetta lets Apple silicon Macs run apps made for Intel processors. The Windows compatibility layer Harbor uses (Wine) runs through it, while Harbor itself runs natively. If Rosetta is missing, Harbor says so before setting up. To install it, open Terminal and run:</p>
+    <p>Rosetta lets Apple silicon Macs run apps made for Intel processors. The Windows compatibility layer Portnaut uses (Wine) runs through it, while Portnaut itself runs natively. If Rosetta is missing, Portnaut says so before setting up. To install it, open Terminal and run:</p>
     <p><code>softwareupdate --install-rosetta</code></p>
-    <p>Accept Apple's licence when Terminal asks, then choose Prepare Harbor again.</p>
+    <p>Accept Apple's licence when Terminal asks, then choose Prepare Portnaut again.</p>
 
     <h2 id="checksum">Check your download</h2>
-    <p>To make sure the file you downloaded is the one published, open Terminal in the folder with the zip and run <code>shasum -a 256 Harbor-{{version}}.zip</code>. The result must be:</p>
+    <p>To make sure the file you downloaded is the one published, open Terminal in the folder with the zip and run <code>shasum -a 256 Portnaut-{{version}}.zip</code>. The result must be:</p>
     <code class="checksum">{{zip_sha256}}</code>
 
-    <h2 id="what-harbor-downloads">What Harbor downloads, and from whom</h2>
-    <p>Harbor itself contains only its own code. When you ask it to, it downloads:</p>
+    <h2 id="what-portnaut-downloads">What Portnaut downloads, and from whom</h2>
+    <p>Portnaut itself contains only its own code. When you ask it to, it downloads:</p>
     <div class="table-wrap">
       <table>
         <thead><tr><th scope="col">What</th><th scope="col">From</th><th scope="col">Licence</th></tr></thead>
@@ -74,17 +74,17 @@
           <tr><td>Wine 11, DXMT and MoltenVK</td><td>Highball's public releases on GitHub (Wine built from the sources CodeWeavers publishes)</td><td>LGPL, Apache-2.0</td></tr>
           <tr><td>D3DMetal, DXVK, GStreamer, SDL and support libraries</td><td>The Sikarugir project's public template on GitHub</td><td>Apple's Game Porting Toolkit licence for D3DMetal; open-source licences for the rest</td></tr>
           <tr><td>Steam, the EA app, Ubisoft Connect</td><td>Valve, Electronic Arts and Ubisoft</td><td>Their own terms, shown by their installers</td></tr>
-          <tr><td>Visual C++, .NET and DirectX components</td><td>Microsoft</td><td>Microsoft's terms; Harbor asks you to accept them first</td></tr>
+          <tr><td>Visual C++, .NET and DirectX components</td><td>Microsoft</td><td>Microsoft's terms; Portnaut asks you to accept them first</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="muted" style="margin-top:16px">D3DMetal is Apple's, from the Game Porting Toolkit, licensed for non-commercial use in developing, testing and evaluating games on Apple hardware. Harbor is free and non-commercial and installs it unmodified.</p>
+    <p class="muted" style="margin-top:16px">D3DMetal is Apple's, from the Game Porting Toolkit, licensed for non-commercial use in developing, testing and evaluating games on Apple hardware. Portnaut is free and non-commercial and installs it unmodified.</p>
 
-    <h2 id="uninstall">Uninstall Harbor</h2>
+    <h2 id="uninstall">Uninstall Portnaut</h2>
     <ol>
-      <li>Quit Harbor and move it from Applications to the Trash.</li>
-      <li>To remove your bottles too, including installed games and their saves, move <code>~/Library/Application Support/Harbor</code> to the Trash. In Finder, choose <strong>Go › Go to Folder…</strong> and paste that path.</li>
-      <li>If you made save backups, they are in <code>~/Documents/Harbor Backups</code>.</li>
+      <li>Quit Portnaut and move it from Applications to the Trash.</li>
+      <li>To remove your bottles too, including installed games and their saves, move <code>~/Library/Application Support/Portnaut</code> to the Trash. In Finder, choose <strong>Go › Go to Folder…</strong> and paste that path.</li>
+      <li>If you made save backups, they are in <code>~/Documents/Portnaut Backups</code>.</li>
     </ol>
   </div>
 </article>

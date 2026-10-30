@@ -1,12 +1,12 @@
 <!--page
 {"path": "/",
- "title": "Harbor – Play Windows Games on Your Mac, Free",
- "social_title": "Harbor: play Windows games on your Mac",
- "description": "Harbor is a free Mac app for playing Windows games on Apple silicon: Steam, the EA app, Ubisoft Connect and more, with DirectX translated to Metal.",
+ "title": "Portnaut – Play Windows Games on Your Mac, Free",
+ "social_title": "Portnaut: play Windows games on your Mac",
+ "description": "Portnaut is a free Mac app for playing Windows games on Apple silicon: Steam, the EA app, Ubisoft Connect and more, with DirectX translated to Metal.",
  "jsonld": [
-  {"@type": "WebSite", "@id": "{{site}}/#website", "url": "{{site}}/", "name": "Harbor", "inLanguage": "en", "publisher": {"@id": "{{site}}/#builtbyargo"}},
+  {"@type": "WebSite", "@id": "{{site}}/#website", "url": "{{site}}/", "name": "Portnaut", "inLanguage": "en", "publisher": {"@id": "{{site}}/#builtbyargo"}},
   {"@type": "Organization", "@id": "{{site}}/#builtbyargo", "name": "Built by Argo", "email": "{{support_email}}", "logo": "{{site}}/built-by-argo.png", "url": "https://github.com/BuiltByArgo", "sameAs": ["https://github.com/BuiltByArgo", "{{kofi_url}}"]},
-  {"@type": "SoftwareApplication", "@id": "{{site}}/#app", "name": "Harbor", "url": "{{site}}/",
+  {"@type": "SoftwareApplication", "@id": "{{site}}/#app", "name": "Portnaut", "url": "{{site}}/",
    "description": "A free Mac app for playing Windows games on Apple silicon. It runs game launchers and games in separate Windows environments with Wine, and translates DirectX to Metal with DXMT, D3DMetal or DXVK.",
    "applicationCategory": "GameApplication", "applicationSubCategory": "Windows game compatibility",
    "operatingSystem": "macOS 14.6 or later on Apple silicon", "softwareVersion": "{{version}}",
@@ -22,13 +22,13 @@
   <div class="wrap">
     <span class="eyebrow">Free · For Apple silicon · Early access</span>
     <h1>Play Windows games on your Mac</h1>
-    <p class="lead">Harbor runs Steam, the EA app, Ubisoft Connect and other Windows games on Apple silicon Macs. It uses Wine and translates DirectX to Apple's Metal, and it is free and open source.</p>
+    <p class="lead">Portnaut runs Steam, the EA app, Ubisoft Connect and other Windows games on Apple silicon Macs. It uses Wine and translates DirectX to Apple's Metal, and it is free and open source.</p>
     <div class="actions">
-      <a class="button primary" href="/download/">Download Harbor {{version}}</a>
-      <a class="button kofi" href="{{kofi_url}}" rel="noopener">Support Harbor on Ko-fi</a>
+      <a class="button primary" href="/download/">Download Portnaut {{version}}</a>
+      <a class="button kofi" href="{{kofi_url}}" rel="noopener">Support Portnaut on Ko-fi</a>
     </div>
     <p class="facts">macOS 14.6 or later · M1 or later · No account, no tracking</p>
-    <div class="hero-shot">{{shot library "Harbor's library on a Mac, with Assassin's Creed III Remastered ready to play" eager}}</div>
+    <div class="hero-shot">{{shot library "Portnaut's library on a Mac, with Assassin's Creed III Remastered ready to play" eager}}</div>
   </div>
 </section>
 
@@ -39,9 +39,9 @@
       <h2>From download to playing in three steps</h2>
     </div>
     <ol class="steps">
-      <li><h3>Prepare Harbor</h3><p>On first launch, Harbor downloads Wine and its graphics translators once, checks each against a published SHA-256 checksum, and keeps them in its own folder.</p></li>
-      <li><h3>Create a bottle</h3><p>A bottle is a separate Windows environment. Pick Steam, the EA app or Ubisoft Connect and Harbor installs it from the publisher's own installer, or run any Windows installer you have.</p></li>
-      <li><h3>Play</h3><p>Your games appear in Harbor's library. Press Play, or start them from their launcher just as you would on a PC.</p></li>
+      <li><h3>Prepare Portnaut</h3><p>On first launch, Portnaut downloads Wine and its graphics translators once, checks each against a published SHA-256 checksum, and keeps them in its own folder.</p></li>
+      <li><h3>Create a bottle</h3><p>A bottle is a separate Windows environment. Pick Steam, the EA app or Ubisoft Connect and Portnaut installs it from the publisher's own installer, or run any Windows installer you have.</p></li>
+      <li><h3>Play</h3><p>Your games appear in Portnaut's library. Press Play, or start them from their launcher just as you would on a PC.</p></li>
     </ol>
   </div>
 </section>
@@ -51,37 +51,37 @@
     <div class="section-head">
       <span class="eyebrow">Features</span>
       <h2>What a Windows game needs, in a Mac app</h2>
-      <p class="lead">No Terminal, no Wine prefixes to manage by hand. Harbor sets things up and tells you why.</p>
+      <p class="lead">No Terminal, no Wine prefixes to manage by hand. Portnaut sets things up and tells you why.</p>
     </div>
     <div class="feature">
       <div class="feature-text">
         <h3>The right renderer for every game</h3>
-        <p>Each bottle uses one of four ways to turn Direct3D into Apple's Metal: DXMT, D3DMetal, DXVK or Wine's own. Harbor reads a game's files, sees which DirectX version it uses, and recommends the renderer that suits it, with the reason.</p>
+        <p>Each bottle uses one of four ways to turn Direct3D into Apple's Metal: DXMT, D3DMetal, DXVK or Wine's own. Portnaut reads a game's files, sees which DirectX version it uses, and recommends the renderer that suits it, with the reason.</p>
         <p>MetalFX upscaling, and DLSS through MetalFX for games that offer it, are there to try too (experimental).</p>
       </div>
-      {{shot bottles "A Harbor bottle's graphics settings: DXMT selected, Harbor's recommendation, and the MetalFX upscaling and DLSS switches"}}
+      {{shot bottles "A Portnaut bottle's graphics settings: DXMT selected, Portnaut's recommendation, and the MetalFX upscaling and DLSS switches"}}
     </div>
     <div class="feature flip">
       <div class="feature-text">
         <h3>Settings for each game</h3>
         <p>Launch arguments, the Windows version a game sees, DLL overrides for mods, and environment variables, set per game in a clear sheet. Nothing to edit by hand in Wine's registry.</p>
       </div>
-      {{shot game-settings "A game's settings in Harbor: name, launch arguments, Windows version, DLL overrides and environment variables"}}
+      {{shot game-settings "A game's settings in Portnaut: name, launch arguments, Windows version, DLL overrides and environment variables"}}
     </div>
     <div class="feature">
       <div class="feature-text">
         <h3>Snapshots and save backups</h3>
-        <p>Before every risky change, Harbor takes a snapshot of the whole bottle: an instant copy that takes no extra space until something changes. If an update or a mod goes wrong, put the bottle back as it was.</p>
+        <p>Before every risky change, Portnaut takes a snapshot of the whole bottle: an instant copy that takes no extra space until something changes. If an update or a mod goes wrong, put the bottle back as it was.</p>
         <p>Back up your game saves to your Documents folder in one click.</p>
       </div>
-      {{shot snapshots "A Harbor bottle's snapshots and save backups, with automatic snapshots taken before updates"}}
+      {{shot snapshots "A Portnaut bottle's snapshots and save backups, with automatic snapshots taken before updates"}}
     </div>
     <div class="feature flip">
       <div class="feature-text">
         <h3>Components that stay up to date</h3>
-        <p>New versions of Wine and the graphics translators install from inside Harbor, after a snapshot of every bottle, with a way back if a new version doesn't suit your games.</p>
+        <p>New versions of Wine and the graphics translators install from inside Portnaut, after a snapshot of every bottle, with a way back if a new version doesn't suit your games.</p>
       </div>
-      {{shot component-updates "Harbor's Component Updates window comparing the installed and available versions of Wine, DXMT, D3DMetal, DXVK and MoltenVK"}}
+      {{shot component-updates "Portnaut's Component Updates window comparing the installed and available versions of Wine, DXMT, D3DMetal, DXVK and MoltenVK"}}
     </div>
   </div>
 </section>
@@ -92,12 +92,12 @@
       <h2>And there's more</h2>
     </div>
     <div class="grid">
-      <div class="card"><span class="tag">Launchers</span><h3>Steam, EA app and Ubisoft Connect</h3><p>Installed from their publishers' own installers. Steam and EA app games join Harbor's library as soon as they finish installing.</p></div>
-      <div class="card"><span class="tag">Installers</span><h3>Any Windows installer</h3><p>Choose an .exe or .msi, or drop it on Harbor's window. Harbor runs it in a bottle and lists the programs it installed.</p></div>
+      <div class="card"><span class="tag">Launchers</span><h3>Steam, EA app and Ubisoft Connect</h3><p>Installed from their publishers' own installers. Steam and EA app games join Portnaut's library as soon as they finish installing.</p></div>
+      <div class="card"><span class="tag">Installers</span><h3>Any Windows installer</h3><p>Choose an .exe or .msi, or drop it on Portnaut's window. Portnaut runs it in a bottle and lists the programs it installed.</p></div>
       <div class="card"><span class="tag">Controllers</span><h3>Your controller, as an Xbox pad</h3><p>Xbox, PlayStation, Switch and most other controllers are recognised through SDL and shown to games as an Xbox controller.</p></div>
       <div class="card"><span class="tag">Components</span><h3>Windows runtimes in one click</h3><p>Visual C++ runtimes, .NET Desktop Runtime 8 and the DirectX helper libraries, downloaded from Microsoft.</p></div>
       <div class="card"><span class="tag">Performance</span><h3>Measured, not guessed</h3><p>Average and low frame rate and GPU time for every session you play, so you can compare renderers side by side.</p></div>
-      <div class="card"><span class="tag">Privacy</span><h3>No account, no tracking</h3><p>Harbor has no analytics. It only connects to the internet to download what you ask for.</p></div>
+      <div class="card"><span class="tag">Privacy</span><h3>No account, no tracking</h3><p>Portnaut has no analytics. It only connects to the internet to download what you ask for.</p></div>
     </div>
   </div>
 </section>
@@ -106,7 +106,7 @@
   <div class="wrap narrow">
     <div class="section-head">
       <span class="eyebrow">Renderers</span>
-      <h2>How Harbor turns DirectX into Metal</h2>
+      <h2>How Portnaut turns DirectX into Metal</h2>
       <p class="lead">Windows games draw with Microsoft's DirectX; Macs draw with Metal. A renderer translates between the two, and each suits different games.</p>
     </div>
     <div class="table-wrap">
@@ -127,9 +127,9 @@
 <section class="alt tight" id="requirements">
   <div class="wrap narrow center">
     <h2>Ready to play?</h2>
-    <p class="lead">Harbor needs a Mac with Apple silicon (M1 or later), macOS 14.6 or later, Rosetta, and about 3 GB of free space plus room for your games.</p>
+    <p class="lead">Portnaut needs a Mac with Apple silicon (M1 or later), macOS 14.6 or later, Rosetta, and about 3 GB of free space plus room for your games.</p>
     <div class="actions">
-      <a class="button primary" href="/download/">Download Harbor {{version}}</a>
+      <a class="button primary" href="/download/">Download Portnaut {{version}}</a>
       <a class="button secondary" href="/guides/">Read the guides</a>
     </div>
   </div>
@@ -138,9 +138,9 @@
 <section id="faq">
   <div class="wrap narrow">
     <div class="section-head"><h2>Questions</h2></div>
-    <details><summary>Is Harbor really free?</summary><p>Yes. Harbor is free and open-source software under the MIT licence. You can support its development on Ko-fi if you like; donations are optional and unlock nothing.</p></details>
-    <details><summary>Do I need a copy of Windows?</summary><p>No. Harbor uses Wine, which provides the parts of Windows that games and launchers use. You only need the games themselves, from Steam, EA, Ubisoft or elsewhere.</p></details>
-    <details><summary>Does it work on Intel Macs?</summary><p>No. Harbor is made for Macs with Apple silicon (M1 or later) running macOS 14.6 or later.</p></details>
+    <details><summary>Is Portnaut really free?</summary><p>Yes. Portnaut is free and open-source software under the MIT licence. You can support its development on Ko-fi if you like; donations are optional and unlock nothing.</p></details>
+    <details><summary>Do I need a copy of Windows?</summary><p>No. Portnaut uses Wine, which provides the parts of Windows that games and launchers use. You only need the games themselves, from Steam, EA, Ubisoft or elsewhere.</p></details>
+    <details><summary>Does it work on Intel Macs?</summary><p>No. Portnaut is made for Macs with Apple silicon (M1 or later) running macOS 14.6 or later.</p></details>
     <p><a href="/faq/">All questions and answers</a></p>
   </div>
 </section>
@@ -149,10 +149,10 @@
   <div class="wrap">
     <div class="support-band">
       <div>
-        <h2>Support Harbor</h2>
-        <p>Harbor is free. If you enjoy it, you can support its development on Ko-fi. Donations are optional and unlock nothing: every feature is for everyone. Questions? Email <a href="mailto:{{support_email}}">{{support_email}}</a>.</p>
+        <h2>Support Portnaut</h2>
+        <p>Portnaut is free. If you enjoy it, you can support its development on Ko-fi. Donations are optional and unlock nothing: every feature is for everyone. Questions? Email <a href="mailto:{{support_email}}">{{support_email}}</a>.</p>
       </div>
-      <div class="actions"><a class="button kofi" href="{{kofi_url}}" rel="noopener">Support Harbor on Ko-fi</a></div>
+      <div class="actions"><a class="button kofi" href="{{kofi_url}}" rel="noopener">Support Portnaut on Ko-fi</a></div>
     </div>
   </div>
 </section>
