@@ -4,18 +4,22 @@
  "social_title": "Portnaut: play Windows games on your Mac",
  "description": "Portnaut is a free Mac app for playing Windows games on Apple silicon: Steam, the EA app, Ubisoft Connect and more, with DirectX translated to Metal.",
  "jsonld": [
-  {"@type": "WebSite", "@id": "{{site}}/#website", "url": "{{site}}/", "name": "Portnaut", "inLanguage": "en", "publisher": {"@id": "{{site}}/#builtbyargo"}},
+  {"@type": "WebSite", "@id": "{{site}}/#website", "url": "{{site}}/", "name": "Portnaut", "alternateName": ["Portnaut for Mac"], "inLanguage": "en", "publisher": {"@id": "{{site}}/#builtbyargo"}},
   {"@type": "Organization", "@id": "{{site}}/#builtbyargo", "name": "Built by Argo", "email": "{{support_email}}", "logo": "{{site}}/built-by-argo.png", "url": "https://github.com/BuiltByArgo", "sameAs": ["https://github.com/BuiltByArgo", "{{kofi_url}}"]},
   {"@type": "SoftwareApplication", "@id": "{{site}}/#app", "name": "Portnaut", "url": "{{site}}/",
    "description": "A free Mac app for playing Windows games on Apple silicon. It runs game launchers and games in separate Windows environments with Wine, and translates DirectX to Metal with DXMT, D3DMetal or DXVK.",
    "applicationCategory": "GameApplication", "applicationSubCategory": "Windows game compatibility",
    "operatingSystem": "macOS 14.6 or later on Apple silicon", "softwareVersion": "{{version}}",
    "downloadUrl": "{{download_url}}", "isAccessibleForFree": true, "license": "https://opensource.org/license/mit",
+   "sameAs": ["{{source_url}}"],
    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
    "image": "{{site}}/assets/icon-512.png",
    "screenshot": ["{{site}}/assets/library-1600.jpg", "{{site}}/assets/bottles-1600.jpg", "{{site}}/assets/game-settings-1600.jpg"],
    "featureList": ["Steam, EA app and Ubisoft Connect on Mac", "DXMT, D3DMetal, DXVK and Wine renderers with a recommendation per game", "Per-game settings", "Controller support through SDL", "Bottle snapshots and save backups", "Component updates with roll back"],
-   "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}}
+   "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}},
+  {"@type": "SoftwareSourceCode", "@id": "{{site}}/#source", "name": "Portnaut source code", "codeRepository": "{{source_url}}",
+   "programmingLanguage": "Swift", "runtimePlatform": "macOS", "license": "https://opensource.org/license/mit",
+   "author": {"@id": "{{site}}/#builtbyargo"}, "targetProduct": {"@id": "{{site}}/#app"}}
  ]}
 -->
 <section class="hero">

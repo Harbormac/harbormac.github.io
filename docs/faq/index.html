@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Portnaut FAQ – Windows Games on a Mac, Answered</title>
-<meta name="description" content="Is Portnaut free? Which Macs and games does it support? Do you need Windows, and is it safe? Answers about playing Windows games on a Mac with Portnaut.">
+<meta name="description" content="Is Portnaut free, and is it an emulator? Which Macs and games work, can it open .exe files, and is it safe? Answers about Windows games on a Mac.">
 <link rel="canonical" href="https://portnaut.com/faq/">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#111b20">
@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="Portnaut">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="Portnaut FAQ – Windows Games on a Mac, Answered">
-<meta property="og:description" content="Is Portnaut free? Which Macs and games does it support? Do you need Windows, and is it safe? Answers about playing Windows games on a Mac with Portnaut.">
+<meta property="og:description" content="Is Portnaut free, and is it an emulator? Which Macs and games work, can it open .exe files, and is it safe? Answers about Windows games on a Mac.">
 <meta property="og:url" content="https://portnaut.com/faq/">
 <meta property="og:image" content="https://portnaut.com/assets/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -25,7 +25,7 @@
 <meta property="og:image:alt" content="Portnaut: Windows games on your Mac">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Portnaut FAQ – Windows Games on a Mac, Answered">
-<meta name="twitter:description" content="Is Portnaut free? Which Macs and games does it support? Do you need Windows, and is it safe? Answers about playing Windows games on a Mac with Portnaut.">
+<meta name="twitter:description" content="Is Portnaut free, and is it an emulator? Which Macs and games work, can it open .exe files, and is it safe? Answers about Windows games on a Mac.">
 <meta name="twitter:image" content="https://portnaut.com/assets/og-image.png">
 <meta name="twitter:image:alt" content="Portnaut: Windows games on your Mac">
 <script type="application/ld+json">
@@ -66,6 +66,22 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Portnaut runs Windows games and game launchers on a Mac. It uses Wine, which provides the parts of Windows that programs rely on, and a renderer that translates the games' DirectX graphics to Apple's Metal. Portnaut sets all of this up for you, recommends settings per game, and keeps your games in a library."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is Portnaut a Windows emulator?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No, though it does the job people look for in one. An emulator imitates a whole PC, which is slow. Portnaut uses Wine, which provides the parts of Windows that programs call directly on macOS, so no copy of Windows runs at all. On Apple silicon, Apple's Rosetta translates a game's Intel code, and a renderer translates its DirectX graphics to Metal. For games this is usually faster than running Windows in an emulator or a virtual machine."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can Portnaut open .exe files?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Choose Install from File… or drop an .exe or .msi file on Portnaut's window. Portnaut runs it in a bottle and lists the programs it installed, which you can then add to your library. Most Windows installers and games work this way; programs that need Windows drivers, such as kernel-level anti-cheat, do not."
      }
     },
     {
@@ -229,6 +245,8 @@
     <h2 id="basics">The basics</h2>
     <details id="free"><summary>Is Portnaut free?</summary><p>Yes. Portnaut is free and open-source software under the MIT licence, made by Built by Argo. You can support its development on Ko-fi if you like; donations are optional and unlock nothing, so every feature is for everyone.</p></details>
     <details id="what-is-portnaut"><summary>What does Portnaut do?</summary><p>Portnaut runs Windows games and game launchers on a Mac. It uses Wine, which provides the parts of Windows that programs rely on, and a renderer that translates the games' DirectX graphics to Apple's Metal. Portnaut sets all of this up for you, recommends settings per game, and keeps your games in a library.</p></details>
+    <details id="emulator"><summary>Is Portnaut a Windows emulator?</summary><p>No, though it does the job people look for in one. An emulator imitates a whole PC, which is slow. Portnaut uses Wine, which provides the parts of Windows that programs call directly on macOS, so no copy of Windows runs at all. On Apple silicon, Apple's Rosetta translates a game's Intel code, and a renderer translates its DirectX graphics to Metal. For games this is usually faster than running Windows in an emulator or a virtual machine.</p></details>
+    <details id="exe-files"><summary>Can Portnaut open .exe files?</summary><p>Yes. Choose Install from File… or drop an .exe or .msi file on Portnaut's window. Portnaut runs it in a bottle and lists the programs it installed, which you can then add to your library. Most Windows installers and games work this way; programs that need Windows drivers, such as kernel-level anti-cheat, do not.</p></details>
     <details id="windows-licence"><summary>Do I need a copy of Windows?</summary><p>No. Wine is not Windows and needs no Windows licence. You only need the games themselves, from Steam, EA, Ubisoft or elsewhere.</p></details>
     <details id="which-macs"><summary>Which Macs does Portnaut run on?</summary><p>Macs with Apple silicon (M1 or later) running macOS 14.6 or later. Intel Macs are not supported. Portnaut also needs Rosetta, which it tells you how to install if it is missing.</p></details>
     <details id="bottle"><summary>What is a bottle?</summary><p>A bottle is a separate Windows environment with its own programs, settings and renderer. Portnaut keeps each launcher, or a game that needs different settings, in its own bottle, so they don't affect each other.</p></details>
