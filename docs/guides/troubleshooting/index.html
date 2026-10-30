@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Windows Games on Mac Not Working? Troubleshooting – Portnaut</title>
+<meta name="description" content="Fixes for common problems with Windows games on a Mac in Portnaut: the app won&#x27;t open, Rosetta, black screens, crashes, launchers, controllers and slow games.">
+<link rel="canonical" href="https://portnaut.com/guides/troubleshooting/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#111b20">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-512.png" type="image/png" sizes="512x512">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="stylesheet" href="/assets/style.css?v=9169c18739">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Portnaut">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Windows games on a Mac not working? Fixes for common problems">
+<meta property="og:description" content="Fixes for common problems with Windows games on a Mac in Portnaut: the app won&#x27;t open, Rosetta, black screens, crashes, launchers, controllers and slow games.">
+<meta property="og:url" content="https://portnaut.com/guides/troubleshooting/">
+<meta property="og:image" content="https://portnaut.com/assets/og-troubleshooting.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Portnaut guide: troubleshooting">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Windows games on a Mac not working? Fixes for common problems">
+<meta name="twitter:description" content="Fixes for common problems with Windows games on a Mac in Portnaut: the app won&#x27;t open, Rosetta, black screens, crashes, launchers, controllers and slow games.">
+<meta name="twitter:image" content="https://portnaut.com/assets/og-troubleshooting.jpg">
+<meta name="twitter:image:alt" content="Portnaut guide: troubleshooting">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "TechArticle",
+   "@id": "https://portnaut.com/guides/troubleshooting/#article",
+   "headline": "Windows games on a Mac not working? Fixes for common problems",
+   "url": "https://portnaut.com/guides/troubleshooting/",
+   "inLanguage": "en",
+   "datePublished": "2026-10-30",
+   "dateModified": "2026-10-30",
+   "image": [
+    "https://portnaut.com/assets/og-troubleshooting.jpg",
+    "https://portnaut.com/assets/snapshots-1600.jpg"
+   ],
+   "author": {
+    "@id": "https://portnaut.com/#builtbyargo"
+   },
+   "publisher": {
+    "@id": "https://portnaut.com/#builtbyargo"
+   },
+   "about": {
+    "@id": "https://portnaut.com/#app"
+   },
+   "isPartOf": {
+    "@id": "https://portnaut.com/#website"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Portnaut",
+     "item": "https://portnaut.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Guides",
+     "item": "https://portnaut.com/guides/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Troubleshooting",
+     "item": "https://portnaut.com/guides/troubleshooting/"
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="nav wrap" aria-label="Main">
+    <a class="brand" href="/"><img src="/assets/icon-512.png" width="30" height="30" alt=""><span>Portnaut</span></a>
+    <ul class="nav-links">
+      <li><a href="/#features">Features</a></li>
+      <li><a href="/guides/">Guides</a></li>
+      <li><a href="/faq/">FAQ</a></li>
+      <li><a class="button primary" href="/download/">Download</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main">
+<div class="page-head">
+  <div class="wrap narrow">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Portnaut</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">Troubleshooting</li></ol></nav>
+    <h1>Troubleshooting Windows games on a Mac</h1>
+    <p class="lead">Fixes for the problems people run into most with Portnaut, from the first start to a game that crashes. Find your problem below; each fix uses the same names you see in the app.</p>
+    <p class="tested">Tested with Portnaut 0.8.0 on macOS 27.2 · Updated 30 October 2026</p>
+  </div>
+</div>
+
+<article class="prose">
+  <div class="wrap narrow">
+    <p><strong>On this page:</strong> <a href="#cant-be-opened">Portnaut can't be opened</a> · <a href="#rosetta">Rosetta</a> · <a href="#greyed-out">Greyed-out buttons</a> · <a href="#integrity-check">Failed download</a> · <a href="#black-screen">Black screen or crash</a> · <a href="#missing-components">Missing DLL errors</a> · <a href="#not-in-library">Game not in the library</a> · <a href="#launchers">Launchers</a> · <a href="#anti-cheat">Anti-cheat</a> · <a href="#controller">Controllers</a> · <a href="#slow">Slow games</a> · <a href="#after-update">After an update</a> · <a href="#get-help">Get help</a></p>
+
+    <h2 id="cant-be-opened">“Portnaut” can't be opened</h2>
+    <p>Portnaut isn't notarized by Apple yet, so macOS can't check it and won't open it the first time. Nothing is wrong with your download. Allow it once:</p>
+    <ol>
+      <li>Try to open Portnaut, then close the message.</li>
+      <li>Open <strong>System Settings › Privacy &amp; Security</strong> and scroll down to <strong>Security</strong>.</li>
+      <li>Next to the message about Portnaut, choose <strong>Open Anyway</strong>, then confirm with your password or Touch ID.</li>
+    </ol>
+    <p>To make sure the file is the one published, <a href="/download/#checksum">check your download's checksum</a>.</p>
+
+    <h2 id="rosetta">Portnaut says Rosetta isn't installed</h2>
+    <p>Wine, which runs the Windows programs, needs Apple's Rosetta on a Mac with Apple silicon. Portnaut itself doesn't. To install Rosetta, open Terminal and run:</p>
+    <p><code>softwareupdate --install-rosetta</code></p>
+    <p>Accept Apple's licence when Terminal asks, then choose <strong>Prepare Portnaut</strong> again.</p>
+
+    <h2 id="greyed-out">Install from File and other buttons are greyed out</h2>
+    <p>Portnaut hasn't been prepared yet. Choose <strong>Prepare Portnaut</strong> in the Library; it downloads Wine and the renderers once. Until then, Install from File, new bottles and launching games stay unavailable. Some buttons are also greyed out while a session runs: stop the session first to switch renderer or take a snapshot.</p>
+
+    <h2 id="integrity-check">A download “failed its integrity check”</h2>
+    <p>Portnaut checks every download against its published SHA-256 checksum before installing it. When a file doesn't match, often because the download was interrupted, Portnaut installs nothing. It's safe to retry. If it keeps failing, <a href="#get-help">send diagnostics</a>.</p>
+
+    <h2 id="black-screen">A game shows a black screen or crashes at start</h2>
+    <p>Most of the time the renderer is the cause. Try these in order:</p>
+    <ol>
+      <li><strong>Try the other recommended renderer.</strong> Stop the session, then choose another renderer in the bottle's <strong>Graphics</strong> section. To keep the working setup untouched, try it in a second bottle instead. <a href="/guides/dxmt-vs-d3dmetal-vs-dxvk/">Which renderer suits which game</a>.</li>
+      <li><strong>Check the game's bitness.</strong> DXMT and D3DMetal cover 64-bit games only. For 32-bit DirectX 9 to 11 games, DXVK is the fast option.</li>
+      <li><strong>Turn on Advertise AVX instructions</strong> in the bottle's <strong>Performance &amp; input lag</strong> section. Some newer games refuse to start without AVX. Rosetta translates those instructions but only reports them when asked.</li>
+      <li><strong>If the game hangs,</strong> turn off <strong>MSync</strong> in the bottle's <strong>Windows</strong> section to rule it out, and turn it back on if that doesn't help.</li>
+    </ol>
+    <p>Before changing settings in a bottle with games you care about, take a snapshot: <strong>Snapshots &amp; backups › Take Snapshot…</strong> in the bottle.</p>
+    <img class="shot" src="/assets/snapshots-1600.jpg" srcset="/assets/snapshots-800.jpg 800w, /assets/snapshots-1600.jpg 1600w" sizes="(max-width: 1080px) 100vw, 1040px" width="1600" height="1166" alt="A Portnaut bottle&#x27;s snapshots and save backups, with automatic snapshots taken before updates" loading="lazy" decoding="async">
+
+    <h2 id="missing-components">A program says a DLL is missing</h2>
+    <p>Messages about files such as <code>MSVCP140.dll</code>, <code>MSVCR120.dll</code> or <code>d3dx9_43.dll</code>, or about .NET, mean the program expects parts that Windows PCs usually have installed. Add them from the bottle's <strong>Windows components</strong> section:</p>
+    <ul>
+      <li><strong>Visual C++ 2015–2022</strong> for <code>msvcp140</code> and <code>vcruntime140</code>, <strong>Visual C++ 2013</strong> for <code>msvcp120</code> and <code>msvcr120</code>, and <strong>Visual C++ 2010</strong> for <code>msvcp100</code> and <code>msvcr100</code>;</li>
+      <li><strong>DirectX 9–11 helper libraries</strong> for <code>d3dx9</code>, <code>d3dx10</code>, <code>d3dx11</code> and <code>d3dcompiler</code> files;</li>
+      <li><strong>.NET Desktop Runtime 8</strong> for tools built on .NET 8, such as many mod managers. Older .NET Framework programs use Wine Mono, which is built in.</li>
+    </ul>
+    <p>Portnaut downloads these from Microsoft and asks you to accept Microsoft's terms first.</p>
+
+    <h2 id="not-in-library">An installed game isn't in the library</h2>
+    <ul>
+      <li>In the bottle, choose <strong>Programs › Find Programs</strong>. Portnaut lists the programs installed in the bottle, so you can add the game.</li>
+      <li>If it isn't listed, choose <strong>Programs › Add Game…</strong> and pick the game's .exe inside the bottle's Windows drive.</li>
+      <li>If Portnaut says a game's Windows program could not be found, the game has been moved or uninstalled. Reinstall it through its launcher, or add it again with <strong>Add Game…</strong>.</li>
+    </ul>
+
+    <h2 id="launchers">Steam, the EA app or Ubisoft Connect won't open or sign in</h2>
+    <ul>
+      <li><strong>Ubisoft Connect sign-in doesn't load:</strong> check the bottle isn't on DXVK, then open Ubisoft Connect again. <a href="/guides/ubisoft-connect-on-mac/">Ubisoft Connect guide</a>.</li>
+      <li><strong>The EA app doesn't open or a game crashes at start:</strong> the EA app is the launcher Portnaut has tested least. Try the other recommended renderer in a second bottle, or turn on Advertise AVX instructions. <a href="/guides/ea-app-on-mac/">EA app guide</a>.</li>
+      <li><strong>Steam:</strong> a Steam bottle starts on D3DMetal. If Steam itself misbehaves after a component update, roll back (see <a href="#after-update">after an update</a>). <a href="/guides/steam-on-mac/">Steam guide</a>.</li>
+    </ul>
+    <p>If a launcher worked before and stopped, <a href="#after-update">restore a snapshot</a> from before the problem started.</p>
+
+    <h2 id="anti-cheat">An online game with anti-cheat won't start</h2>
+    <p>Games with kernel-level anti-cheat, such as many competitive shooters, Battlefield and EA Sports FC, don't run under Wine, whatever the settings. No fix in Portnaut changes that. A cloud gaming service may offer them. <a href="/guides/windows-emulator-for-mac/#cloud-gaming">More about cloud gaming</a>.</p>
+
+    <h2 id="controller">A controller isn't detected</h2>
+    <ol>
+      <li>Connect the controller to the Mac first, in <strong>System Settings › Bluetooth</strong> or with a cable. It then shows in the bottle's <strong>Controllers</strong> section.</li>
+      <li>Keep <strong>Recognise controllers with SDL</strong> on. SDL knows the layouts of Xbox, PlayStation, Switch and most other controllers.</li>
+      <li>Most games expect an Xbox controller, so keep <strong>Show controllers as Xbox controllers (XInput)</strong> on. Turn it off for games that want to see each controller as it is.</li>
+      <li>Choose <strong>Test in Windows…</strong> to check that Windows sees the controller.</li>
+    </ol>
+    <p>These settings apply when the bottle's next session starts. Steam games can also use Steam Input on top.</p>
+
+    <h2 id="slow">A game runs slowly</h2>
+    <ul>
+      <li><strong>Measure first:</strong> turn on <strong>Show Metal performance HUD</strong> in the bottle's Performance &amp; input lag section to see the frame rate in the game.</li>
+      <li><strong>Compare renderers:</strong> Portnaut records the frame rate of every session. The game's page in the Library shows the results per renderer, and suggests one you haven't tried yet.</li>
+      <li><strong>Render fewer pixels:</strong> with <strong>High Resolution Mode</strong> off, games render a quarter of the pixels: much faster, with a softer image. In DXMT bottles, <strong>MetalFX upscaling</strong> keeps that speed and upscales the picture to full Retina detail.</li>
+      <li><strong>Lower the input lag:</strong> turn off VSync in the game, leave the frame rate limit off and turn on <strong>Reduce frame queue</strong>.</li>
+    </ul>
+
+    <h2 id="after-update">A game stopped working after an update</h2>
+    <ul>
+      <li><strong>After a component update:</strong> open <strong>Check for Component Updates…</strong> in the Portnaut menu and choose <strong>Roll Back…</strong> to return to the previous Wine and renderers.</li>
+      <li><strong>After a change in the bottle:</strong> in the bottle's <strong>Snapshots &amp; backups</strong>, choose <strong>Restore…</strong> next to a snapshot from before the problem. Portnaut takes snapshots automatically before updates.</li>
+      <li><strong>Saves:</strong> <strong>Back Up Saves</strong> copies a bottle's saves to <code>~/Documents/Portnaut Backups</code>, and <strong>Restore…</strong> puts them back.</li>
+    </ul>
+
+    <h2 id="get-help">Still stuck? Send diagnostics</h2>
+    <ol>
+      <li>Open <strong>Diagnostics</strong> in Portnaut's sidebar and choose <strong>Export diagnostics…</strong>.</li>
+      <li>Read through the report before you send it. Logs stay on your Mac until you do.</li>
+      <li>Email it to <a href="mailto:builtbyargo@proton.me">builtbyargo@proton.me</a>, with the game, the bottle's renderer and what happened.</li>
+    </ol>
+
+    <p>Next: <a href="/guides/dxmt-vs-d3dmetal-vs-dxvk/">DXMT vs D3DMetal vs DXVK</a> · <a href="/guides/install-wine-on-mac/">Install Wine on a Mac</a> · <a href="/faq/">FAQ</a></p>
+  </div>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="/"><img src="/assets/icon-512.png" width="30" height="30" alt=""><span>Portnaut</span></a>
+        <p>Play Windows games on your Mac. Free and open source, made by Built by Argo.</p>
+      </div>
+      <nav aria-label="Portnaut">
+        <p class="footer-title">Portnaut</p>
+        <ul>
+          <li><a href="/download/">Download</a></li>
+          <li><a href="/whats-new/">What's new</a></li>
+          <li><a href="/#features">Features</a></li>
+          <li><a href="/faq/">FAQ</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/privacy/">Privacy</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Guides">
+        <p class="footer-title">Guides</p>
+        <ul>
+          <li><a href="/guides/steam-on-mac/">Steam on Mac</a></li>
+          <li><a href="/guides/ubisoft-connect-on-mac/">Ubisoft Connect on Mac</a></li>
+          <li><a href="/guides/ea-app-on-mac/">EA app on Mac</a></li>
+          <li><a href="/guides/dxmt-vs-d3dmetal-vs-dxvk/">DXMT vs D3DMetal vs DXVK</a></li>
+          <li><a href="/guides/open-exe-files-on-mac/">Open .exe files on a Mac</a></li>
+          <li><a href="/guides/windows-emulator-for-mac/">Windows emulator for Mac?</a></li>
+          <li><a href="/guides/game-porting-toolkit/">Game Porting Toolkit</a></li>
+          <li><a href="/guides/install-wine-on-mac/">Install Wine on a Mac</a></li>
+          <li><a href="/guides/troubleshooting/" aria-current="page">Troubleshooting</a></li>
+          <li><a href="/guides/">All guides</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="footer-title">Support</p>
+        <ul>
+          <li><a href="mailto:builtbyargo@proton.me">builtbyargo@proton.me</a></li>
+          <li><a href="https://ko-fi.com/A2H229BWWV" rel="noopener">Support Portnaut on Ko-fi</a></li>
+          <li><a href="https://github.com/BuiltByArgo/Portnaut" rel="noopener">Source code on GitHub</a></li>
+          <li><a href="https://github.com/BuiltByArgo/Portnaut/releases" rel="noopener">Releases on GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="legal">© 2026 Built by Argo. Portnaut is an independent project, not affiliated with or endorsed by Apple, Valve, Electronic Arts, Ubisoft, Microsoft, CodeWeavers, Highball or Sikarugir. Steam, EA, Ubisoft Connect, Assassin's Creed, Apple, Mac, macOS, Metal and MetalFX are trademarks of their owners.</p>
+  </div>
+</footer>
+</body>
+</html>
