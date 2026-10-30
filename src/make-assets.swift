@@ -65,7 +65,8 @@ let guides = [("steam-on-mac", "Steam games on a Mac", "game-settings"),
               ("windows-emulator-for-mac", "Windows emulator for Mac?", "game-settings"),
               ("game-porting-toolkit", "Game Porting Toolkit, without Terminal", "component-updates"),
               ("install-wine-on-mac", "Install Wine on a Mac, without Homebrew", "bottles"),
-              ("troubleshooting", "Troubleshooting Windows games on a Mac", "snapshots")]
+              ("troubleshooting", "Troubleshooting Windows games on a Mac", "snapshots"),
+              ("whisky-alternative", "Free alternatives to Whisky", "library")]
 for (slug, title, shot) in guides {
     let image = load(shots.appendingPathComponent("\(shot).png"))
     let guideCard = render(width: 1200, height: 630, background: page) { ctx in

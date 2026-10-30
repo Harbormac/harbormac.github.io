@@ -1,0 +1,111 @@
+<!--page
+{"path": "/guides/whisky-alternative/",
+ "title": "Free Whisky Alternatives for Mac (Windows Games) – Portnaut",
+ "social_title": "Whisky is no longer maintained: free alternatives for Windows games on a Mac",
+ "image": "/assets/og-whisky-alternative.jpg",
+ "image_alt": "Portnaut guide: free alternatives to Whisky",
+ "description": "Whisky is no longer maintained. Compare the free alternatives for playing Windows games on an Apple silicon Mac, and how to move your games to Portnaut.",
+ "faq": true,
+ "jsonld": [
+  {"@type": "TechArticle", "@id": "{{site}}/guides/whisky-alternative/#article", "headline": "Whisky is no longer maintained: free alternatives for Windows games on a Mac", "url": "{{site}}/guides/whisky-alternative/", "inLanguage": "en", "datePublished": "2026-10-30", "dateModified": "2026-10-30", "image": ["{{site}}/assets/og-whisky-alternative.jpg", "{{site}}/assets/library-1600.jpg"], "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}, "about": {"@id": "{{site}}/#app"}, "isPartOf": {"@id": "{{site}}/#website"}},
+  {"@type": "BreadcrumbList", "itemListElement": [
+   {"@type": "ListItem", "position": 1, "name": "Portnaut", "item": "{{site}}/"},
+   {"@type": "ListItem", "position": 2, "name": "Guides", "item": "{{site}}/guides/"},
+   {"@type": "ListItem", "position": 3, "name": "Whisky alternatives", "item": "{{site}}/guides/whisky-alternative/"}]}
+ ]}
+-->
+<div class="page-head">
+  <div class="wrap narrow">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Portnaut</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">Whisky alternatives</li></ol></nav>
+    <h1>Free alternatives to Whisky for Mac</h1>
+    <p class="lead">Whisky, the free Wine app many Mac gamers used, is no longer maintained. If you want a free replacement to keep playing Windows games, these are the options that are still being developed, Portnaut among them.</p>
+    <p class="tested">Updated 30 October 2026 · Portnaut {{version}}</p>
+  </div>
+</div>
+
+<article class="prose">
+  <div class="wrap narrow">
+    <h2 id="what-happened">What happened to Whisky</h2>
+    <p>In April 2025, Whisky's developer announced that it is no longer actively maintained. According to the project's maintenance notice:</p>
+    <ul>
+      <li>its Wine build gets no further updates and won't move to Wine 8 or later;</li>
+      <li>no more fixes are made for specific apps and games, Steam included;</li>
+      <li>apps and games may break at any time, for example after a macOS update.</li>
+    </ul>
+    <p>The original repository was archived in May 2025. Whisky may still run your games today, but nothing gets fixed when they stop working.</p>
+
+    <h2 id="at-a-glance">The free alternatives at a glance</h2>
+    <p>All three run Windows games on a Mac with Apple silicon through Wine 11, are free, and are open source.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th scope="col"></th><th scope="col">Portnaut</th><th scope="col">Highball</th><th scope="col">Whisky community fork</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Launchers set up for you</strong></td><td>Steam, the EA app, Ubisoft Connect</td><td>Steam; Epic Games accounts through Legendary</td><td>Steam, Epic, the EA app, Battle.net</td></tr>
+          <tr><td><strong>Renderers</strong></td><td>DXMT, D3DMetal, DXVK and Wine's own, recommended per game</td><td>DXMT, D3DMetal, DXVK, chosen per game from a compatibility database</td><td>D3DMetal, DXVK</td></tr>
+          <tr><td><strong>macOS</strong></td><td>14.6 or later</td><td>14 or later</td><td>15 or later</td></tr>
+          <tr><td><strong>Licence</strong></td><td>MIT</td><td>GPL-3.0</td><td>GPL-3.0</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul>
+      <li><strong>Portnaut</strong> keeps each launcher in its own bottle, recommends a renderer for each game, and takes snapshots before risky changes. More below.</li>
+      <li><strong>Highball</strong> sets up Steam and Epic games. Portnaut downloads its Wine from Highball's public builds.</li>
+      <li><strong>The Whisky community fork</strong> continues Whisky's code with a newer Wine. It looks and works most like the Whisky you know.</li>
+    </ul>
+    <p>Other free tools fill narrower roles:</p>
+    <ul>
+      <li><strong>Heroic Games Launcher</strong> is for Epic, GOG and Amazon games, and runs them with Wine or Apple's Game Porting Toolkit.</li>
+      <li><strong>Sikarugir</strong>, the successor to Wineskin, turns a single Windows game into its own Mac app. Portnaut uses renderer packages from its public template.</li>
+      <li><strong>Porting Kit</strong> installs ready-made ports of Windows games.</li>
+    </ul>
+
+    <h2 id="portnaut">Portnaut as a Whisky alternative</h2>
+    <p>If you used Whisky for Steam, the EA app or Ubisoft Connect, Portnaut covers the same ground:</p>
+    <ul>
+      <li><strong>Bottles,</strong> like Whisky's: <strong>Bottles › New Bottle…</strong> creates one ready for Steam, the EA app or Ubisoft Connect, or an empty one for anything else.</li>
+      <li><strong>A renderer recommendation for every game.</strong> Portnaut reads each game's .exe and suggests DXMT, D3DMetal, DXVK or Wine's own. <a href="/guides/dxmt-vs-d3dmetal-vs-dxvk/">How the renderers compare</a>.</li>
+      <li><strong>Wine 11 that keeps updating,</strong> through Component Updates, with a snapshot of your bottles first and roll back if a game stops working.</li>
+      <li><strong>Snapshots and save backups</strong> per bottle.</li>
+      <li><strong>Any Windows installer</strong> through <strong>Install from File…</strong>, and Windows components such as Visual C++ and .NET from Microsoft.</li>
+      <li><strong>Controllers</strong> through SDL, with a test panel.</li>
+    </ul>
+    <p>Where it's weaker, honestly: Portnaut is in early access and not yet notarized by Apple. It has no ready-made bottle for the Epic Games Launcher or Battle.net. The EA app is the launcher it has tested least, and it hasn't tested a DirectX 12 game in depth yet. It's tested most with Ubisoft Connect and Assassin's Creed III Remastered, which plays at about 60 fps on an M4 Pro.</p>
+    {{shot library "Portnaut's library, with Install from File… at the top right of the window"}}
+
+    <h2 id="moving">Moving your games from Whisky to Portnaut</h2>
+    <p>Portnaut doesn't import Whisky bottles, but you don't have to give Whisky up first: the two keep separate folders and can be installed side by side.</p>
+    <ol>
+      <li><strong><a href="/download/">Download Portnaut</a></strong>, open it and choose <strong>Prepare Portnaut</strong>.</li>
+      <li><strong>Create a bottle for your launcher</strong> with <strong>Bottles › New Bottle…</strong>, install the launcher and sign in.</li>
+      <li><strong>Get your games back.</strong> The simplest way is to install them again through the launcher. Saves that the launcher syncs to its cloud come back by themselves.</li>
+      <li><strong>Large games:</strong> to save a long download, copy the game's folder from your Whisky bottle's C: drive into the Portnaut bottle's (<strong>Programs › Open C: Drive in Finder</strong>), then point the launcher at it. Ubisoft Connect has <strong>Locate installed game</strong> for this. Steam checks files already in its <code>steamapps/common</code> folder when you choose Install, and downloads only what's missing.</li>
+      <li><strong>Saves that aren't in the cloud:</strong> copy the game's save folder from the Whisky bottle's C: drive to the matching folder in the Portnaut bottle's. The Windows user folder may have a different name in each.</li>
+    </ol>
+    <p>Before you remove Whisky, play each game once in Portnaut to check it runs and your saves are there.</p>
+
+    <h2 id="faq">Questions</h2>
+    <details>
+      <summary>Can I still use Whisky?</summary>
+      <p>It may still run your games, but it gets no Wine updates or game fixes, and its notice warns that apps and games may break at any time. A maintained alternative is the safer choice for the long run.</p>
+    </details>
+    <details>
+      <summary>Is Portnaut a fork of Whisky?</summary>
+      <p>No. Portnaut is its own app, written in Swift and open source under the MIT licence. It uses Wine from Highball's public builds and renderer packages from the Sikarugir project's template.</p>
+    </details>
+    <details>
+      <summary>Is there a free alternative to Whisky?</summary>
+      <p>Yes. Portnaut, Highball and the Whisky community fork are all free and open source, and all run Windows games on Apple silicon through Wine 11.</p>
+    </details>
+    <details>
+      <summary>Can I keep Whisky and Portnaut on the same Mac?</summary>
+      <p>Yes. Portnaut keeps its Wine and bottles in its own folder, <code>~/Library/Application Support/Portnaut</code>, and doesn't touch Whisky's.</p>
+    </details>
+    <details>
+      <summary>Does Portnaut run on Intel Macs?</summary>
+      <p>No. Portnaut needs a Mac with Apple silicon (M1 or later) and macOS 14.6 or later.</p>
+    </details>
+
+    <p>Next: <a href="/guides/steam-on-mac/">Steam on Mac</a> · <a href="/guides/install-wine-on-mac/">Install Wine on a Mac</a> · <a href="/guides/windows-emulator-for-mac/">Windows emulator for Mac?</a></p>
+    <p class="muted"><small>Whisky, Highball, Heroic Games Launcher, Sikarugir, Porting Kit, Steam, Epic Games and Battle.net are the names or trademarks of their owners. Portnaut is not affiliated with them. Facts about other apps come from their own websites and repositories, checked on 30 October 2026.</small></p>
+  </div>
+</article>
