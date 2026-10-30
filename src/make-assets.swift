@@ -60,7 +60,8 @@ write(card, "og-image.png", jpeg: false)
 let guides = [("steam-on-mac", "Steam games on a Mac", "game-settings"),
               ("ubisoft-connect-on-mac", "Ubisoft Connect games on a Mac", "library"),
               ("ea-app-on-mac", "The EA app on a Mac", "component-updates"),
-              ("dxmt-vs-d3dmetal-vs-dxvk", "DXMT, D3DMetal or DXVK?", "bottles")]
+              ("dxmt-vs-d3dmetal-vs-dxvk", "DXMT, D3DMetal or DXVK?", "bottles"),
+              ("open-exe-files-on-mac", "Open .exe files on a Mac", "library")]
 for (slug, title, shot) in guides {
     let image = load(shots.appendingPathComponent("\(shot).png"))
     let guideCard = render(width: 1200, height: 630, background: page) { ctx in

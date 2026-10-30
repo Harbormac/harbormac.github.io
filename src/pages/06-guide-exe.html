@@ -1,0 +1,89 @@
+<!--page
+{"path": "/guides/open-exe-files-on-mac/",
+ "title": "How to Open .exe Files on a Mac (Apple Silicon) – Portnaut",
+ "social_title": "How to open .exe files on a Mac, free",
+ "image": "/assets/og-open-exe-files-on-mac.jpg",
+ "image_alt": "Portnaut guide: open .exe files on a Mac",
+ "description": "Run Windows .exe and .msi files on an Apple silicon Mac for free: why macOS can't open them, and how to run installers and games with Portnaut.",
+ "faq": true,
+ "jsonld": [
+  {"@type": "TechArticle", "@id": "{{site}}/guides/open-exe-files-on-mac/#article", "headline": "How to open .exe files on a Mac", "url": "{{site}}/guides/open-exe-files-on-mac/", "inLanguage": "en", "datePublished": "2026-10-30", "dateModified": "2026-10-30", "image": ["{{site}}/assets/og-open-exe-files-on-mac.jpg", "{{site}}/assets/library-1600.jpg"], "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}, "about": {"@id": "{{site}}/#app"}, "isPartOf": {"@id": "{{site}}/#website"}},
+  {"@type": "BreadcrumbList", "itemListElement": [
+   {"@type": "ListItem", "position": 1, "name": "Portnaut", "item": "{{site}}/"},
+   {"@type": "ListItem", "position": 2, "name": "Guides", "item": "{{site}}/guides/"},
+   {"@type": "ListItem", "position": 3, "name": "Open .exe files on a Mac", "item": "{{site}}/guides/open-exe-files-on-mac/"}]}
+ ]}
+-->
+<div class="page-head">
+  <div class="wrap narrow">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Portnaut</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">Open .exe files on a Mac</li></ol></nav>
+    <h1>How to open .exe files on a Mac</h1>
+    <p class="lead">An .exe file is a Windows program, so double-clicking it on a Mac does nothing useful. With Portnaut you can run Windows installers and programs on an Apple silicon Mac for free, without installing Windows.</p>
+    <p class="tested">Tested with Portnaut {{version}} on macOS 27.2 · Updated 30 October 2026</p>
+  </div>
+</div>
+
+<article class="prose">
+  <div class="wrap narrow">
+    <h2 id="why">Why your Mac can't open an .exe</h2>
+    <p>An .exe (and its installer cousin, the .msi) is built for Windows: it expects Windows' system files and, usually, an Intel processor. macOS has neither, so it can't start one. To run it you need something that provides the parts of Windows the program calls.</p>
+    <p>Portnaut does that with <strong>Wine</strong>, which provides those parts directly on macOS, so no copy of Windows runs and you need no Windows licence. On Apple silicon, Apple's Rosetta translates the program's Intel code, and for games a renderer translates DirectX graphics to Metal.</p>
+
+    <h2 id="before-you-start">Before you start</h2>
+    <p><a href="/download/">Download and install Portnaut</a>, open it, and choose <strong>Prepare Portnaut</strong>. That needs a Mac with Apple silicon (M1 or later), macOS 14.6 or later, and Rosetta. Install from File stays greyed out until Portnaut is prepared.</p>
+
+    <h2 id="installers">Run an installer (.exe or .msi)</h2>
+    <p>Most Windows software comes as an installer. To run one:</p>
+    <ol>
+      <li><strong>Choose Install from File…</strong> at the top right of Portnaut's window (or press ⌘I), and pick the .exe or .msi. You can also drop the file onto Portnaut's window.</li>
+      <li><strong>Choose where it goes.</strong> In the <strong>Install a Windows Program</strong> sheet, pick an existing bottle or <strong>New Bottle</strong>. A bottle is a separate Windows environment, so the program stays apart from everything else. For a new bottle you can choose its renderer and the Windows version programs see; the defaults are fine for most software.</li>
+      <li><strong>Click Install</strong> and go through the installer as you would on a PC. While it runs, its own folder appears to Windows as drive H:, so installers that come with extra files beside them work too.</li>
+      <li><strong>Choose what goes in your library.</strong> When the installer has finished, Portnaut lists the programs it installed, each with the renderer it recommends. Tick the ones you want and click the <strong>Add … to Library</strong> button, which shows how many you ticked.</li>
+      <li><strong>Play</strong> from Portnaut's library. Programs you didn't add stay in the bottle; <strong>Programs › Find Programs</strong> lists them again later.</li>
+    </ol>
+    {{shot library "Portnaut's library, with Install from File… at the top right of the window"}}
+
+    <h2 id="portable">Run a program that doesn't need installing</h2>
+    <p>Some games and tools are just a folder with an .exe inside. Those go into a bottle's Windows drive first:</p>
+    <ol>
+      <li>In <strong>Bottles</strong>, select a bottle (or create one with <strong>New Bottle…</strong>).</li>
+      <li>Choose <strong>Programs › Open C: Drive in Finder</strong> and copy the program's folder into it, for example into <code>Program Files</code>.</li>
+      <li>Choose <strong>Programs › Add Game…</strong> and pick the program's .exe. It joins your library.</li>
+    </ol>
+
+    <h2 id="what-works">Which .exe files work</h2>
+    <ul>
+      <li><strong>Usually work:</strong> game installers, game launchers, and many Windows games and tools. For launchers, Portnaut also has ready-made bottles: see the guides for <a href="/guides/steam-on-mac/">Steam</a>, <a href="/guides/ea-app-on-mac/">the EA app</a> and <a href="/guides/ubisoft-connect-on-mac/">Ubisoft Connect</a>.</li>
+      <li><strong>Sometimes need extra pieces:</strong> programs that ask for the Visual C++ runtimes, .NET or DirectX helper libraries. Add them from the bottle's Windows components, which Portnaut downloads from Microsoft.</li>
+      <li><strong>Don't work:</strong> anything that installs Windows drivers, including games with kernel-level anti-cheat, and Windows system tools. Every program is different, so if one fails, try a new bottle with another renderer.</li>
+    </ul>
+
+    <h2 id="other-ways">Other ways to run Windows programs on a Mac</h2>
+    <ul>
+      <li><strong>A virtual machine</strong> runs a whole copy of Windows for Arm inside macOS. It works with almost any program, but needs a Windows licence, plenty of memory and disk space, and many games run slower or not at all.</li>
+      <li><strong>Cloud gaming</strong> streams games running on someone else's PC. It works only for the games a service offers, and needs a fast connection.</li>
+      <li><strong>Boot Camp</strong> installs Windows next to macOS, but only on Intel Macs. Apple silicon Macs can't use it.</li>
+    </ul>
+    <p>For games and everyday Windows programs, Portnaut's approach is free, needs no Windows licence, and keeps each program in its own bottle.</p>
+
+    <h2 id="faq">Questions</h2>
+    <details>
+      <summary>Is it safe to open .exe files on a Mac?</summary>
+      <p>Only run Windows programs you trust, just as you would on a PC. Bottles keep Windows programs apart from each other and away from your Mac's own folders, but they are not a security sandbox.</p>
+    </details>
+    <details>
+      <summary>Do I need Windows to run an .exe on a Mac?</summary>
+      <p>No. Portnaut runs Windows programs with Wine, which provides the parts of Windows that programs need, so no copy of Windows runs and no Windows licence is needed.</p>
+    </details>
+    <details>
+      <summary>Can Portnaut open .msi files too?</summary>
+      <p>Yes. Install from File accepts both .exe and .msi files, and so does dropping a file on Portnaut's window.</p>
+    </details>
+    <details>
+      <summary>Does this work on Intel Macs?</summary>
+      <p>No. Portnaut needs a Mac with Apple silicon (M1 or later) and macOS 14.6 or later.</p>
+    </details>
+
+    <p>Next: <a href="/guides/steam-on-mac/">Steam on Mac</a> · <a href="/guides/dxmt-vs-d3dmetal-vs-dxvk/">DXMT vs D3DMetal vs DXVK</a> · <a href="/faq/">FAQ</a></p>
+  </div>
+</article>
