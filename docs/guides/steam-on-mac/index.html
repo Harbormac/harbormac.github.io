@@ -39,7 +39,7 @@
    "url": "https://portnaut.com/guides/steam-on-mac/",
    "inLanguage": "en",
    "datePublished": "2026-10-28",
-   "dateModified": "2026-10-29",
+   "dateModified": "2026-11-03",
    "image": "https://portnaut.com/assets/og-steam-on-mac.jpg",
    "author": {
     "@id": "https://portnaut.com/#builtbyargo"
@@ -99,13 +99,17 @@
   <div class="wrap narrow">
     <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Portnaut</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">Steam on Mac</li></ol></nav>
     <h1>How to play Steam games on a Mac</h1>
-    <p class="lead">Steam's Mac app only shows games made for macOS. With Portnaut, you can run the Windows version of Steam on an Apple silicon Mac and play Windows games from your library, for free.</p>
-    <p class="tested">Tested with Portnaut 0.12.0 on macOS 27.2 · Updated 29 October 2026</p>
+    <p class="lead">Steam has its own Mac app, and for games with a Mac version that's the one to use. For the Windows-only games in your library, Portnaut runs the Windows version of Steam on a Mac or MacBook with Apple silicon, for free.</p>
+    <p class="tested">Tested with Portnaut 0.12.0 on macOS 27.2 · Updated 3 November 2026</p>
   </div>
 </div>
 
 <article class="prose">
   <div class="wrap narrow">
+    <h2 id="mac-version">First: does the game have a Mac version?</h2>
+    <p>On a game's Steam store page, look at the system icons next to the price. An Apple logo means it has a Mac version: install it with <a href="https://store.steampowered.com/about/">Steam's Mac app</a>, which usually runs it better than any Windows version could. If there's only a Windows logo, the game is Windows only, and that's what Portnaut is for.</p>
+    <p>You can use both with the same Steam account: the Mac app for your Mac games, and Steam in Portnaut for the rest.</p>
+
     <h2 id="before-you-start">Before you start</h2>
     <p><a href="/download/">Download and install Portnaut</a>, open it, and choose <strong>Prepare Portnaut</strong>. That needs a Mac with Apple silicon, macOS 14.6 or later, and Rosetta.</p>
 
@@ -125,7 +129,7 @@
     <h2 id="tips">Tips</h2>
     <ul>
       <li><strong>Steam's own window is drawn in software.</strong> That's deliberate and keeps it from going black; your games still use the renderer.</li>
-      <li><strong>Launch options:</strong> a game's <strong>Settings…</strong> in Portnaut take launch arguments, which Portnaut passes to the game through Steam.</li>
+      <li><strong>Launch options:</strong> a game's <strong>Game Settings…</strong> in Portnaut take launch arguments, which Portnaut passes to the game through Steam.</li>
       <li><strong>Controllers</strong> appear to games as Xbox controllers, and Steam Input works on top.</li>
       <li><strong>A game that needs AVX</strong> and won't start: turn on <strong>Advertise AVX instructions</strong> in the bottle's <strong>Performance &amp; input lag</strong> section.</li>
       <li><strong>Compare renderers:</strong> Portnaut records the frame rate of every session you start from its library, so you can try a game on two renderers and see which is faster.</li>
@@ -140,11 +144,12 @@
     <h2 id="troubleshooting">If something goes wrong</h2>
     <ul>
       <li><strong>An installed game isn't in the library:</strong> in the bottle, choose <strong>Programs › Find Programs</strong>.</li>
-      <li><strong>A game crashes or shows a black screen:</strong> try the other recommended renderer, ideally in a second bottle.</li>
+      <li><strong>A game crashes or shows a black screen:</strong> search it in <strong>Will It Run?</strong> (⌘K) to see the renderer it was tested on. In easy mode Portnaut picks the renderer each time you press Play; to try another one yourself, turn easy mode off in the bottle's settings and change the renderer in its Graphics section.</li>
       <li><strong>More fixes:</strong> <a href="/guides/troubleshooting/">troubleshooting</a> covers black screens, missing DLLs, controllers and slow games.</li>
       <li><strong>Still stuck:</strong> choose <strong>Diagnostics › Export diagnostics…</strong> and email the file to <a href="mailto:builtbyargo@proton.me">builtbyargo@proton.me</a> with what you were doing.</li>
     </ul>
-    <p>Next: <a href="/guides/ubisoft-connect-on-mac/">Ubisoft Connect on Mac</a> · <a href="/guides/ea-app-on-mac/">the EA app on Mac</a> · <a href="/faq/">FAQ</a></p>
+    <p>Games with a guide: <a href="/guides/gta-5-on-mac/">GTA 5</a> · <a href="/guides/red-dead-redemption-2-on-mac/">Red Dead Redemption 2</a> · <a href="/guides/guardians-of-the-galaxy-on-mac/">Guardians of the Galaxy</a> · <a href="/guides/metaphor-refantazio-on-mac/">Metaphor: ReFantazio</a></p>
+    <p>Next: <a href="/guides/play-pc-games-on-mac/">How to play PC games on a Mac</a> · <a href="/guides/epic-games-on-mac/">Epic Games on Mac</a> · <a href="/faq/">FAQ</a></p>
   </div>
 </article>
 </main>
@@ -169,6 +174,7 @@
       <nav aria-label="Guides">
         <p class="footer-title">Guides</p>
         <ul>
+          <li><a href="/guides/play-pc-games-on-mac/">Play PC games on a Mac</a></li>
           <li><a href="/guides/gta-5-on-mac/">GTA 5 on Mac</a></li>
           <li><a href="/guides/red-dead-redemption-2-on-mac/">Red Dead Redemption 2 on Mac</a></li>
           <li><a href="/guides/steam-on-mac/" aria-current="page">Steam on Mac</a></li>
@@ -177,8 +183,9 @@
           <li><a href="/guides/ubisoft-connect-on-mac/">Ubisoft Connect on Mac</a></li>
           <li><a href="/guides/battle-net-on-mac/">Battle.net on Mac</a></li>
           <li><a href="/guides/gog-games-on-mac/">GOG games on Mac</a></li>
-          <li><a href="/guides/open-exe-files-on-mac/">Open .exe files on a Mac</a></li>
+          <li><a href="/guides/boot-camp-apple-silicon/">Boot Camp on Apple silicon?</a></li>
           <li><a href="/guides/windows-emulator-for-mac/">Windows emulator for Mac?</a></li>
+          <li><a href="/guides/open-exe-files-on-mac/">Open .exe files on a Mac</a></li>
           <li><a href="/guides/dxmt-vs-d3dmetal-vs-dxvk/">DXMT vs D3DMetal vs DXVK</a></li>
           <li><a href="/guides/whisky-alternative/">Whisky alternatives</a></li>
           <li><a href="/guides/troubleshooting/">Troubleshooting</a></li>

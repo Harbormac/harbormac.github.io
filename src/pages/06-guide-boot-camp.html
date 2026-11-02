@@ -1,0 +1,88 @@
+<!--page
+{"path": "/guides/boot-camp-apple-silicon/",
+ "title": "Boot Camp on an Apple Silicon Mac? The Alternatives – Portnaut",
+ "social_title": "Boot Camp on an M1 or later Mac? What to use instead",
+ "image": "/assets/og-boot-camp-apple-silicon.jpg",
+ "image_alt": "Portnaut guide: Boot Camp on Apple silicon",
+ "description": "Boot Camp only works on Intel Macs. For games and Windows apps on an M1, M2, M3, M4 or M5 Mac, here's what to use instead, and what each option can't do.",
+ "faq": true,
+ "jsonld": [
+  {"@type": "TechArticle", "@id": "{{site}}/guides/boot-camp-apple-silicon/#article", "headline": "Boot Camp on an Apple silicon Mac? What to use instead", "url": "{{site}}/guides/boot-camp-apple-silicon/", "inLanguage": "en", "datePublished": "2026-11-03", "dateModified": "2026-11-03", "image": "{{site}}/assets/og-boot-camp-apple-silicon.jpg", "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}, "about": {"@id": "{{site}}/#app"}, "isPartOf": {"@id": "{{site}}/#website"}},
+  {"@type": "BreadcrumbList", "itemListElement": [
+   {"@type": "ListItem", "position": 1, "name": "Portnaut", "item": "{{site}}/"},
+   {"@type": "ListItem", "position": 2, "name": "Guides", "item": "{{site}}/guides/"},
+   {"@type": "ListItem", "position": 3, "name": "Boot Camp on Apple silicon", "item": "{{site}}/guides/boot-camp-apple-silicon/"}]}
+ ]}
+-->
+<div class="page-head">
+  <div class="wrap narrow">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Portnaut</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">Boot Camp on Apple silicon</li></ol></nav>
+    <h1>Boot Camp on an M1, M2, M3, M4 or M5 Mac?</h1>
+    <p class="lead">No: Boot Camp only exists on Intel Macs, and a Mac with Apple silicon can't start Windows directly. What to use instead depends on what you need Windows for.</p>
+    <p class="tested">Updated 3 November 2026 · Portnaut {{version}}</p>
+  </div>
+</div>
+
+<article class="prose">
+  <div class="wrap narrow">
+    <h2 id="why">Why there's no Boot Camp on Apple silicon</h2>
+    <p>Boot Camp installed the ordinary Windows for Intel PCs next to macOS, so an Intel Mac could start up as a Windows PC. Macs with Apple silicon use a different kind of processor, which that Windows can't run on, and Apple doesn't offer a way to start them in Windows. Apple's Boot Camp Assistant only supports Intel Macs.</p>
+
+    <h2 id="what-instead">What to use instead</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th scope="col">You want to…</th><th scope="col">Use</th><th scope="col">Windows licence</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Play Windows games</strong></td><td>Portnaut (Wine), free</td><td>Not needed</td></tr>
+          <tr><td><strong>Play online games whose anti-cheat won't run on a Mac</strong></td><td>Cloud gaming, if the service has the game</td><td>Not needed</td></tr>
+          <tr><td><strong>Use Windows apps,</strong> such as business software</td><td>A virtual machine with Windows for Arm</td><td>Needed</td></tr>
+          <tr><td><strong>Run one Windows program or installer</strong></td><td>Portnaut's Install from File</td><td>Not needed</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="games">For games: Portnaut</h2>
+    <p>Portnaut runs Windows games directly on macOS through Wine: Wine provides the parts of Windows that games use, Rosetta translates their Intel code, and a renderer translates their DirectX graphics to Apple's Metal. No copy of Windows runs, so there's nothing to buy and nothing to restart into.</p>
+    <ul>
+      <li><strong>What works:</strong> many games from Steam, Epic Games, the EA app, Ubisoft Connect, Battle.net, GOG and the Rockstar Games Launcher, DirectX 9 to 12. <a href="/guides/play-pc-games-on-mac/">How to play PC games on a Mac</a>.</li>
+      <li><strong>What doesn't:</strong> games with kernel-level anti-cheat, and the online part of some games that otherwise run, such as GTA Online (<a href="/guides/gta-5-on-mac/">GTA 5's story mode does run</a>).</li>
+      <li><strong>Check first:</strong> Portnaut's Will It Run? (⌘K) checks about 13,000 games before you download one.</li>
+    </ul>
+    <p><a href="/download/">Download Portnaut</a>, free for Macs with Apple silicon.</p>
+
+    <h2 id="virtual-machine">For Windows apps: a virtual machine</h2>
+    <p>A virtual machine runs a whole copy of Windows 11 for Arm in a window on your Mac. Microsoft's own support page, <a href="https://support.microsoft.com/en-us/windows/experience/platform-variants/options-for-using-windows-11-with-mac-computers-with-apple-m1-m2-and-m3-chips">Options for using Windows 11 with Mac computers</a>, names Parallels Desktop as an authorized way to do this on Macs with M1, M2 and M3 chips, and Windows 365, a Windows PC in Microsoft's cloud, as another. VMware Fusion and UTM can run Windows 11 for Arm too.</p>
+    <ul>
+      <li><strong>Good for:</strong> Windows software that needs a full copy of Windows. Windows for Arm runs most Intel programs through its own translation.</li>
+      <li><strong>Less good for games:</strong> you need a Windows licence and plenty of memory and disk space, 3D graphics support is limited, and demanding games often struggle.</li>
+      <li><strong>Not for drivers:</strong> Windows for Arm can't load drivers made for Intel PCs, and many anti-cheat systems refuse to run in a virtual machine.</li>
+    </ul>
+
+    <h2 id="cloud">For online games with anti-cheat: cloud gaming</h2>
+    <p>Services such as GeForce NOW and Xbox Cloud Gaming run games on their own PCs and stream the picture to your Mac. They're the realistic way to play online games whose anti-cheat won't run on a Mac, as long as the service offers the game. They need a fast, steady connection and usually a subscription.</p>
+
+    <h2 id="intel">Have an Intel Mac?</h2>
+    <p>Then Boot Camp is still on your Mac, in Applications › Utilities. Portnaut itself needs Apple silicon (M1 or later), so on an Intel Mac it isn't an option.</p>
+
+    <h2 id="faq">Questions</h2>
+    <details>
+      <summary>Does Boot Camp work on M1, M2, M3, M4 or M5 Macs?</summary>
+      <p>No. Boot Camp only works on Intel Macs. Macs with Apple silicon can't start up in Windows, so use Portnaut for games or a virtual machine for Windows apps.</p>
+    </details>
+    <details>
+      <summary>Can I dual-boot Windows on a Mac with Apple silicon?</summary>
+      <p>No. Apple doesn't offer a way to start these Macs in Windows. Windows 11 for Arm runs in a virtual machine instead, inside macOS.</p>
+    </details>
+    <details>
+      <summary>How do I play Windows games without Boot Camp?</summary>
+      <p>With Portnaut, which runs Windows games through Wine on macOS itself. It's free and needs no Windows licence. Games with kernel-level anti-cheat don't run; for those, cloud gaming is the option.</p>
+    </details>
+    <details>
+      <summary>Is a virtual machine better than Wine for games?</summary>
+      <p>Usually not. A virtual machine runs a whole extra operating system and has limited 3D graphics, so games tend to run better through Wine, which translates their graphics straight to Metal. A virtual machine is better for Windows apps that Wine can't handle.</p>
+    </details>
+
+    <p>Next: <a href="/guides/play-pc-games-on-mac/">How to play PC games on a Mac</a> · <a href="/guides/windows-emulator-for-mac/">Windows emulator for Mac?</a> · <a href="/guides/open-exe-files-on-mac/">Open .exe files on a Mac</a></p>
+    <p class="muted"><small>Boot Camp, Parallels Desktop, Windows, Windows 365, VMware Fusion, UTM, GeForce NOW and Xbox Cloud Gaming are trademarks of their owners. Portnaut is not affiliated with them.</small></p>
+  </div>
+</article>

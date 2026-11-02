@@ -7,7 +7,7 @@
  "description": "Play GTA 5's story mode on an Apple silicon Mac or MacBook with Portnaut, free. What works, what doesn't (GTA Online), and the steps, from setup to playing.",
  "faq": true,
  "jsonld": [
-  {"@type": "TechArticle", "@id": "{{site}}/guides/gta-5-on-mac/#article", "headline": "How to play GTA 5's story mode on a Mac", "url": "{{site}}/guides/gta-5-on-mac/", "inLanguage": "en", "datePublished": "2026-11-02", "dateModified": "2026-11-02", "image": "{{site}}/assets/og-gta-5-on-mac.jpg", "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}, "about": {"@id": "{{site}}/#app"}, "isPartOf": {"@id": "{{site}}/#website"}},
+  {"@type": "TechArticle", "@id": "{{site}}/guides/gta-5-on-mac/#article", "headline": "How to play GTA 5's story mode on a Mac", "url": "{{site}}/guides/gta-5-on-mac/", "inLanguage": "en", "datePublished": "2026-11-02", "dateModified": "2026-11-03", "image": "{{site}}/assets/og-gta-5-on-mac.jpg", "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}, "about": {"@id": "{{site}}/#app"}, "isPartOf": {"@id": "{{site}}/#website"}},
   {"@type": "BreadcrumbList", "itemListElement": [
    {"@type": "ListItem", "position": 1, "name": "Portnaut", "item": "{{site}}/"},
    {"@type": "ListItem", "position": 2, "name": "Guides", "item": "{{site}}/guides/"},
@@ -19,7 +19,7 @@
     <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Portnaut</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">GTA 5 on Mac</li></ol></nav>
     <h1>How to play GTA 5 on a Mac</h1>
     <p class="lead">Grand Theft Auto V has no Mac version, but its story mode has been played on Macs with Apple silicon, with the same Wine Portnaut uses, and Portnaut sets it up for free. GTA Online doesn't work: read what works first.</p>
-    <p class="tested">Story mode played on a Mac with Apple silicon (Highball's compatibility database) · Portnaut {{version}} · Updated 2 November 2026</p>
+    <p class="tested">Story mode played on a Mac with Apple silicon (Highball's compatibility database) · Portnaut {{version}} · Updated 3 November 2026</p>
   </div>
 </div>
 
@@ -48,12 +48,14 @@
       <li><strong>Install Grand Theft Auto V Legacy</strong> from your Steam library. When the download finishes, the game appears in Portnaut's library by itself.</li>
       <li><strong>Press Play in Portnaut.</strong> Easy mode switches the bottle to DXMT, the renderer GTA V was played on. Steam opens the Rockstar Games Launcher first: sign in with your Rockstar account, and it hands over to the game. The first start can take several minutes.</li>
     </ol>
-    <p>Portnaut sets two things up for you. GTA V Legacy gets the launch option <code>-nobattleye</code> when it joins your library, which starts story mode without BattlEye; you'll see it in the game's <strong>Settings…</strong>. And the Rockstar Games Launcher's sign-in window is set to draw, which on a Mac it otherwise doesn't.</p>
+    <p>Portnaut sets two things up for you. GTA V Legacy gets the launch option <code>-nobattleye</code> when it joins your library, which starts story mode without BattlEye; you'll see it under <strong>Launch arguments</strong> in the game's <strong>Game Settings…</strong>. And the Rockstar Games Launcher's sign-in window is set to draw, which on a Mac it otherwise doesn't.</p>
     {{shot library "Portnaut's library, where an installed Steam game appears with a Play button"}}
 
     <h2 id="tips">Tips</h2>
     <ul>
       <li><strong>Keep easy mode on,</strong> or set the bottle to DXMT yourself: the Rockstar Games Launcher doesn't start on D3DMetal.</li>
+      <li><strong>Rockstar won't sign you in?</strong> Check that your Mac sets its date, time and time zone automatically, in <strong>System Settings › General › Date &amp; Time</strong>. A wrong clock made the sign-in fail in Highball's tests.</li>
+      <li><strong>Keep the game in front while it first loads.</strong> GTA V pauses itself when its window isn't in front, so the first load into story mode can look stuck. You can turn off <strong>Pause Game On Focus Loss</strong> in its settings.</li>
       <li><strong>Controllers</strong> work: GTA V sees them as Xbox controllers.</li>
       <li><strong>Saves:</strong> with easy mode, Portnaut backs up your saves before every session.</li>
       <li><strong>Slow?</strong> Lower the game's resolution or settings, or turn on MetalFX upscaling in the bottle's Graphics section. <a href="/guides/troubleshooting/#slow">More performance tips</a>.</li>

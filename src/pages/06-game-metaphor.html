@@ -1,0 +1,81 @@
+<!--page
+{"path": "/guides/metaphor-refantazio-on-mac/",
+ "title": "How to Play Metaphor: ReFantazio on a Mac or MacBook – Portnaut",
+ "social_title": "How to play Metaphor: ReFantazio on a Mac",
+ "image": "/assets/og-metaphor-refantazio-on-mac.jpg",
+ "image_alt": "Portnaut guide: Metaphor: ReFantazio on a Mac",
+ "description": "Metaphor: ReFantazio has no Mac version. Its free demo has been played on an Apple silicon Mac: what was tested, what wasn't yet, and the steps.",
+ "faq": true,
+ "jsonld": [
+  {"@type": "TechArticle", "@id": "{{site}}/guides/metaphor-refantazio-on-mac/#article", "headline": "How to play Metaphor: ReFantazio on a Mac", "url": "{{site}}/guides/metaphor-refantazio-on-mac/", "inLanguage": "en", "datePublished": "2026-11-03", "dateModified": "2026-11-03", "image": "{{site}}/assets/og-metaphor-refantazio-on-mac.jpg", "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}, "about": {"@id": "{{site}}/#app"}, "isPartOf": {"@id": "{{site}}/#website"}},
+  {"@type": "BreadcrumbList", "itemListElement": [
+   {"@type": "ListItem", "position": 1, "name": "Portnaut", "item": "{{site}}/"},
+   {"@type": "ListItem", "position": 2, "name": "Guides", "item": "{{site}}/guides/"},
+   {"@type": "ListItem", "position": 3, "name": "Metaphor: ReFantazio on Mac", "item": "{{site}}/guides/metaphor-refantazio-on-mac/"}]}
+ ]}
+-->
+<div class="page-head">
+  <div class="wrap narrow">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Portnaut</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">Metaphor: ReFantazio on Mac</li></ol></nav>
+    <h1>How to play Metaphor: ReFantazio on a Mac</h1>
+    <p class="lead">Metaphor: ReFantazio has no Mac version. Its free demo has been played on a Mac with Apple silicon, smoothly; the full game has been reported working but not verified yet. Try the demo first: it costs nothing.</p>
+    <p class="tested">Demo played on a Mac with Apple silicon (Highball's compatibility database) · Portnaut {{version}} · Updated 3 November 2026</p>
+  </div>
+</div>
+
+<article class="prose">
+  <div class="wrap narrow">
+    <h2 id="what-works">What has been tested, and what hasn't</h2>
+    <ul>
+      <li><strong>The free Prologue Demo plays.</strong> On an M1 Pro, as recorded in <a href="https://github.com/gauthierpiarrette/highball-db">Highball's open compatibility database</a>: the opening cutscenes, the title menu, a new game, the first dialogue and the run through the Tradia Desert, at 55 to 59 fps at 1728 × 1117 on the DXMT renderer, without a crash in 35 minutes. The first battle wasn't reached in that session.</li>
+      <li><strong>The full game hasn't been verified.</strong> A player reported it running on an M5 Max; Highball hasn't verified that yet. The full game uses Denuvo copy protection, which the demo test didn't cover.</li>
+      <li><strong>It needs a recent Wine.</strong> Older Wine builds crash or hang when the game starts. A fix in Highball's Wine 11 from September 2026 solved that, and the Wine Portnaut installs is a later build that includes it. We haven't played the game through Portnaut ourselves yet.</li>
+      <li><strong>Single-player.</strong> There's no online part that could be blocked.</li>
+    </ul>
+
+    <h2 id="you-need">What you need</h2>
+    <ul>
+      <li>A Mac or MacBook with Apple silicon (M1 or later), macOS 14.6 or later, and Rosetta.</li>
+      <li>A Steam account. The demo is free; the full game needs about 93 GB of free space, as Steam lists.</li>
+    </ul>
+
+    <h2 id="steps">Play Metaphor: ReFantazio on your Mac, step by step</h2>
+    <ol>
+      <li><strong><a href="/download/">Download Portnaut</a></strong>, open it, and choose <strong>Prepare Portnaut</strong>.</li>
+      <li><strong>Create a Steam bottle</strong> with <strong>Bottles › New Bottle…</strong>, keep <strong>easy mode</strong> on, install Steam and sign in. <a href="/guides/steam-on-mac/">The Steam guide</a> has the details.</li>
+      <li><strong>Install the free Prologue Demo</strong> from the game's Steam store page, or the full game if you own it. It appears in Portnaut's library by itself.</li>
+      <li><strong>Press Play in Portnaut.</strong> Easy mode picks the renderer for you; for this DirectX 11 game that's DXMT, the renderer the demo was played on.</li>
+    </ol>
+    {{shot library "Portnaut's library, where an installed Steam game appears with a Play button"}}
+
+    <h2 id="tips">Tips</h2>
+    <ul>
+      <li><strong>Yes or No?</strong> The game's Yes/No prompts start on No, so press the Up arrow before Return.</li>
+      <li><strong>Keyboard:</strong> Return confirms, Escape opens the pause menu (with Skip for cutscenes), and F fast-forwards dialogue. A controller works too: the game sees it as an Xbox controller.</li>
+      <li><strong>Sound:</strong> some Mac players have reported the sound cutting out. It didn't happen in the 35-minute test.</li>
+      <li><strong>If the game closes right away:</strong> Steam lists a processor with AVX as required. Turn on <strong>Advertise AVX instructions</strong> in the bottle's <strong>Performance &amp; input lag</strong> section and try again.</li>
+      <li><strong>Saves:</strong> with easy mode, Portnaut backs up your saves before every session.</li>
+    </ul>
+
+    <h2 id="faq">Questions</h2>
+    <details>
+      <summary>Can you play Metaphor: ReFantazio on a Mac?</summary>
+      <p>Its free demo, yes: it has been played on a Mac with Apple silicon at 55 to 59 fps through Wine and DXMT, which Portnaut sets up. The full game has been reported working by a player but hasn't been verified yet, so try the demo before you buy.</p>
+    </details>
+    <details>
+      <summary>Is there a Mac version?</summary>
+      <p>No. On Steam the game is Windows only, which is why it needs Wine to run on a Mac.</p>
+    </details>
+    <details>
+      <summary>Does Denuvo work on a Mac?</summary>
+      <p>For this game it's not confirmed yet. The demo test didn't cover Denuvo, and the player report of the full game hasn't been verified. Other games with Denuvo, such as Marvel's Guardians of the Galaxy, have been played on Macs through Wine.</p>
+    </details>
+    <details>
+      <summary>Do I need Windows?</summary>
+      <p>No. Portnaut runs the game through Wine, which needs no copy of Windows and no Windows licence.</p>
+    </details>
+
+    <p>Next: <a href="/guides/guardians-of-the-galaxy-on-mac/">Guardians of the Galaxy on Mac</a> · <a href="/guides/steam-on-mac/">Steam on Mac</a> · <a href="/guides/play-pc-games-on-mac/">How to play PC games on a Mac</a></p>
+    <p class="muted"><small>Metaphor: ReFantazio, Atlus, SEGA, Denuvo and Steam are trademarks of their owners. Portnaut is not affiliated with them. Compatibility facts come from Highball's database, checked on 2 November 2026.</small></p>
+  </div>
+</article>

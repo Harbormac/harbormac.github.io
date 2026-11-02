@@ -1,0 +1,83 @@
+<!--page
+{"path": "/guides/guardians-of-the-galaxy-on-mac/",
+ "title": "How to Play Marvel's Guardians of the Galaxy on a Mac – Portnaut",
+ "social_title": "How to play Marvel's Guardians of the Galaxy on a Mac",
+ "image": "/assets/og-guardians-of-the-galaxy-on-mac.jpg",
+ "image_alt": "Portnaut guide: Guardians of the Galaxy on a Mac",
+ "description": "Marvel's Guardians of the Galaxy has no Mac version, but it has been played on Apple silicon Macs. What was tested, the settings that help, and the steps.",
+ "faq": true,
+ "jsonld": [
+  {"@type": "TechArticle", "@id": "{{site}}/guides/guardians-of-the-galaxy-on-mac/#article", "headline": "How to play Marvel's Guardians of the Galaxy on a Mac", "url": "{{site}}/guides/guardians-of-the-galaxy-on-mac/", "inLanguage": "en", "datePublished": "2026-11-03", "dateModified": "2026-11-03", "image": "{{site}}/assets/og-guardians-of-the-galaxy-on-mac.jpg", "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}, "about": {"@id": "{{site}}/#app"}, "isPartOf": {"@id": "{{site}}/#website"}},
+  {"@type": "BreadcrumbList", "itemListElement": [
+   {"@type": "ListItem", "position": 1, "name": "Portnaut", "item": "{{site}}/"},
+   {"@type": "ListItem", "position": 2, "name": "Guides", "item": "{{site}}/guides/"},
+   {"@type": "ListItem", "position": 3, "name": "Guardians of the Galaxy on Mac", "item": "{{site}}/guides/guardians-of-the-galaxy-on-mac/"}]}
+ ]}
+-->
+<div class="page-head">
+  <div class="wrap narrow">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Portnaut</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">Guardians of the Galaxy on Mac</li></ol></nav>
+    <h1>How to play Marvel's Guardians of the Galaxy on a Mac</h1>
+    <p class="lead">Marvel's Guardians of the Galaxy has no Mac version, but it has been played on Macs with Apple silicon, including with the same Wine Portnaut installs. It's a single-player game, so there's no online part to lose.</p>
+    <p class="tested">Played on Macs with Apple silicon (Highball's compatibility database) · Portnaut {{version}} · Updated 3 November 2026</p>
+  </div>
+</div>
+
+<article class="prose">
+  <div class="wrap narrow">
+    <h2 id="what-works">What has been tested</h2>
+    <ul>
+      <li><strong>It plays.</strong> The Steam copy was played on an M1 Pro, as recorded in <a href="https://github.com/gauthierpiarrette/highball-db">Highball's open compatibility database</a>: from Play Game into the opening scene under keyboard control, at 1280 × 720.</li>
+      <li><strong>The same Wine as Portnaut.</strong> A player with a base M5 played it with Highball's Wine 11 build r27, the one Portnaut installs, and rated it 5 out of 5 after a 9-minute session: about 50 fps with the Low preset and High textures. We haven't played it through Portnaut ourselves yet.</li>
+      <li><strong>It needs D3DMetal.</strong> The game is DirectX 12 only, so it runs on Apple's D3DMetal renderer. On DXMT it stops before the splash screen with "No suitable D3D12 adapter found".</li>
+      <li><strong>Steam is the tested store.</strong> The player who first reported the game working used the Epic Games Store copy; that hasn't been verified.</li>
+    </ul>
+
+    <h2 id="you-need">What you need</h2>
+    <ul>
+      <li>A Mac or MacBook with Apple silicon (M1 or later), macOS 14.6 or later, and Rosetta.</li>
+      <li>The game on Steam and a Steam account.</li>
+      <li>About 80 GB of free space, as Steam lists for the game.</li>
+    </ul>
+
+    <h2 id="steps">Play Guardians of the Galaxy on your Mac, step by step</h2>
+    <ol>
+      <li><strong><a href="/download/">Download Portnaut</a></strong>, open it, and choose <strong>Prepare Portnaut</strong>.</li>
+      <li><strong>Create a Steam bottle</strong> with <strong>Bottles › New Bottle…</strong>, keep <strong>easy mode</strong> on, install Steam and sign in. <a href="/guides/steam-on-mac/">The Steam guide</a> has the details.</li>
+      <li><strong>Install Marvel's Guardians of the Galaxy</strong> from your Steam library. It appears in Portnaut's library by itself.</li>
+      <li><strong>Press Play in Portnaut.</strong> Easy mode keeps the bottle on D3DMetal, the renderer this game needs.</li>
+      <li><strong>If a message says your graphics driver is older than supported, choose Yes.</strong> The game looks for an AMD graphics driver, because D3DMetal presents your Mac's graphics as an AMD card.</li>
+    </ol>
+    <p>To stop that message appearing, do what Highball's setup does: in the game's <strong>Game Settings…</strong>, under <strong>DLL overrides</strong>, choose <strong>Add Override</strong>, type <code>amd_ags_x64</code> and pick <strong>Disabled</strong>. That turns off AMD's helper library, which can't work on a Mac anyway.</p>
+    {{shot game-settings "A game's settings in Portnaut"}}
+
+    <h2 id="tips">Tips</h2>
+    <ul>
+      <li><strong>The first minute is slow.</strong> Expect about 10 fps while the game prepares its shaders; it then speeds up.</li>
+      <li><strong>Lower shadows and detail, not resolution.</strong> On a Mac the game is held back by the processor rather than the graphics, so settings that reduce what's drawn (shadows, level of detail, object density) gain the most. Lowering the resolution gains little.</li>
+      <li><strong>Controllers</strong> work: the game sees them as Xbox controllers.</li>
+      <li><strong>Saves:</strong> with easy mode, Portnaut backs up your saves before every session.</li>
+    </ul>
+
+    <h2 id="faq">Questions</h2>
+    <details>
+      <summary>Can you play Guardians of the Galaxy on a Mac?</summary>
+      <p>Yes. There's no Mac version, but the Windows version has been played on Macs with Apple silicon through Wine with Apple's D3DMetal, which Portnaut sets up for free.</p>
+    </details>
+    <details>
+      <summary>Why doesn't it work on DXMT or DXVK?</summary>
+      <p>The game only supports DirectX 12, and of the renderers Portnaut offers, only D3DMetal translates DirectX 12. In easy mode Portnaut chooses it for you.</p>
+    </details>
+    <details>
+      <summary>How fast does it run?</summary>
+      <p>About 50 fps on a base M5 with the Low preset, and 17 to 42 fps at 1280 × 720 on an M1 Pro, depending on the scene and the Wine version. Newer and Pro or Max chips do better.</p>
+    </details>
+    <details>
+      <summary>Do I need Windows?</summary>
+      <p>No. Portnaut runs the game through Wine, which needs no copy of Windows and no Windows licence.</p>
+    </details>
+
+    <p>Next: <a href="/guides/metaphor-refantazio-on-mac/">Metaphor: ReFantazio on Mac</a> · <a href="/guides/steam-on-mac/">Steam on Mac</a> · <a href="/guides/play-pc-games-on-mac/">How to play PC games on a Mac</a></p>
+    <p class="muted"><small>Marvel, Guardians of the Galaxy, DirectX and Steam are trademarks of their owners. Portnaut is not affiliated with them. Compatibility facts come from Highball's database, checked on 2 November 2026.</small></p>
+  </div>
+</article>

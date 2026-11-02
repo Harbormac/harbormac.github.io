@@ -71,7 +71,11 @@ let guides = [("steam-on-mac", "Steam games on a Mac", "game-settings"),
               ("red-dead-redemption-2-on-mac", "Red Dead Redemption 2 on a Mac", "component-updates"),
               ("epic-games-on-mac", "Epic Games Store games on a Mac", "bottles"),
               ("gog-games-on-mac", "GOG games on a Mac", "library"),
-              ("battle-net-on-mac", "Battle.net games on a Mac", "bottles")]
+              ("battle-net-on-mac", "Battle.net games on a Mac", "bottles"),
+              ("play-pc-games-on-mac", "How to play PC games on a Mac", "library"),
+              ("boot-camp-apple-silicon", "Boot Camp on an Apple silicon Mac?", "bottles"),
+              ("guardians-of-the-galaxy-on-mac", "Guardians of the Galaxy on a Mac", "game-settings"),
+              ("metaphor-refantazio-on-mac", "Metaphor: ReFantazio on a Mac", "library")]
 for (slug, title, shot) in guides {
     let image = load(shots.appendingPathComponent("\(shot).png"))
     let guideCard = render(width: 1200, height: 630, background: page) { ctx in

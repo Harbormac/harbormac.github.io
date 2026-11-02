@@ -1,0 +1,126 @@
+<!--page
+{"path": "/guides/play-pc-games-on-mac/",
+ "title": "How to Play PC Games on a Mac or MacBook – Portnaut",
+ "social_title": "How to play PC games on a Mac",
+ "image": "/assets/og-play-pc-games-on-mac.jpg",
+ "image_alt": "Portnaut guide: PC games on a Mac",
+ "description": "Play Windows PC games on an Apple silicon Mac or MacBook, step by step: check for a Mac version, set up your game store in Portnaut, and know what won't run.",
+ "faq": true,
+ "jsonld": [
+  {"@type": "TechArticle", "@id": "{{site}}/guides/play-pc-games-on-mac/#article", "headline": "How to play PC games on a Mac", "url": "{{site}}/guides/play-pc-games-on-mac/", "inLanguage": "en", "datePublished": "2026-11-03", "dateModified": "2026-11-03", "image": "{{site}}/assets/og-play-pc-games-on-mac.jpg", "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}, "about": {"@id": "{{site}}/#app"}, "isPartOf": {"@id": "{{site}}/#website"}},
+  {"@type": "BreadcrumbList", "itemListElement": [
+   {"@type": "ListItem", "position": 1, "name": "Portnaut", "item": "{{site}}/"},
+   {"@type": "ListItem", "position": 2, "name": "Guides", "item": "{{site}}/guides/"},
+   {"@type": "ListItem", "position": 3, "name": "PC games on a Mac", "item": "{{site}}/guides/play-pc-games-on-mac/"}]}
+ ]}
+-->
+<div class="page-head">
+  <div class="wrap narrow">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Portnaut</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">PC games on a Mac</li></ol></nav>
+    <h1>How to play PC games on a Mac</h1>
+    <p class="lead">Most PC games are made for Windows, but many of them run on a Mac or MacBook with Apple silicon, with no copy of Windows. This guide takes you from “does it have a Mac version?” to pressing Play, and says plainly what won't work.</p>
+    <p class="tested">Portnaut {{version}} · Updated 3 November 2026</p>
+  </div>
+</div>
+
+<article class="prose">
+  <div class="wrap narrow">
+    <h2 id="short-answer">The short answer</h2>
+    <ul>
+      <li><strong>If the game has a Mac version, use it.</strong> It runs best and needs nothing extra.</li>
+      <li><strong>If it's Windows only,</strong> Portnaut can run it through Wine, free, on any Mac with Apple silicon (M1 or later). Many games work; some work only in single-player, and a few don't run at all.</li>
+      <li><strong>Check a game before you buy or download it.</strong> Portnaut's Will It Run? knows about 13,000 games.</li>
+    </ul>
+
+    <h2 id="mac-version">Step 1: check for a Mac version</h2>
+    <p>Many popular games have one, and it's easy to miss:</p>
+    <ul>
+      <li><strong>Steam:</strong> an Apple logo next to the price on the game's store page. Install it with <a href="https://store.steampowered.com/about/">Steam's Mac app</a>.</li>
+      <li><strong>GOG and the Epic Games Store:</strong> the game's page lists macOS among its systems.</li>
+      <li><strong>The Mac App Store:</strong> some games are sold there too.</li>
+    </ul>
+    <p>No Mac version? Read on.</p>
+
+    <h2 id="will-it-run">Step 2: check whether the Windows version can run</h2>
+    <p>Whether a Windows game runs on a Mac depends mostly on the game, not on your Mac:</p>
+    <ul>
+      <li><strong>Usually fine:</strong> single-player games and many online games, using DirectX 9, 10, 11 or 12.</li>
+      <li><strong>Single-player only:</strong> some games run but block their online mode, because the online part needs anti-cheat that Wine can't run. <a href="/guides/gta-5-on-mac/">GTA 5</a> is an example: story mode plays, GTA Online doesn't.</li>
+      <li><strong>Won't run:</strong> games whose anti-cheat runs inside Windows itself (kernel-level anti-cheat). That's true for every Wine-based app, not just Portnaut.</li>
+    </ul>
+    <p>Portnaut's <strong>Will It Run?</strong> (⌘K) shows what's known about a game: whether it's been played on a Mac, whether Mac players report it working, what Linux players' results predict, and whether its anti-cheat blocks it. It works on your Mac, without sending what you search for.</p>
+
+    <h2 id="steps">Step 3: set it up in Portnaut</h2>
+    <ol>
+      <li><strong><a href="/download/">Download Portnaut</a></strong>, move it to your Applications folder and open it. It isn't notarized by Apple yet, so the first time, allow it in <strong>System Settings › Privacy &amp; Security</strong> with <strong>Open Anyway</strong>.</li>
+      <li><strong>Choose Prepare Portnaut.</strong> It downloads Wine and the graphics renderers once, a few hundred MB.</li>
+      <li><strong>Create a bottle for your game store.</strong> Choose <strong>Bottles › New Bottle…</strong> and pick the store you bought the game from: Steam, Epic Games, the EA app, Ubisoft Connect, Battle.net, GOG Galaxy, the Rockstar Games Launcher or Amazon Games. Keep <strong>easy mode</strong> on.</li>
+      <li><strong>Install the store and sign in.</strong> Portnaut downloads the store's own Windows installer. Your password goes to the store; Portnaut never sees it.</li>
+      <li><strong>Install the game</strong> in the store, as you would on a PC. It appears in Portnaut's library by itself.</li>
+      <li><strong>Press Play.</strong> In easy mode Portnaut picks the graphics renderer that suits the game and backs up your saves first.</li>
+    </ol>
+    <p>Got the game as a Windows installer instead, say from GOG's website? Use <strong>Install from File…</strong>. <a href="/guides/open-exe-files-on-mac/">How to open .exe files on a Mac</a>.</p>
+    {{shot library "Portnaut's library, where installed games appear with a Play button"}}
+
+    <h2 id="store-guides">Guides for each store</h2>
+    <ul>
+      <li><a href="/guides/steam-on-mac/">Steam on a Mac</a></li>
+      <li><a href="/guides/epic-games-on-mac/">Epic Games Store games on a Mac</a></li>
+      <li><a href="/guides/ea-app-on-mac/">The EA app on a Mac</a></li>
+      <li><a href="/guides/ubisoft-connect-on-mac/">Ubisoft Connect on a Mac</a></li>
+      <li><a href="/guides/battle-net-on-mac/">Battle.net on a Mac</a></li>
+      <li><a href="/guides/gog-games-on-mac/">GOG games on a Mac</a></li>
+    </ul>
+
+    <h2 id="game-guides">Guides for specific games</h2>
+    <p>Each one says what has been tested, by whom, and what doesn't work:</p>
+    <ul>
+      <li><a href="/guides/gta-5-on-mac/">GTA 5</a>: story mode, not GTA Online</li>
+      <li><a href="/guides/red-dead-redemption-2-on-mac/">Red Dead Redemption 2</a>: the story, after one component update</li>
+      <li><a href="/guides/guardians-of-the-galaxy-on-mac/">Marvel's Guardians of the Galaxy</a></li>
+      <li><a href="/guides/metaphor-refantazio-on-mac/">Metaphor: ReFantazio</a></li>
+      <li><a href="/guides/ubisoft-connect-on-mac/">Assassin's Creed III Remastered</a>, the game Portnaut has been tested with most</li>
+    </ul>
+
+    <h2 id="which-mac">How fast will it be?</h2>
+    <p>That depends on the game and your Mac. Rosetta translates the game's Intel code and a renderer translates its DirectX graphics to Apple's Metal, which costs some speed compared with a PC of similar power. A few rules of thumb:</p>
+    <ul>
+      <li><strong>Pro, Max and newer chips</strong> are noticeably faster in demanding games.</li>
+      <li><strong>Memory counts.</strong> Large open-world games can use most of 16 GB; with less, they slow down when macOS starts swapping.</li>
+      <li><strong>A MacBook Air has no fan,</strong> so a demanding game can slow down after a while. Lighter and older games are fine.</li>
+      <li><strong>Find My Best Setup</strong> in Portnaut plays a game on each renderer that can run it, measures every round on your Mac, and keeps the fastest.</li>
+    </ul>
+
+    <h2 id="other-ways">Other ways to play</h2>
+    <ul>
+      <li><strong>Cloud gaming,</strong> such as GeForce NOW or Xbox Cloud Gaming, streams games from a PC elsewhere. It's the way to play online games whose anti-cheat won't run on a Mac, if the service offers them.</li>
+      <li><strong>A virtual machine</strong> runs a whole copy of Windows for Arm, which suits Windows apps more than games. Boot Camp doesn't exist on Macs with Apple silicon: <a href="/guides/boot-camp-apple-silicon/">what to use instead of Boot Camp</a>.</li>
+    </ul>
+    <p><a href="/guides/windows-emulator-for-mac/">All the options compared</a>.</p>
+
+    <h2 id="faq">Questions</h2>
+    <details>
+      <summary>Can you play PC games on a Mac?</summary>
+      <p>Yes, many of them. Games with a Mac version run directly. Windows-only games run through Wine, which Portnaut sets up for free on Macs with Apple silicon. Games with kernel-level anti-cheat don't run, and some games run only their single-player part.</p>
+    </details>
+    <details>
+      <summary>Do I need Windows to play PC games on a Mac?</summary>
+      <p>No. Wine provides the parts of Windows that games use, so no copy of Windows and no Windows licence is needed. You only need the games, from the store you bought them in.</p>
+    </details>
+    <details>
+      <summary>Can a MacBook Air play PC games?</summary>
+      <p>Yes, within its limits. Any MacBook Air with Apple silicon runs Portnaut. Lighter and older games run well; demanding games run at lower settings, and because the Air has no fan, they can slow down over a long session.</p>
+    </details>
+    <details>
+      <summary>Does this work on an Intel Mac?</summary>
+      <p>Portnaut needs a Mac with Apple silicon (M1 or later). On an Intel Mac, Boot Camp can still install Windows next to macOS.</p>
+    </details>
+    <details>
+      <summary>Is it free?</summary>
+      <p>Yes. Portnaut is free and open source, and so are Wine and most of the renderers it uses. You only pay for the games.</p>
+    </details>
+
+    <p>Next: <a href="/guides/steam-on-mac/">Steam on a Mac</a> · <a href="/guides/boot-camp-apple-silicon/">Boot Camp on Apple silicon?</a> · <a href="/guides/troubleshooting/">Troubleshooting</a></p>
+    <p class="muted"><small>Steam, Epic Games, EA, Ubisoft Connect, Battle.net, GOG, Rockstar Games, Amazon Games, GeForce NOW, Xbox Cloud Gaming and Boot Camp are trademarks of their owners. Portnaut is not affiliated with them.</small></p>
+  </div>
+</article>

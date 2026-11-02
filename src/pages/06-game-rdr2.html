@@ -7,7 +7,7 @@
  "description": "Play Red Dead Redemption 2's story on an Apple silicon Mac or MacBook with Portnaut, free: what has been tested, the one update it needs, and the steps.",
  "faq": true,
  "jsonld": [
-  {"@type": "TechArticle", "@id": "{{site}}/guides/red-dead-redemption-2-on-mac/#article", "headline": "How to play Red Dead Redemption 2 on a Mac", "url": "{{site}}/guides/red-dead-redemption-2-on-mac/", "inLanguage": "en", "datePublished": "2026-11-02", "dateModified": "2026-11-02", "image": "{{site}}/assets/og-red-dead-redemption-2-on-mac.jpg", "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}, "about": {"@id": "{{site}}/#app"}, "isPartOf": {"@id": "{{site}}/#website"}},
+  {"@type": "TechArticle", "@id": "{{site}}/guides/red-dead-redemption-2-on-mac/#article", "headline": "How to play Red Dead Redemption 2 on a Mac", "url": "{{site}}/guides/red-dead-redemption-2-on-mac/", "inLanguage": "en", "datePublished": "2026-11-02", "dateModified": "2026-11-03", "image": "{{site}}/assets/og-red-dead-redemption-2-on-mac.jpg", "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}, "about": {"@id": "{{site}}/#app"}, "isPartOf": {"@id": "{{site}}/#website"}},
   {"@type": "BreadcrumbList", "itemListElement": [
    {"@type": "ListItem", "position": 1, "name": "Portnaut", "item": "{{site}}/"},
    {"@type": "ListItem", "position": 2, "name": "Guides", "item": "{{site}}/guides/"},
@@ -19,7 +19,7 @@
     <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Portnaut</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">Red Dead Redemption 2 on Mac</li></ol></nav>
     <h1>How to play Red Dead Redemption 2 on a Mac</h1>
     <p class="lead">Red Dead Redemption 2 has no Mac version, but its story has been played on Macs with Apple silicon, and Portnaut sets it up for free. It needs one component update first.</p>
-    <p class="tested">Played on a Mac with Apple silicon (Highball's compatibility database) · Portnaut {{version}} · Updated 2 November 2026</p>
+    <p class="tested">Played on a Mac with Apple silicon (Highball's compatibility database) · Portnaut {{version}} · Updated 3 November 2026</p>
   </div>
 </div>
 
@@ -30,6 +30,8 @@
       <li><strong>The story plays.</strong> The Steam copy has been played on a Mac with Apple silicon, as recorded in <a href="https://github.com/gauthierpiarrette/highball-db">Highball's open compatibility database</a>: it loads in about a minute, reaches the main menu and plays. Portnaut uses the same Wine. We haven't played it through Portnaut ourselves yet.</li>
       <li><strong>It needs the Stable component update.</strong> Red Dead Redemption 2 used to quit at 98% of its first load on every Mac. A fix in Highball's MoltenVK, the Vulkan layer, solved that, and Portnaut installs it with the Stable set of component updates.</li>
       <li><strong>Windowed was tested.</strong> It was played windowed at 1280 × 720; full screen at your display's resolution hasn't been tested yet.</li>
+      <li><strong>Memory matters.</strong> On an M1 Pro with 16 GB the game used about 14 GB, macOS started swapping, and riding slowed from about 30 fps to under 20 within a minute. Highball's tester said it runs there, but isn't comfortable to play. A Mac with 24 GB or more should avoid that, but it hasn't been measured.</li>
+      <li><strong>Newer Macs do better.</strong> A player with an M3 played for about four hours, with the same Wine and MoltenVK fix that Portnaut installs, and rated it 5 out of 5.</li>
       <li><strong>Red Dead Online hasn't been tested yet.</strong> The game has no kernel anti-cheat listed, but we won't claim it works until someone has played it.</li>
       <li><strong>Known issue:</strong> a player on a MacBook Air with M5 reports grass, bushes and trees flickering while moving.</li>
       <li><strong>Steam is the tested store.</strong> Copies from the Rockstar Games Launcher or the Epic Games Store haven't been tried yet.</li>
@@ -37,7 +39,7 @@
 
     <h2 id="you-need">What you need</h2>
     <ul>
-      <li>A Mac or MacBook with Apple silicon (M1 or later), macOS 14.6 or later, and Rosetta.</li>
+      <li>A Mac or MacBook with Apple silicon (M1 or later), macOS 14.6 or later, and Rosetta. More than 16 GB of memory is better: see above.</li>
       <li>Red Dead Redemption 2 on Steam, a Steam account and a Rockstar Games account.</li>
       <li>Around 150 GB of free space, as Steam lists for the game.</li>
     </ul>
