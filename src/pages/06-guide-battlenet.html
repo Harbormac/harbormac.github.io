@@ -1,0 +1,62 @@
+<!--page
+{"path": "/guides/battle-net-on-mac/",
+ "title": "How to Play Battle.net PC Games on a Mac or MacBook – Portnaut",
+ "social_title": "How to play Windows-only Battle.net games on a Mac",
+ "image": "/assets/og-battle-net-on-mac.jpg",
+ "image_alt": "Portnaut guide: Battle.net games on a Mac",
+ "description": "Blizzard's Mac app covers Blizzard's Mac games. For the Windows-only ones, run the Windows Battle.net app on an Apple silicon Mac with Portnaut, free.",
+ "faq": true,
+ "jsonld": [
+  {"@type": "TechArticle", "@id": "{{site}}/guides/battle-net-on-mac/#article", "headline": "How to play Windows-only Battle.net games on a Mac", "url": "{{site}}/guides/battle-net-on-mac/", "inLanguage": "en", "datePublished": "2026-11-02", "dateModified": "2026-11-02", "image": "{{site}}/assets/og-battle-net-on-mac.jpg", "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}, "about": {"@id": "{{site}}/#app"}, "isPartOf": {"@id": "{{site}}/#website"}},
+  {"@type": "BreadcrumbList", "itemListElement": [
+   {"@type": "ListItem", "position": 1, "name": "Portnaut", "item": "{{site}}/"},
+   {"@type": "ListItem", "position": 2, "name": "Guides", "item": "{{site}}/guides/"},
+   {"@type": "ListItem", "position": 3, "name": "Battle.net on Mac", "item": "{{site}}/guides/battle-net-on-mac/"}]}
+ ]}
+-->
+<div class="page-head">
+  <div class="wrap narrow">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Portnaut</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">Battle.net on Mac</li></ol></nav>
+    <h1>How to play Windows Battle.net games on a Mac</h1>
+    <p class="lead">Blizzard's own Battle.net app for Mac runs the Blizzard games made for macOS, such as World of Warcraft, Hearthstone and StarCraft II: use it for those. For Blizzard's Windows-only games, Portnaut runs the Windows Battle.net app on a Mac or MacBook with Apple silicon.</p>
+    <p class="tested">Battle.net app tested with Portnaut {{version}} on macOS 27.2 · Updated 2 November 2026</p>
+  </div>
+</div>
+
+<article class="prose">
+  <div class="wrap narrow">
+    <h2 id="tested">What has been tested</h2>
+    <ul>
+      <li>The Windows Battle.net app installs and opens to its sign-in page in Portnaut. Its window would stay white on a Mac; Portnaut sets it up to draw.</li>
+      <li><strong>Overwatch 2:</strong> a player reports it playing well on a Mac with Apple silicon, recorded in <a href="https://github.com/gauthierpiarrette/highball-db">Highball's open compatibility database</a>. It hasn't been verified there or by us yet.</li>
+      <li><strong>Other Blizzard games:</strong> check each one with Portnaut's <strong>Will It Run?</strong> (⌘K) before installing it. Some Blizzard games use anti-cheat that Wine can't run.</li>
+    </ul>
+
+    <h2 id="steps">Install the Windows Battle.net app in Portnaut</h2>
+    <ol>
+      <li><strong><a href="/download/">Download Portnaut</a></strong>, open it, and choose <strong>Prepare Portnaut</strong>.</li>
+      <li><strong>Create a Battle.net bottle.</strong> Choose <strong>Bottles › New Bottle…</strong>, select <strong>Battle.net</strong> and keep <strong>easy mode</strong> on.</li>
+      <li><strong>Install Battle.net.</strong> Choose <strong>Install Battle.net</strong> and follow Blizzard's installer.</li>
+      <li><strong>Sign in</strong> with your Battle.net account. Your password goes to Blizzard; Portnaut never sees or stores it.</li>
+      <li><strong>Install a game</strong> from Battle.net. Battle.net gives each game a folder of its own; in Portnaut, choose <strong>Programs › Find Programs</strong> to add it to the library, or start it from Battle.net.</li>
+    </ol>
+    {{shot bottles "A Portnaut bottle's settings, with the recommended renderer"}}
+
+    <h2 id="faq">Questions</h2>
+    <details>
+      <summary>Is there Battle.net for Mac?</summary>
+      <p>Yes, Blizzard makes a Mac app for its Mac games, such as World of Warcraft, Hearthstone and StarCraft II. Windows-only Blizzard games need the Windows Battle.net app, which Portnaut runs on Macs with Apple silicon.</p>
+    </details>
+    <details>
+      <summary>Can I play Overwatch 2 on a Mac?</summary>
+      <p>A player reports it playing well through Wine on a Mac with Apple silicon; it hasn't been verified yet. It's free, so you can try it in a Battle.net or Steam bottle in Portnaut.</p>
+    </details>
+    <details>
+      <summary>Is it free?</summary>
+      <p>Portnaut and Battle.net are free. Games cost what they cost on Battle.net.</p>
+    </details>
+
+    <p>Next: <a href="/guides/steam-on-mac/">Steam on Mac</a> · <a href="/guides/epic-games-on-mac/">Epic Games on Mac</a> · <a href="/guides/troubleshooting/#launchers">If a launcher won't open</a></p>
+    <p class="muted"><small>Battle.net, Blizzard, World of Warcraft, Hearthstone, StarCraft and Overwatch are trademarks of Blizzard Entertainment, Inc. Portnaut is not affiliated with Blizzard. Compatibility facts come from Highball's database, checked on 2 November 2026.</small></p>
+  </div>
+</article>

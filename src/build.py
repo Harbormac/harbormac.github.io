@@ -21,7 +21,7 @@ import datetime, hashlib, html, json, os, re, shutil, sys
 from html.parser import HTMLParser
 
 SITE = "https://portnaut.com"
-VERSION = "0.8.0"
+VERSION = "0.12.0"
 RELEASES_URL = "https://github.com/BuiltByArgo/Portnaut/releases"
 DOWNLOAD_URL = "https://github.com/BuiltByArgo/Portnaut/releases/latest"
 SOURCE_URL = "https://github.com/BuiltByArgo/Portnaut"

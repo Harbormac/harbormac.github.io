@@ -1,7 +1,7 @@
 <!--page
 {"path": "/guides/",
- "title": "Guides: Steam, EA App and Ubisoft Connect on Mac – Portnaut",
- "description": "Step-by-step guides for running Steam, the EA app and Ubisoft Connect on an Apple silicon Mac with Portnaut, and for choosing the right renderer.",
+ "title": "Guides: Play PC Games on a Mac or MacBook – Portnaut",
+ "description": "Step-by-step guides to playing Windows PC games on an Apple silicon Mac or MacBook: GTA 5, Red Dead Redemption 2, Steam, Epic, EA, Battle.net, GOG and more.",
  "jsonld": [
   {"@type": "CollectionPage", "@id": "{{site}}/guides/#page", "url": "{{site}}/guides/", "name": "Portnaut guides", "isPartOf": {"@id": "{{site}}/#website"}},
   {"@type": "BreadcrumbList", "itemListElement": [
@@ -13,25 +13,41 @@
   <div class="wrap">
     <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Portnaut</a></li><li aria-current="page">Guides</li></ol></nav>
     <h1>Guides</h1>
-    <p class="lead">How to get your Windows game launchers and games running on an Apple silicon Mac with Portnaut, step by step.</p>
+    <p class="lead">How to play Windows PC games on a Mac or MacBook with Apple silicon, step by step. Each guide says what has been tested and what doesn't work.</p>
   </div>
 </div>
 
 <section class="tight">
   <div class="wrap">
+    <h2 id="games">Games</h2>
     <div class="grid">
-      <a class="card" href="/guides/steam-on-mac/"><span class="tag">Steam</span><h3>Play Steam games on a Mac</h3><p>Install the Windows version of Steam in a Portnaut bottle, sign in, and play the Windows games in your library.</p><span class="more">Read the guide →</span></a>
+      <a class="card" href="/guides/gta-5-on-mac/"><span class="tag">Story mode</span><h3>Play GTA 5 on a Mac</h3><p>GTA V's story mode has been played on Macs with Apple silicon. GTA Online doesn't work: its anti-cheat can't run under Wine.</p><span class="more">Read the guide →</span></a>
+      <a class="card" href="/guides/red-dead-redemption-2-on-mac/"><span class="tag">Story</span><h3>Play Red Dead Redemption 2 on a Mac</h3><p>The story has been played on a Mac after one component update. What was tested, and the steps.</p><span class="more">Read the guide →</span></a>
+      <a class="card" href="/guides/ubisoft-connect-on-mac/"><span class="tag">Tested most</span><h3>Assassin's Creed III on a Mac</h3><p>Portnaut's most-tested game: Assassin's Creed III Remastered through Ubisoft Connect, at about 60 fps on an M4 Pro.</p><span class="more">Read the guide →</span></a>
+    </div>
+    <h2 id="stores">Stores and launchers</h2>
+    <div class="grid">
+      <a class="card" href="/guides/steam-on-mac/"><span class="tag">Steam</span><h3>Play Steam games on a Mac</h3><p>Install the Windows version of Steam, sign in, and play the Windows games in your library.</p><span class="more">Read the guide →</span></a>
+      <a class="card" href="/guides/epic-games-on-mac/"><span class="tag">Epic Games</span><h3>Play Epic Games Store games on a Mac</h3><p>Run the Windows Epic Games Launcher for the Windows games in your Epic library, including the free ones.</p><span class="more">Read the guide →</span></a>
+      <a class="card" href="/guides/ea-app-on-mac/"><span class="tag">EA app</span><h3>Run the EA app on a Mac</h3><p>Install the Windows EA app and find out which EA games can run under Wine, and which can't.</p><span class="more">Read the guide →</span></a>
       <a class="card" href="/guides/ubisoft-connect-on-mac/"><span class="tag">Ubisoft Connect</span><h3>Play Ubisoft Connect games on a Mac</h3><p>Set up Ubisoft Connect with working sign-in, and play games such as Assassin's Creed III Remastered.</p><span class="more">Read the guide →</span></a>
-      <a class="card" href="/guides/ea-app-on-mac/"><span class="tag">EA app</span><h3>Run the EA app on a Mac</h3><p>Install the EA app in its own bottle and find out which EA games can run under Wine.</p><span class="more">Read the guide →</span></a>
+      <a class="card" href="/guides/battle-net-on-mac/"><span class="tag">Battle.net</span><h3>Play Windows Battle.net games on a Mac</h3><p>When Blizzard's Mac app is enough, and how to run the Windows Battle.net app for the rest.</p><span class="more">Read the guide →</span></a>
+      <a class="card" href="/guides/gog-games-on-mac/"><span class="tag">GOG</span><h3>Play GOG games on a Mac</h3><p>Check for a Mac version first; run Windows-only GOG games from their installers or through GOG Galaxy.</p><span class="more">Read the guide →</span></a>
+    </div>
+    <h2 id="start">Getting started and fixes</h2>
+    <div class="grid">
+      <a class="card" href="/download/#install"><span class="tag">Getting started</span><h3>Install Portnaut</h3><p>Requirements, the one-time “Open Anyway” step, Rosetta, and checking your download.</p><span class="more">Install Portnaut →</span></a>
       <a class="card" href="/guides/open-exe-files-on-mac/"><span class="tag">Any program</span><h3>Open .exe files on a Mac</h3><p>Run Windows installers and programs that need no installing, and see which ones work.</p><span class="more">Read the guide →</span></a>
       <a class="card" href="/guides/windows-emulator-for-mac/"><span class="tag">Options</span><h3>Windows emulator for Mac?</h3><p>Wine, virtual machines, cloud gaming and Boot Camp compared, and which suits which game.</p><span class="more">Compare the options →</span></a>
-      <a class="card" href="/guides/game-porting-toolkit/"><span class="tag">DirectX 12</span><h3>Apple's Game Porting Toolkit</h3><p>Use D3DMetal, the toolkit's DirectX 11 and 12 translation, without Terminal or a developer account.</p><span class="more">Read the guide →</span></a>
-      <a class="card" href="/guides/whisky-alternative/"><span class="tag">Switching</span><h3>Free alternatives to Whisky</h3><p>Whisky is no longer maintained. Compare the free options, and move your games to Portnaut.</p><span class="more">Compare the options →</span></a>
-      <a class="card" href="/guides/install-wine-on-mac/"><span class="tag">Wine</span><h3>Install Wine on a Mac</h3><p>Get Wine 11 and the graphics renderers on Apple silicon without Homebrew or Terminal, and keep them up to date.</p><span class="more">Read the guide →</span></a>
       <a class="card" href="/guides/troubleshooting/"><span class="tag">Fixes</span><h3>Troubleshooting</h3><p>Black screens, crashes, missing DLLs, launchers, controllers and slow games: what to try, in order.</p><span class="more">Find a fix →</span></a>
-      <a class="card" href="/download/#install"><span class="tag">Getting started</span><h3>Install Portnaut</h3><p>Requirements, the one-time “Open Anyway” step, Rosetta, and checking your download.</p><span class="more">Install Portnaut →</span></a>
+      <a class="card" href="/faq/"><span class="tag">Help</span><h3>Questions and answers</h3><p>Free? MacBooks? Anti-cheat? Where your games are stored? The answers in one place.</p><span class="more">Read the FAQ →</span></a>
+    </div>
+    <h2 id="tinkerers">For tinkerers</h2>
+    <div class="grid">
       <a class="card" href="/guides/dxmt-vs-d3dmetal-vs-dxvk/"><span class="tag">Graphics</span><h3>DXMT vs D3DMetal vs DXVK</h3><p>What each renderer does, which DirectX versions it covers, and which to pick for a game.</p><span class="more">Read the guide →</span></a>
-      <a class="card" href="/faq/"><span class="tag">Help</span><h3>Questions and answers</h3><p>Free? Intel Macs? Anti-cheat? Where your games are stored? The answers in one place.</p><span class="more">Read the FAQ →</span></a>
+      <a class="card" href="/guides/game-porting-toolkit/"><span class="tag">DirectX 12</span><h3>Apple's Game Porting Toolkit</h3><p>Use D3DMetal, the toolkit's DirectX 11 and 12 translation, without Terminal or a developer account.</p><span class="more">Read the guide →</span></a>
+      <a class="card" href="/guides/install-wine-on-mac/"><span class="tag">Wine</span><h3>Install Wine on a Mac</h3><p>Get Wine 11 and the graphics renderers on Apple silicon without Homebrew or Terminal, and keep them up to date.</p><span class="more">Read the guide →</span></a>
+      <a class="card" href="/guides/whisky-alternative/"><span class="tag">Switching</span><h3>Free alternatives to Whisky</h3><p>Whisky is no longer maintained. Compare the free options, and move your games to Portnaut.</p><span class="more">Compare the options →</span></a>
     </div>
   </div>
 </section>
@@ -39,9 +55,8 @@
 <section class="tight">
   <div class="wrap narrow prose">
     <h2 id="where-to-start">Where to start</h2>
-    <p>New to Portnaut? <a href="/download/">Install it</a> first and choose <strong>Prepare Portnaut</strong>, then pick the guide for the launcher your games are in. Each launcher gets its own bottle: a separate Windows environment, so one launcher's settings and updates never affect another.</p>
-    <p>The <a href="/guides/ubisoft-connect-on-mac/">Ubisoft Connect guide</a> covers the setup Portnaut has been tested with most, including Assassin's Creed III Remastered. The <a href="/guides/steam-on-mac/">Steam guide</a> suits most Windows games you already own. The <a href="/guides/ea-app-on-mac/">EA app guide</a> explains which EA games can run and which can't, because some need anti-cheat that Wine does not support.</p>
-    <p>Have a Windows program that isn't a game launcher? <a href="/guides/open-exe-files-on-mac/">How to open .exe files on a Mac</a> covers installers and programs that need no installing. Wondering whether you need an emulator? <a href="/guides/windows-emulator-for-mac/">Is there a Windows emulator for Mac?</a> compares the options, and <a href="/guides/game-porting-toolkit/">Apple's Game Porting Toolkit, without Terminal</a> covers DirectX 12 games. Looking for Wine itself? <a href="/guides/install-wine-on-mac/">How to install Wine on a Mac, without Homebrew</a> explains what Portnaut sets up, and if you used Whisky, <a href="/guides/whisky-alternative/">the free alternatives to Whisky</a> compares the options. And if something doesn't work, <a href="/guides/troubleshooting/">troubleshooting</a> lists the fixes for the common problems.</p>
-    <p>Every guide says which renderer to use, and <a href="/guides/dxmt-vs-d3dmetal-vs-dxvk/">DXMT vs D3DMetal vs DXVK</a> explains them all. Portnaut recommends one for each game, and you can switch between DXMT, D3DMetal, DXVK and Wine's own in a game's settings if a game looks wrong or runs slowly. The <a href="/faq/">FAQ</a> answers the common questions.</p>
+    <p>New to Portnaut? <a href="/download/">Install it</a> first and choose <strong>Prepare Portnaut</strong>, then pick the guide for the store your games are in. Each launcher gets its own bottle: a separate Windows environment, so one launcher's settings and updates never affect another. New bottles start in easy mode, which picks the renderer for each game when you press Play.</p>
+    <p>Before you buy or download a game, check it with Portnaut's <strong>Will It Run?</strong> (⌘K). It knows about 13,000 games: the ones played on a Mac, the ones Mac players report working, and the ones blocked by anti-cheat. Some games run only their single-player part: <a href="/guides/gta-5-on-mac/">GTA 5's story mode</a> plays, GTA Online doesn't. Games with kernel-level anti-cheat, such as EA Sports FC and Battlefield, don't run at all, which the <a href="/guides/ea-app-on-mac/">EA app guide</a> explains.</p>
+    <p>You don't need to know how any of it works. If you're curious, <a href="/guides/dxmt-vs-d3dmetal-vs-dxvk/">DXMT vs D3DMetal vs DXVK</a> explains the renderers, and if something doesn't work, <a href="/guides/troubleshooting/">troubleshooting</a> lists the fixes for the common problems.</p>
   </div>
 </section>

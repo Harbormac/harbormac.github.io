@@ -1,0 +1,72 @@
+<!--page
+{"path": "/guides/gog-games-on-mac/",
+ "title": "How to Play GOG Games on a Mac or MacBook – Portnaut",
+ "social_title": "How to play Windows GOG games on a Mac",
+ "image": "/assets/og-gog-games-on-mac.jpg",
+ "image_alt": "Portnaut guide: GOG games on a Mac",
+ "description": "Play Windows-only GOG games on an Apple silicon Mac or MacBook with Portnaut, for free: with GOG Galaxy, or straight from GOG's offline installers.",
+ "faq": true,
+ "jsonld": [
+  {"@type": "TechArticle", "@id": "{{site}}/guides/gog-games-on-mac/#article", "headline": "How to play Windows GOG games on a Mac", "url": "{{site}}/guides/gog-games-on-mac/", "inLanguage": "en", "datePublished": "2026-11-02", "dateModified": "2026-11-02", "image": "{{site}}/assets/og-gog-games-on-mac.jpg", "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}, "about": {"@id": "{{site}}/#app"}, "isPartOf": {"@id": "{{site}}/#website"}},
+  {"@type": "BreadcrumbList", "itemListElement": [
+   {"@type": "ListItem", "position": 1, "name": "Portnaut", "item": "{{site}}/"},
+   {"@type": "ListItem", "position": 2, "name": "Guides", "item": "{{site}}/guides/"},
+   {"@type": "ListItem", "position": 3, "name": "GOG games on Mac", "item": "{{site}}/guides/gog-games-on-mac/"}]}
+ ]}
+-->
+<div class="page-head">
+  <div class="wrap narrow">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Portnaut</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">GOG games on Mac</li></ol></nav>
+    <h1>How to play GOG games on a Mac</h1>
+    <p class="lead">Many GOG games have a Mac version: use that when there is one. For the Windows-only ones, Portnaut runs them on a Mac or MacBook with Apple silicon, with GOG Galaxy or straight from GOG's offline installers.</p>
+    <p class="tested">GOG Galaxy tested with Portnaut {{version}} on macOS 27.2 · Updated 2 November 2026</p>
+  </div>
+</div>
+
+<article class="prose">
+  <div class="wrap narrow">
+    <h2 id="mac-version">First, check for a Mac version</h2>
+    <p>On GOG's website, a game's page lists the systems it runs on. If macOS is among them, download the Mac version from GOG; a Mac version usually runs better than a Windows one. The rest of this guide is for games that are Windows only.</p>
+
+    <h2 id="installers">The simple way: GOG's offline installers</h2>
+    <p>GOG games are DRM-free, so they need no launcher to start.</p>
+    <ol>
+      <li><strong><a href="/download/">Download Portnaut</a></strong>, open it, and choose <strong>Prepare Portnaut</strong>.</li>
+      <li><strong>Download the game's Windows installer</strong> from your library on GOG's website (the "offline backup game installers").</li>
+      <li><strong>Choose Install from File…</strong> in Portnaut, or drop the installer on Portnaut's window, and install the game into a new bottle. <a href="/guides/open-exe-files-on-mac/">How Install from File works</a>.</li>
+      <li>The game appears in Portnaut's library by itself. Press <strong>Play</strong>.</li>
+    </ol>
+
+    <h2 id="galaxy">With GOG Galaxy</h2>
+    <ol>
+      <li><strong>Create a GOG Galaxy bottle</strong> with <strong>Bottles › New Bottle…</strong> and keep <strong>easy mode</strong> on.</li>
+      <li><strong>Choose Install GOG Galaxy</strong> and follow GOG's installer. Galaxy's first start right after its installer closes again; Portnaut then opens it for you.</li>
+      <li><strong>Sign in</strong> and install games. They appear in Portnaut's library by themselves and start without Galaxy.</li>
+    </ol>
+    <p>Galaxy's window would stay blank on a Mac; Portnaut sets Galaxy up so it draws, before every start. Keep the bottle on DXVK, DXMT or D3DMetal: on Wine's own renderer Galaxy's window stays white.</p>
+    {{shot library "Portnaut's library, where installed games appear with a Play button"}}
+
+    <h2 id="limits">Good to know</h2>
+    <ul>
+      <li><strong>Older games:</strong> many GOG games are older 32-bit DirectX 9 games, which DXVK, the GOG bottle's renderer, handles. In easy mode Portnaut picks the renderer for each game when you press Play.</li>
+      <li><strong>Check a game first:</strong> Portnaut's <strong>Will It Run?</strong> (⌘K) checks about 13,000 games.</li>
+    </ul>
+
+    <h2 id="faq">Questions</h2>
+    <details>
+      <summary>Can I play GOG games on a Mac?</summary>
+      <p>Yes. Use the Mac version when GOG offers one. Windows-only GOG games run through Portnaut if the game itself runs under Wine: with GOG Galaxy, or from GOG's offline installers.</p>
+    </details>
+    <details>
+      <summary>Do I need GOG Galaxy?</summary>
+      <p>No. GOG games are DRM-free: install them from GOG's offline installers with Install from File, and they start without Galaxy. Galaxy is there for downloads, updates and cloud saves.</p>
+    </details>
+    <details>
+      <summary>Is it free?</summary>
+      <p>Portnaut and GOG Galaxy are free. Games cost what they cost on GOG.</p>
+    </details>
+
+    <p>Next: <a href="/guides/epic-games-on-mac/">Epic Games on Mac</a> · <a href="/guides/open-exe-files-on-mac/">Open .exe files on a Mac</a> · <a href="/guides/troubleshooting/">Troubleshooting</a></p>
+    <p class="muted"><small>GOG and GOG GALAXY are trademarks of GOG sp. z o.o. Portnaut is not affiliated with GOG.</small></p>
+  </div>
+</article>

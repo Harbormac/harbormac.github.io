@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Portnaut FAQ – Windows Games on a Mac, Answered</title>
+<title>Portnaut FAQ – PC Games on a Mac or MacBook, Answered</title>
 <meta name="description" content="Is Portnaut free, and is it an emulator? Which Macs and games work, can it open .exe files, and is it safe? Answers about Windows games on a Mac.">
 <link rel="canonical" href="https://portnaut.com/faq/">
 <meta name="robots" content="index, follow, max-image-preview:large">
@@ -12,11 +12,11 @@
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/assets/icon-512.png" type="image/png" sizes="512x512">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
-<link rel="stylesheet" href="/assets/style.css?v=9169c18739">
+<link rel="stylesheet" href="/assets/style.css?v=42220ad2fd">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Portnaut">
 <meta property="og:locale" content="en_US">
-<meta property="og:title" content="Portnaut FAQ – Windows Games on a Mac, Answered">
+<meta property="og:title" content="Portnaut FAQ – PC Games on a Mac or MacBook, Answered">
 <meta property="og:description" content="Is Portnaut free, and is it an emulator? Which Macs and games work, can it open .exe files, and is it safe? Answers about Windows games on a Mac.">
 <meta property="og:url" content="https://portnaut.com/faq/">
 <meta property="og:image" content="https://portnaut.com/assets/og-image.png">
@@ -24,7 +24,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Portnaut: Windows games on your Mac">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Portnaut FAQ – Windows Games on a Mac, Answered">
+<meta name="twitter:title" content="Portnaut FAQ – PC Games on a Mac or MacBook, Answered">
 <meta name="twitter:description" content="Is Portnaut free, and is it an emulator? Which Macs and games work, can it open .exe files, and is it safe? Answers about Windows games on a Mac.">
 <meta name="twitter:image" content="https://portnaut.com/assets/og-image.png">
 <meta name="twitter:image:alt" content="Portnaut: Windows games on your Mac">
@@ -94,6 +94,14 @@
     },
     {
      "@type": "Question",
+     "name": "Can I play PC games on my MacBook?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Many, yes. Any MacBook Air or MacBook Pro with Apple silicon (M1 or later) runs Portnaut, and Windows PC games run if the game itself works under Wine. Games with kernel-level anti-cheat don't, and some games run only their single-player part. Check a game with Will It Run? before you buy or download it. A MacBook Air has no fan, so a demanding game can slow down after a while."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Which Macs does Portnaut run on?",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -102,10 +110,18 @@
     },
     {
      "@type": "Question",
+     "name": "What is easy mode?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "In easy mode, which new bottles start in, Portnaut sets each game up for you: when you press Play it switches the bottle to the renderer that suits the game (the one measured fastest on your Mac, else the one it was tested on, else the one its files suggest) and backs up your saves first. You can turn it off in the bottle's settings."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "What is a bottle?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "A bottle is a separate Windows environment with its own programs, settings and renderer. Portnaut keeps each launcher, or a game that needs different settings, in its own bottle, so they don't affect each other."
+      "text": "A bottle is a separate Windows environment with its own programs, settings and renderer. Portnaut keeps each launcher in its own bottle, so launchers don't affect each other."
      }
     },
     {
@@ -113,7 +129,15 @@
      "name": "Which games work?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Many Windows games using DirectX 9, 10, 11 or 12 can run, but every game is different. Portnaut has been tested most with Assassin's Creed III Remastered through Ubisoft Connect, which plays through missions at about 60 fps on an M4 Pro. Games with kernel-level anti-cheat do not run."
+      "text": "Many Windows games using DirectX 9, 10, 11 or 12 can run, but every game is different. Portnaut has been tested most with Assassin's Creed III Remastered through Ubisoft Connect, which plays through missions at about 60 fps on an M4 Pro. The story modes of GTA V and Red Dead Redemption 2 have been played on Macs with the same Wine. Games with kernel-level anti-cheat do not run. Check a game with Will It Run? in Portnaut first."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I know if a game will run?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Search it in Will It Run? (in the Library, or Command-K). Portnaut checks about 13,000 games from Highball's open compatibility database: games tested on a Mac, games Mac players report working, predictions from Linux players' results, and games blocked by kernel anti-cheat. The check happens on your Mac. Portnaut also warns you when Steam starts downloading a game that can't run."
      }
     },
     {
@@ -121,7 +145,7 @@
      "name": "Which launchers does Portnaut support?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Steam, the EA app and Ubisoft Connect are set up in a few clicks. Any other Windows installer (.exe or .msi) can be run in a bottle with Install from File."
+      "text": "Steam, the EA app, Ubisoft Connect, the Epic Games Launcher, Battle.net, the Rockstar Games Launcher, GOG Galaxy and Amazon Games are set up in a few clicks. Any other Windows installer (.exe or .msi) can be run in a bottle with Install from File."
      }
     },
     {
@@ -129,7 +153,7 @@
      "name": "Do online games with anti-cheat work?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Games with kernel-level anti-cheat, such as EA Sports FC and Battlefield, do not run under Wine, in Portnaut or elsewhere. Some online games also don't allow Wine in their terms, so check a game's rules before playing it online."
+      "text": "Games with kernel-level anti-cheat, such as EA Sports FC and Battlefield, do not run under Wine, in Portnaut or elsewhere. Some games run, but only offline: GTA V's story mode has been played on a Mac, while GTA Online needs BattlEye's kernel anti-cheat and doesn't work. Will It Run? names a game's anti-cheat. Some online games also don't allow Wine in their terms, so check a game's rules before playing it online."
      }
     },
     {
@@ -137,7 +161,7 @@
      "name": "Which renderer should I choose?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Usually the one Portnaut recommends: it reads each game's files and suggests DXMT for most 64-bit DirectX 11 games, D3DMetal for DirectX 12, DXVK for 32-bit DirectX 10 and 11 games, and Wine's own renderer for older games. The renderer applies to a whole bottle. How the renderers compare."
+      "text": "Usually the one Portnaut recommends: it reads each game's files and suggests DXMT for most 64-bit DirectX 11 games, D3DMetal for DirectX 12, DXVK for 32-bit DirectX 10 and 11 games, and Wine's own renderer for older games. In easy mode Portnaut switches to each game's renderer when you press Play, so you don't have to choose. How the renderers compare."
      }
     },
     {
@@ -177,7 +201,7 @@
      "name": "Does Portnaut collect any data?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "No. Portnaut has no account, no analytics and no tracking. It connects to the internet only to download what you ask for and, when you open Component Updates, to ask GitHub what is new. See the privacy page for details."
+      "text": "No. Portnaut has no account, no analytics and no tracking. It connects to the internet only to download what you ask for and, when you open Component Updates, to ask GitHub what is new and fetch the newest compatibility list. Will It Run? works on your Mac. See the privacy page for details."
      }
     },
     {
@@ -248,21 +272,24 @@
     <details id="emulator"><summary>Is Portnaut a Windows emulator?</summary><p>No, though it does the job people look for in one. An emulator imitates a whole PC, which is slow. Portnaut uses Wine, which provides the parts of Windows that programs call directly on macOS, so no copy of Windows runs at all. On Apple silicon, Apple's Rosetta translates a game's Intel code, and a renderer translates its DirectX graphics to Metal. For games this is usually faster than running Windows in an emulator or a virtual machine. <a href="/guides/windows-emulator-for-mac/">All the options compared</a>.</p></details>
     <details id="exe-files"><summary>Can Portnaut open .exe files?</summary><p>Yes. Choose Install from File… or drop an .exe or .msi file on Portnaut's window. Portnaut runs it in a bottle and lists the programs it installed, which you can then add to your library. Most Windows installers and games work this way; programs that need Windows drivers, such as kernel-level anti-cheat, do not. <a href="/guides/open-exe-files-on-mac/">Step by step: how to open .exe files on a Mac</a>.</p></details>
     <details id="windows-licence"><summary>Do I need a copy of Windows?</summary><p>No. Wine is not Windows and needs no Windows licence. You only need the games themselves, from Steam, EA, Ubisoft or elsewhere.</p></details>
+    <details id="macbook"><summary>Can I play PC games on my MacBook?</summary><p>Many, yes. Any MacBook Air or MacBook Pro with Apple silicon (M1 or later) runs Portnaut, and Windows PC games run if the game itself works under Wine. Games with kernel-level anti-cheat don't, and some games run only their single-player part. Check a game with Will It Run? before you buy or download it. A MacBook Air has no fan, so a demanding game can slow down after a while.</p></details>
     <details id="which-macs"><summary>Which Macs does Portnaut run on?</summary><p>Macs with Apple silicon (M1 or later) running macOS 14.6 or later. Intel Macs are not supported. Portnaut also needs Rosetta, which it tells you how to install if it is missing.</p></details>
-    <details id="bottle"><summary>What is a bottle?</summary><p>A bottle is a separate Windows environment with its own programs, settings and renderer. Portnaut keeps each launcher, or a game that needs different settings, in its own bottle, so they don't affect each other.</p></details>
+    <details id="easy-mode"><summary>What is easy mode?</summary><p>In easy mode, which new bottles start in, Portnaut sets each game up for you: when you press Play it switches the bottle to the renderer that suits the game (the one measured fastest on your Mac, else the one it was tested on, else the one its files suggest) and backs up your saves first. You can turn it off in the bottle's settings.</p></details>
+    <details id="bottle"><summary>What is a bottle?</summary><p>A bottle is a separate Windows environment with its own programs, settings and renderer. Portnaut keeps each launcher in its own bottle, so launchers don't affect each other.</p></details>
 
     <h2 id="games">Games</h2>
-    <details id="which-games"><summary>Which games work?</summary><p>Many Windows games using DirectX 9, 10, 11 or 12 can run, but every game is different. Portnaut has been tested most with Assassin's Creed III Remastered through Ubisoft Connect, which plays through missions at about 60 fps on an M4 Pro. Games with kernel-level anti-cheat do not run.</p></details>
-    <details id="launchers"><summary>Which launchers does Portnaut support?</summary><p>Steam, the EA app and Ubisoft Connect are set up in a few clicks. Any other Windows installer (.exe or .msi) can be run in a bottle with Install from File.</p></details>
-    <details id="anti-cheat"><summary>Do online games with anti-cheat work?</summary><p>Games with kernel-level anti-cheat, such as EA Sports FC and Battlefield, do not run under Wine, in Portnaut or elsewhere. Some online games also don't allow Wine in their terms, so check a game's rules before playing it online.</p></details>
-    <details id="renderer"><summary>Which renderer should I choose?</summary><p>Usually the one Portnaut recommends: it reads each game's files and suggests DXMT for most 64-bit DirectX 11 games, D3DMetal for DirectX 12, DXVK for 32-bit DirectX 10 and 11 games, and Wine's own renderer for older games. The renderer applies to a whole bottle. <a href="/guides/dxmt-vs-d3dmetal-vs-dxvk/">How the renderers compare</a>.</p></details>
+    <details id="which-games"><summary>Which games work?</summary><p>Many Windows games using DirectX 9, 10, 11 or 12 can run, but every game is different. Portnaut has been tested most with Assassin's Creed III Remastered through Ubisoft Connect, which plays through missions at about 60 fps on an M4 Pro. The story modes of <a href="/guides/gta-5-on-mac/">GTA V</a> and <a href="/guides/red-dead-redemption-2-on-mac/">Red Dead Redemption 2</a> have been played on Macs with the same Wine. Games with kernel-level anti-cheat do not run. Check a game with Will It Run? in Portnaut first.</p></details>
+    <details id="will-it-run"><summary>How do I know if a game will run?</summary><p>Search it in Will It Run? (in the Library, or Command-K). Portnaut checks about 13,000 games from Highball's open compatibility database: games tested on a Mac, games Mac players report working, predictions from Linux players' results, and games blocked by kernel anti-cheat. The check happens on your Mac. Portnaut also warns you when Steam starts downloading a game that can't run.</p></details>
+    <details id="launchers"><summary>Which launchers does Portnaut support?</summary><p>Steam, the EA app, Ubisoft Connect, the Epic Games Launcher, Battle.net, the Rockstar Games Launcher, GOG Galaxy and Amazon Games are set up in a few clicks. Any other Windows installer (.exe or .msi) can be run in a bottle with Install from File.</p></details>
+    <details id="anti-cheat"><summary>Do online games with anti-cheat work?</summary><p>Games with kernel-level anti-cheat, such as EA Sports FC and Battlefield, do not run under Wine, in Portnaut or elsewhere. Some games run, but only offline: GTA V's story mode has been played on a Mac, while GTA Online needs BattlEye's kernel anti-cheat and doesn't work. Will It Run? names a game's anti-cheat. Some online games also don't allow Wine in their terms, so check a game's rules before playing it online.</p></details>
+    <details id="renderer"><summary>Which renderer should I choose?</summary><p>Usually the one Portnaut recommends: it reads each game's files and suggests DXMT for most 64-bit DirectX 11 games, D3DMetal for DirectX 12, DXVK for 32-bit DirectX 10 and 11 games, and Wine's own renderer for older games. In easy mode Portnaut switches to each game's renderer when you press Play, so you don't have to choose. <a href="/guides/dxmt-vs-d3dmetal-vs-dxvk/">How the renderers compare</a>.</p></details>
     <details id="controllers"><summary>Can I use a game controller?</summary><p>Yes. Portnaut recognises Xbox, PlayStation, Switch and most other controllers through SDL and shows them to games as an Xbox controller, which most games expect.</p></details>
     <details id="performance"><summary>How fast are games?</summary><p>That depends on the game, the renderer and your Mac. Portnaut records the average and low frame rate of every session you start from its library, so you can compare renderers. MetalFX upscaling can help in demanding games.</p></details>
 
     <h2 id="safety">Installing, safety and privacy</h2>
     <details id="blocked"><summary>Why does macOS stop Portnaut the first time I open it?</summary><p>Portnaut is not notarized by Apple yet. Open System Settings, then Privacy and Security, and choose Open Anyway next to the message about Portnaut. After that it opens normally.</p></details>
     <details id="safe"><summary>Is Portnaut safe?</summary><p>Portnaut contains only its own code and downloads Wine and the renderers from their makers' public releases on GitHub, checking each download against a published SHA-256 checksum. Launchers come from their publishers and Windows components from Microsoft. Bottles keep Windows programs apart from each other and away from your Mac's own folders, but they are not a security sandbox: only run Windows programs you trust.</p></details>
-    <details id="data"><summary>Does Portnaut collect any data?</summary><p>No. Portnaut has no account, no analytics and no tracking. It connects to the internet only to download what you ask for and, when you open Component Updates, to ask GitHub what is new. See the privacy page for details.</p></details>
+    <details id="data"><summary>Does Portnaut collect any data?</summary><p>No. Portnaut has no account, no analytics and no tracking. It connects to the internet only to download what you ask for and, when you open Component Updates, to ask GitHub what is new and fetch the newest compatibility list. Will It Run? works on your Mac. See the privacy page for details.</p></details>
     <details id="storage"><summary>Where are my games and saves stored?</summary><p>Inside your bottles, in the Portnaut folder in your Library: ~/Library/Application Support/Portnaut. Save backups you make go to Portnaut Backups in your Documents folder.</p></details>
     <details id="uninstall"><summary>How do I uninstall Portnaut?</summary><p>Move Portnaut from Applications to the Trash. To remove your bottles and games too, also move ~/Library/Application Support/Portnaut to the Trash.</p></details>
 
@@ -294,14 +321,17 @@
       <nav aria-label="Guides">
         <p class="footer-title">Guides</p>
         <ul>
+          <li><a href="/guides/gta-5-on-mac/">GTA 5 on Mac</a></li>
+          <li><a href="/guides/red-dead-redemption-2-on-mac/">Red Dead Redemption 2 on Mac</a></li>
           <li><a href="/guides/steam-on-mac/">Steam on Mac</a></li>
-          <li><a href="/guides/ubisoft-connect-on-mac/">Ubisoft Connect on Mac</a></li>
+          <li><a href="/guides/epic-games-on-mac/">Epic Games on Mac</a></li>
           <li><a href="/guides/ea-app-on-mac/">EA app on Mac</a></li>
-          <li><a href="/guides/dxmt-vs-d3dmetal-vs-dxvk/">DXMT vs D3DMetal vs DXVK</a></li>
+          <li><a href="/guides/ubisoft-connect-on-mac/">Ubisoft Connect on Mac</a></li>
+          <li><a href="/guides/battle-net-on-mac/">Battle.net on Mac</a></li>
+          <li><a href="/guides/gog-games-on-mac/">GOG games on Mac</a></li>
           <li><a href="/guides/open-exe-files-on-mac/">Open .exe files on a Mac</a></li>
           <li><a href="/guides/windows-emulator-for-mac/">Windows emulator for Mac?</a></li>
-          <li><a href="/guides/game-porting-toolkit/">Game Porting Toolkit</a></li>
-          <li><a href="/guides/install-wine-on-mac/">Install Wine on a Mac</a></li>
+          <li><a href="/guides/dxmt-vs-d3dmetal-vs-dxvk/">DXMT vs D3DMetal vs DXVK</a></li>
           <li><a href="/guides/whisky-alternative/">Whisky alternatives</a></li>
           <li><a href="/guides/troubleshooting/">Troubleshooting</a></li>
           <li><a href="/guides/">All guides</a></li>
@@ -317,7 +347,7 @@
         </ul>
       </div>
     </div>
-    <p class="legal">© 2026 Built by Argo. Portnaut is an independent project, not affiliated with or endorsed by Apple, Valve, Electronic Arts, Ubisoft, Microsoft, CodeWeavers, Highball or Sikarugir. Steam, EA, Ubisoft Connect, Assassin's Creed, Apple, Mac, macOS, Metal and MetalFX are trademarks of their owners.</p>
+    <p class="legal">© 2026 Built by Argo. Portnaut is an independent project, not affiliated with or endorsed by Apple, Valve, Electronic Arts, Ubisoft, Epic Games, Blizzard Entertainment, Rockstar Games, GOG, Amazon, Microsoft, CodeWeavers, Highball or Sikarugir. Steam, EA, Ubisoft Connect, Epic Games, Battle.net, Rockstar Games, GOG GALAXY, Amazon Games, Assassin's Creed, Apple, Mac, macOS, Metal and MetalFX are trademarks of their owners.</p>
   </div>
 </footer>
 </body>

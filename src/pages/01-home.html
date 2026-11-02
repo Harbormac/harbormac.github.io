@@ -1,8 +1,8 @@
 <!--page
 {"path": "/",
- "title": "Portnaut – Play Windows Games on Your Mac, Free",
+ "title": "Portnaut – Play Windows PC Games on Your Mac or MacBook, Free",
  "social_title": "Portnaut: play Windows games on your Mac",
- "description": "Portnaut is a free Mac app for playing Windows games on Apple silicon: Steam, the EA app, Ubisoft Connect and more, with DirectX translated to Metal.",
+ "description": "Portnaut is a free app for playing Windows PC games on an Apple silicon Mac or MacBook: Steam, Epic, Battle.net, Ubisoft Connect and more. No Windows needed.",
  "jsonld": [
   {"@type": "WebSite", "@id": "{{site}}/#website", "url": "{{site}}/", "name": "Portnaut", "alternateName": ["Portnaut for Mac"], "inLanguage": "en", "publisher": {"@id": "{{site}}/#builtbyargo"}},
   {"@type": "Organization", "@id": "{{site}}/#builtbyargo", "name": "Built by Argo", "email": "{{support_email}}", "logo": "{{site}}/built-by-argo.png", "url": "https://github.com/BuiltByArgo", "sameAs": ["https://github.com/BuiltByArgo", "{{kofi_url}}"]},
@@ -15,7 +15,7 @@
    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
    "image": "{{site}}/assets/icon-512.png",
    "screenshot": ["{{site}}/assets/library-1600.jpg", "{{site}}/assets/bottles-1600.jpg", "{{site}}/assets/game-settings-1600.jpg"],
-   "featureList": ["Steam, EA app and Ubisoft Connect on Mac", "DXMT, D3DMetal, DXVK and Wine renderers with a recommendation per game", "Per-game settings", "Controller support through SDL", "Bottle snapshots and save backups", "Component updates with roll back"],
+   "featureList": ["Steam, Epic Games, Battle.net, Rockstar Games, GOG Galaxy, Amazon Games, EA app and Ubisoft Connect on Mac", "DXMT, D3DMetal, DXVK and Wine renderers with a recommendation per game", "Per-game settings", "Controller support through SDL", "Easy mode: the renderer chosen for each game", "Will It Run? compatibility check for about 13,000 games", "Find My Best Setup: renderers measured on your Mac", "Couch Mode for a controller and a TV", "Bottle snapshots and automatic save backups", "Component updates with roll back"],
    "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}},
   {"@type": "SoftwareSourceCode", "@id": "{{site}}/#source", "name": "Portnaut source code", "codeRepository": "{{source_url}}",
    "programmingLanguage": "Swift", "runtimePlatform": "macOS", "license": "https://opensource.org/license/mit",
@@ -26,7 +26,7 @@
   <div class="wrap">
     <span class="eyebrow">Free · For Apple silicon · Early access</span>
     <h1>Play Windows games on your Mac</h1>
-    <p class="lead">Portnaut runs Steam, the EA app, Ubisoft Connect and other Windows games on Apple silicon Macs. It uses Wine and translates DirectX to Apple's Metal, and it is free and open source.</p>
+    <p class="lead">Portnaut runs Steam, Epic Games, Battle.net, Ubisoft Connect and other Windows PC games on Macs and MacBooks with Apple silicon. It uses Wine and translates DirectX to Apple's Metal, and it is free and open source.</p>
     <div class="actions">
       <a class="button primary" href="/download/">Download Portnaut {{version}}</a>
       <a class="button kofi" href="{{kofi_url}}" rel="noopener">Support Portnaut on Ko-fi</a>
@@ -44,7 +44,7 @@
     </div>
     <ol class="steps">
       <li><h3>Prepare Portnaut</h3><p>On first launch, Portnaut downloads Wine and its graphics translators once, checks each against a published SHA-256 checksum, and keeps them in its own folder.</p></li>
-      <li><h3>Create a bottle</h3><p>A bottle is a separate Windows environment. Pick Steam, the EA app or Ubisoft Connect and Portnaut installs it from the publisher's own installer, or run any Windows installer you have.</p></li>
+      <li><h3>Create a bottle</h3><p>A bottle is a separate Windows environment. Pick a launcher, such as Steam, Epic Games or Battle.net, and Portnaut installs it from the publisher's own installer, or run any Windows installer you have.</p></li>
       <li><h3>Play</h3><p>Your games appear in Portnaut's library. Press Play, or start them from their launcher just as you would on a PC.</p></li>
     </ol>
   </div>
@@ -76,7 +76,7 @@
       <div class="feature-text">
         <h3>Snapshots and save backups</h3>
         <p>Before every risky change, Portnaut takes a snapshot of the whole bottle: an instant copy that takes no extra space until something changes. If an update or a mod goes wrong, put the bottle back as it was.</p>
-        <p>Back up your game saves to your Documents folder in one click.</p>
+        <p>Back up your game saves to your Documents folder in one click, or let Portnaut do it before every game.</p>
       </div>
       {{shot snapshots "A Portnaut bottle's snapshots and save backups, with automatic snapshots taken before updates"}}
     </div>
@@ -96,12 +96,15 @@
       <h2>And there's more</h2>
     </div>
     <div class="grid">
-      <div class="card"><span class="tag">Launchers</span><h3>Steam, EA app and Ubisoft Connect</h3><p>Installed from their publishers' own installers. Steam and EA app games join Portnaut's library as soon as they finish installing.</p></div>
+      <div class="card"><span class="tag">Easy mode</span><h3>Install a game, press Play</h3><p>When you press Play, Portnaut switches the bottle to the renderer that suits the game and backs up your saves first. Advanced settings stay one click away.</p></div>
+      <div class="card"><span class="tag">Will It Run?</span><h3>Know before you download</h3><p>Check about 13,000 games for Mac reports and anti-cheat before you buy or download one. Portnaut warns you when Steam starts downloading a game that can't run.</p></div>
+      <div class="card"><span class="tag">Couch Mode</span><h3>Play from the sofa</h3><p>Your library full screen on a TV, driven by a controller: choose a game with the D-pad and press A to play.</p></div>
+      <div class="card"><span class="tag">Launchers</span><h3>Eight game launchers</h3><p>Steam, the EA app, Ubisoft Connect, Epic Games, Battle.net, Rockstar Games, GOG Galaxy and Amazon Games, installed from their publishers' own installers. Games from most of them join Portnaut's library as soon as they finish installing.</p></div>
       <div class="card"><span class="tag">Installers</span><h3>Any Windows installer</h3><p>Choose an .exe or .msi, or drop it on Portnaut's window. Portnaut runs it in a bottle and lists the programs it installed.</p></div>
       <div class="card"><span class="tag">Controllers</span><h3>Your controller, as an Xbox pad</h3><p>Xbox, PlayStation, Switch and most other controllers are recognised through SDL and shown to games as an Xbox controller.</p></div>
       <div class="card"><span class="tag">Components</span><h3>Windows runtimes in one click</h3><p>Visual C++ runtimes, .NET Desktop Runtime 8 and the DirectX helper libraries, downloaded from Microsoft.</p></div>
-      <div class="card"><span class="tag">Performance</span><h3>Measured, not guessed</h3><p>Average and low frame rate and GPU time for every session you play, so you can compare renderers side by side.</p></div>
-      <div class="card"><span class="tag">Privacy</span><h3>No account, no tracking</h3><p>Portnaut has no analytics. It only connects to the internet to download what you ask for.</p></div>
+      <div class="card"><span class="tag">Performance</span><h3>Measured, not guessed</h3><p>Find My Best Setup plays a game on each renderer, measures every round on your Mac and keeps the fastest. Every session's frame rate is recorded too.</p></div>
+      <div class="card"><span class="tag">Privacy</span><h3>No account, no tracking</h3><p>Portnaut has no analytics. It only connects to the internet to download what you ask for, and it checks your games against its compatibility list on your Mac.</p></div>
     </div>
   </div>
 </section>
@@ -136,6 +139,7 @@
       <a class="button primary" href="/download/">Download Portnaut {{version}}</a>
       <a class="button secondary" href="/guides/">Read the guides</a>
     </div>
+    <p class="muted" style="margin-top:18px">Step by step: <a href="/guides/gta-5-on-mac/">GTA 5 (story mode)</a> · <a href="/guides/red-dead-redemption-2-on-mac/">Red Dead Redemption 2</a> · <a href="/guides/steam-on-mac/">Steam</a> · <a href="/guides/epic-games-on-mac/">Epic Games</a> · <a href="/guides/battle-net-on-mac/">Battle.net</a> · <a href="/guides/gog-games-on-mac/">GOG</a></p>
   </div>
 </section>
 

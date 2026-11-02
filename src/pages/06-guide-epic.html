@@ -1,0 +1,66 @@
+<!--page
+{"path": "/guides/epic-games-on-mac/",
+ "title": "How to Play Epic Games Store Games on a Mac or MacBook – Portnaut",
+ "social_title": "How to play Windows games from the Epic Games Store on a Mac",
+ "image": "/assets/og-epic-games-on-mac.jpg",
+ "image_alt": "Portnaut guide: Epic Games Store games on a Mac",
+ "description": "Run the Windows Epic Games Launcher on an Apple silicon Mac or MacBook with Portnaut, for free, and play the Windows games in your Epic library.",
+ "faq": true,
+ "jsonld": [
+  {"@type": "TechArticle", "@id": "{{site}}/guides/epic-games-on-mac/#article", "headline": "How to play Windows games from the Epic Games Store on a Mac", "url": "{{site}}/guides/epic-games-on-mac/", "inLanguage": "en", "datePublished": "2026-11-02", "dateModified": "2026-11-02", "image": "{{site}}/assets/og-epic-games-on-mac.jpg", "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}, "about": {"@id": "{{site}}/#app"}, "isPartOf": {"@id": "{{site}}/#website"}},
+  {"@type": "BreadcrumbList", "itemListElement": [
+   {"@type": "ListItem", "position": 1, "name": "Portnaut", "item": "{{site}}/"},
+   {"@type": "ListItem", "position": 2, "name": "Guides", "item": "{{site}}/guides/"},
+   {"@type": "ListItem", "position": 3, "name": "Epic Games on Mac", "item": "{{site}}/guides/epic-games-on-mac/"}]}
+ ]}
+-->
+<div class="page-head">
+  <div class="wrap narrow">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Portnaut</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">Epic Games on Mac</li></ol></nav>
+    <h1>How to play Epic Games Store games on a Mac</h1>
+    <p class="lead">The Mac version of the Epic Games Launcher only installs games made for macOS. With Portnaut you can run the Windows version on a Mac or MacBook with Apple silicon and install the Windows games in your Epic library, including the free ones.</p>
+    <p class="tested">Launcher tested with Portnaut {{version}} on macOS 27.2 · Updated 2 November 2026</p>
+  </div>
+</div>
+
+<article class="prose">
+  <div class="wrap narrow">
+    <h2 id="tested">What has been tested</h2>
+    <p>The Windows Epic Games Launcher installs and opens to its sign-in page in Portnaut, with nothing to set up by hand. How well a particular game then runs depends on the game: Portnaut's <strong>Will It Run?</strong> (⌘K) checks about 13,000 games before you download one.</p>
+
+    <h2 id="steps">Install the Epic Games Launcher in Portnaut</h2>
+    <ol>
+      <li><strong><a href="/download/">Download Portnaut</a></strong>, open it, and choose <strong>Prepare Portnaut</strong>.</li>
+      <li><strong>Create an Epic Games bottle.</strong> Choose <strong>Bottles › New Bottle…</strong>, select <strong>Epic Games</strong> and keep <strong>easy mode</strong> on.</li>
+      <li><strong>Install the launcher.</strong> Choose <strong>Install Epic Games Launcher</strong>. Portnaut downloads Epic's own installer and installs it with a progress bar.</li>
+      <li><strong>Sign in.</strong> Choose <strong>Open Epic Games Launcher</strong> and sign in. Your password goes to Epic; Portnaut never sees or stores it.</li>
+      <li><strong>Install a game</strong> as you would on a PC. When Epic finishes installing it, it appears in Portnaut's library by itself.</li>
+      <li><strong>Play</strong> from Portnaut's library. Epic games start through the launcher, which signs them in to Epic's online services; in easy mode, Portnaut first switches the bottle to the renderer that suits the game.</li>
+    </ol>
+    {{shot bottles "A Portnaut bottle's settings, with the recommended renderer"}}
+
+    <h2 id="limits">Good to know</h2>
+    <ul>
+      <li><strong>Check a game first.</strong> Games protected by anti-cheat that runs in the Windows kernel can't run under Wine, in Portnaut or anywhere else. Will It Run? names them.</li>
+      <li><strong>Online and anti-cheat:</strong> some games run but block online play under Wine. Will It Run? says when a game's anti-cheat may do that.</li>
+      <li><strong>Free games:</strong> games you claim on Epic's Mac app or website are in the same library, so the Windows launcher in Portnaut shows them too.</li>
+    </ul>
+
+    <h2 id="faq">Questions</h2>
+    <details>
+      <summary>Can I play Epic Games Store games on a Mac?</summary>
+      <p>Games with a Mac version, through Epic's Mac app. Windows-only games, through the Windows Epic Games Launcher in Portnaut, if the game itself runs under Wine. Check it with Will It Run? first.</p>
+    </details>
+    <details>
+      <summary>Do I need a second Epic account?</summary>
+      <p>No. Sign in with the account you already have; your library is the same on every platform.</p>
+    </details>
+    <details>
+      <summary>Is it free?</summary>
+      <p>Portnaut and the Epic Games Launcher are free. Games cost what they cost on Epic.</p>
+    </details>
+
+    <p>Next: <a href="/guides/steam-on-mac/">Steam on Mac</a> · <a href="/guides/gog-games-on-mac/">GOG games on Mac</a> · <a href="/guides/troubleshooting/#launchers">If a launcher won't open</a></p>
+    <p class="muted"><small>Epic Games and the Epic Games Store are trademarks of Epic Games, Inc. Portnaut is not affiliated with Epic Games.</small></p>
+  </div>
+</article>

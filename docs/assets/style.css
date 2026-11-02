@@ -102,6 +102,7 @@ section.tight { padding: 56px 0; }
 
 /* Cards */
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+.grid + h2 { margin-top: 56px; }
 .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
 .card h3 { font-family: var(--sans); font-size: 1.05rem; font-weight: 650; letter-spacing: 0; margin-bottom: 0.4em; }
 .card p { color: var(--muted); margin: 0; font-size: 0.97rem; }
@@ -175,6 +176,7 @@ details p, details ul { color: var(--muted); }
   body { font-size: 16px; }
   .nav { gap: 8px; padding-top: 10px; padding-bottom: 10px; }
   .nav-links { margin-left: 0; width: 100%; justify-content: space-between; gap: 6px 14px; }
+  [id] { scroll-margin-top: 124px; }
   .hero { padding-top: 48px; }
   .hero .actions .button, .center .actions .button { flex: 1 1 100%; }
   .footer-grid { grid-template-columns: 1fr; }

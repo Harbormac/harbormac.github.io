@@ -1,0 +1,85 @@
+<!--page
+{"path": "/guides/red-dead-redemption-2-on-mac/",
+ "title": "How to Play Red Dead Redemption 2 on a Mac or MacBook – Portnaut",
+ "social_title": "How to play Red Dead Redemption 2 on a Mac",
+ "image": "/assets/og-red-dead-redemption-2-on-mac.jpg",
+ "image_alt": "Portnaut guide: Red Dead Redemption 2 on a Mac",
+ "description": "Play Red Dead Redemption 2's story on an Apple silicon Mac or MacBook with Portnaut, free: what has been tested, the one update it needs, and the steps.",
+ "faq": true,
+ "jsonld": [
+  {"@type": "TechArticle", "@id": "{{site}}/guides/red-dead-redemption-2-on-mac/#article", "headline": "How to play Red Dead Redemption 2 on a Mac", "url": "{{site}}/guides/red-dead-redemption-2-on-mac/", "inLanguage": "en", "datePublished": "2026-11-02", "dateModified": "2026-11-02", "image": "{{site}}/assets/og-red-dead-redemption-2-on-mac.jpg", "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}, "about": {"@id": "{{site}}/#app"}, "isPartOf": {"@id": "{{site}}/#website"}},
+  {"@type": "BreadcrumbList", "itemListElement": [
+   {"@type": "ListItem", "position": 1, "name": "Portnaut", "item": "{{site}}/"},
+   {"@type": "ListItem", "position": 2, "name": "Guides", "item": "{{site}}/guides/"},
+   {"@type": "ListItem", "position": 3, "name": "Red Dead Redemption 2 on Mac", "item": "{{site}}/guides/red-dead-redemption-2-on-mac/"}]}
+ ]}
+-->
+<div class="page-head">
+  <div class="wrap narrow">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Portnaut</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">Red Dead Redemption 2 on Mac</li></ol></nav>
+    <h1>How to play Red Dead Redemption 2 on a Mac</h1>
+    <p class="lead">Red Dead Redemption 2 has no Mac version, but its story has been played on Macs with Apple silicon, and Portnaut sets it up for free. It needs one component update first.</p>
+    <p class="tested">Played on a Mac with Apple silicon (Highball's compatibility database) · Portnaut {{version}} · Updated 2 November 2026</p>
+  </div>
+</div>
+
+<article class="prose">
+  <div class="wrap narrow">
+    <h2 id="what-works">What has been tested</h2>
+    <ul>
+      <li><strong>The story plays.</strong> The Steam copy has been played on a Mac with Apple silicon, as recorded in <a href="https://github.com/gauthierpiarrette/highball-db">Highball's open compatibility database</a>: it loads in about a minute, reaches the main menu and plays. Portnaut uses the same Wine. We haven't played it through Portnaut ourselves yet.</li>
+      <li><strong>It needs the Stable component update.</strong> Red Dead Redemption 2 used to quit at 98% of its first load on every Mac. A fix in Highball's MoltenVK, the Vulkan layer, solved that, and Portnaut installs it with the Stable set of component updates.</li>
+      <li><strong>Windowed was tested.</strong> It was played windowed at 1280 × 720; full screen at your display's resolution hasn't been tested yet.</li>
+      <li><strong>Red Dead Online hasn't been tested yet.</strong> The game has no kernel anti-cheat listed, but we won't claim it works until someone has played it.</li>
+      <li><strong>Known issue:</strong> a player on a MacBook Air with M5 reports grass, bushes and trees flickering while moving.</li>
+      <li><strong>Steam is the tested store.</strong> Copies from the Rockstar Games Launcher or the Epic Games Store haven't been tried yet.</li>
+    </ul>
+
+    <h2 id="you-need">What you need</h2>
+    <ul>
+      <li>A Mac or MacBook with Apple silicon (M1 or later), macOS 14.6 or later, and Rosetta.</li>
+      <li>Red Dead Redemption 2 on Steam, a Steam account and a Rockstar Games account.</li>
+      <li>Around 150 GB of free space, as Steam lists for the game.</li>
+    </ul>
+
+    <h2 id="steps">Play Red Dead Redemption 2 on your Mac, step by step</h2>
+    <ol>
+      <li><strong><a href="/download/">Download Portnaut</a></strong>, open it, and choose <strong>Prepare Portnaut</strong>.</li>
+      <li><strong>Install the Stable components.</strong> Choose <strong>Portnaut › Check for Component Updates…</strong>, pick <strong>Stable</strong> and install it (Highball r29 or later). It's a small download and brings the MoltenVK fix this game needs. <a href="/guides/install-wine-on-mac/#updates">How component updates work</a>.</li>
+      <li><strong>Create a Steam bottle</strong> with <strong>Bottles › New Bottle…</strong>, keep <strong>easy mode</strong> on, install Steam and sign in. <a href="/guides/steam-on-mac/">The Steam guide</a> has the details.</li>
+      <li><strong>Install Red Dead Redemption 2</strong> from your Steam library. It appears in Portnaut's library by itself.</li>
+      <li><strong>Press Play in Portnaut.</strong> Easy mode keeps the bottle on DXMT, which the Rockstar Games Launcher needs. Steam opens that launcher first: sign in with your Rockstar account, and it hands over to the game.</li>
+      <li><strong>Set the game to windowed</strong> in its graphics settings, the way it was tested, and keep the Graphics API on <strong>Vulkan</strong>.</li>
+    </ol>
+    <p>The game draws with its own Vulkan renderer through MoltenVK, so the bottle's renderer doesn't change how the game itself looks or runs; DXMT is there for the Rockstar Games Launcher. Portnaut also sets that launcher's sign-in window to draw, which on a Mac it otherwise doesn't.</p>
+    {{shot component-updates "Portnaut's Component Updates window, where the Stable set is installed"}}
+
+    <h2 id="tips">Tips</h2>
+    <ul>
+      <li><strong>It's a demanding game.</strong> Start with lower settings and raise them while it stays smooth.</li>
+      <li><strong>Controllers</strong> work: the game sees them as Xbox controllers.</li>
+      <li><strong>Saves:</strong> with easy mode, Portnaut backs up your saves before every session.</li>
+    </ul>
+
+    <h2 id="faq">Questions</h2>
+    <details>
+      <summary>Can you play Red Dead Redemption 2 on a Mac?</summary>
+      <p>Yes, the story. The game has no Mac version, but the Steam copy has been played on Macs with Apple silicon through Wine, with Highball's MoltenVK fix that Portnaut installs with its Stable component update.</p>
+    </details>
+    <details>
+      <summary>Does Red Dead Online work on a Mac?</summary>
+      <p>It hasn't been tested yet. We'll update this page when it has.</p>
+    </details>
+    <details>
+      <summary>Why does it need a component update?</summary>
+      <p>The game asks for some kinds of images that Metal can't store the way the game requests, so without the fix it quits at 98% of its first load. Highball's MoltenVK creates those images another way. Portnaut installs it with the Stable set, and keeps the previous versions so you can roll back.</p>
+    </details>
+    <details>
+      <summary>Do I need Windows or Boot Camp?</summary>
+      <p>No. Portnaut runs the game through Wine, which needs no copy of Windows. Boot Camp doesn't exist on Macs with Apple silicon.</p>
+    </details>
+
+    <p>Next: <a href="/guides/gta-5-on-mac/">GTA 5 on Mac</a> · <a href="/guides/steam-on-mac/">Steam on Mac</a> · <a href="/guides/troubleshooting/">Troubleshooting</a></p>
+    <p class="muted"><small>Red Dead Redemption, Rockstar Games and Vulkan are trademarks of their owners. Portnaut is not affiliated with them. Compatibility facts come from Highball's database, checked on 2 November 2026.</small></p>
+  </div>
+</article>

@@ -1,0 +1,87 @@
+<!--page
+{"path": "/guides/gta-5-on-mac/",
+ "title": "How to Play GTA 5 on a Mac or MacBook (Story Mode) – Portnaut",
+ "social_title": "How to play GTA 5's story mode on a Mac",
+ "image": "/assets/og-gta-5-on-mac.jpg",
+ "image_alt": "Portnaut guide: GTA 5 on a Mac",
+ "description": "Play GTA 5's story mode on an Apple silicon Mac or MacBook with Portnaut, free. What works, what doesn't (GTA Online), and the steps, from setup to playing.",
+ "faq": true,
+ "jsonld": [
+  {"@type": "TechArticle", "@id": "{{site}}/guides/gta-5-on-mac/#article", "headline": "How to play GTA 5's story mode on a Mac", "url": "{{site}}/guides/gta-5-on-mac/", "inLanguage": "en", "datePublished": "2026-11-02", "dateModified": "2026-11-02", "image": "{{site}}/assets/og-gta-5-on-mac.jpg", "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}, "about": {"@id": "{{site}}/#app"}, "isPartOf": {"@id": "{{site}}/#website"}},
+  {"@type": "BreadcrumbList", "itemListElement": [
+   {"@type": "ListItem", "position": 1, "name": "Portnaut", "item": "{{site}}/"},
+   {"@type": "ListItem", "position": 2, "name": "Guides", "item": "{{site}}/guides/"},
+   {"@type": "ListItem", "position": 3, "name": "GTA 5 on Mac", "item": "{{site}}/guides/gta-5-on-mac/"}]}
+ ]}
+-->
+<div class="page-head">
+  <div class="wrap narrow">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Portnaut</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">GTA 5 on Mac</li></ol></nav>
+    <h1>How to play GTA 5 on a Mac</h1>
+    <p class="lead">Grand Theft Auto V has no Mac version, but its story mode has been played on Macs with Apple silicon, with the same Wine Portnaut uses, and Portnaut sets it up for free. GTA Online doesn't work: read what works first.</p>
+    <p class="tested">Story mode played on a Mac with Apple silicon (Highball's compatibility database) · Portnaut {{version}} · Updated 2 November 2026</p>
+  </div>
+</div>
+
+<article class="prose">
+  <div class="wrap narrow">
+    <h2 id="what-works">What works, and what doesn't</h2>
+    <ul>
+      <li><strong>Story mode works.</strong> The Steam copy of <strong>GTA V Legacy</strong>, the original DirectX 11 edition, has been played on Macs with Apple silicon on the DXMT renderer, as recorded in <a href="https://github.com/gauthierpiarrette/highball-db">Highball's open compatibility database</a>. Portnaut uses the same Wine. We haven't played it through Portnaut ourselves yet.</li>
+      <li><strong>GTA Online doesn't work.</strong> Rockstar protects GTA Online with BattlEye, an anti-cheat that runs in the Windows kernel, and Wine can't run it, on a Mac or anywhere else. Story mode starts without it.</li>
+      <li><strong>Install GTA V Legacy, not Enhanced.</strong> Steam lists the two editions separately. Legacy is the one played on a Mac.</li>
+      <li><strong>Steam is the tested store.</strong> Copies from the Rockstar Games Launcher or the Epic Games Store haven't been tried yet.</li>
+    </ul>
+
+    <h2 id="you-need">What you need</h2>
+    <ul>
+      <li>A Mac or MacBook with Apple silicon (M1 or later), macOS 14.6 or later, and Rosetta.</li>
+      <li>GTA V on Steam, a Steam account and a Rockstar Games account.</li>
+      <li>Around 100 GB of free space for the game.</li>
+    </ul>
+
+    <h2 id="steps">Play GTA 5 on your Mac, step by step</h2>
+    <ol>
+      <li><strong><a href="/download/">Download Portnaut</a></strong>, open it, and choose <strong>Prepare Portnaut</strong>.</li>
+      <li><strong>Create a Steam bottle.</strong> Choose <strong>Bottles › New Bottle…</strong>, select <strong>Steam</strong> and keep <strong>easy mode</strong> on.</li>
+      <li><strong>Install Steam and sign in.</strong> Choose <strong>Install Steam</strong>, then <strong>Open Steam</strong>. <a href="/guides/steam-on-mac/">The Steam guide</a> has the details.</li>
+      <li><strong>Install Grand Theft Auto V Legacy</strong> from your Steam library. When the download finishes, the game appears in Portnaut's library by itself.</li>
+      <li><strong>Press Play in Portnaut.</strong> Easy mode switches the bottle to DXMT, the renderer GTA V was played on. Steam opens the Rockstar Games Launcher first: sign in with your Rockstar account, and it hands over to the game. The first start can take several minutes.</li>
+    </ol>
+    <p>Portnaut sets two things up for you. GTA V Legacy gets the launch option <code>-nobattleye</code> when it joins your library, which starts story mode without BattlEye; you'll see it in the game's <strong>Settings…</strong>. And the Rockstar Games Launcher's sign-in window is set to draw, which on a Mac it otherwise doesn't.</p>
+    {{shot library "Portnaut's library, where an installed Steam game appears with a Play button"}}
+
+    <h2 id="tips">Tips</h2>
+    <ul>
+      <li><strong>Keep easy mode on,</strong> or set the bottle to DXMT yourself: the Rockstar Games Launcher doesn't start on D3DMetal.</li>
+      <li><strong>Controllers</strong> work: GTA V sees them as Xbox controllers.</li>
+      <li><strong>Saves:</strong> with easy mode, Portnaut backs up your saves before every session.</li>
+      <li><strong>Slow?</strong> Lower the game's resolution or settings, or turn on MetalFX upscaling in the bottle's Graphics section. <a href="/guides/troubleshooting/#slow">More performance tips</a>.</li>
+    </ul>
+
+    <h2 id="faq">Questions</h2>
+    <details>
+      <summary>Can you play GTA 5 on a Mac?</summary>
+      <p>Yes, the story mode. GTA V has no Mac version, but the Steam copy of GTA V Legacy has been played on Macs with Apple silicon through Wine on the DXMT renderer, the setup Portnaut uses. You need a Mac with Apple silicon (M1 or later).</p>
+    </details>
+    <details>
+      <summary>Does GTA Online work on a Mac?</summary>
+      <p>No. GTA Online requires BattlEye, an anti-cheat that runs in the Windows kernel, and Wine can't run it. That's the same on a Mac, on Linux and on the Steam Deck. Only story mode works.</p>
+    </details>
+    <details>
+      <summary>Which GTA 5 edition should I install?</summary>
+      <p>GTA V Legacy, the original DirectX 11 edition. It's the one that's been played on a Mac. The Enhanced edition hasn't been tested yet.</p>
+    </details>
+    <details>
+      <summary>Do I need Windows or Boot Camp?</summary>
+      <p>No. Portnaut runs the game through Wine, which needs no copy of Windows. Boot Camp doesn't exist on Macs with Apple silicon.</p>
+    </details>
+    <details>
+      <summary>Is it free?</summary>
+      <p>Portnaut is free and open source. You need to own GTA V on Steam.</p>
+    </details>
+
+    <p>Next: <a href="/guides/red-dead-redemption-2-on-mac/">Red Dead Redemption 2 on Mac</a> · <a href="/guides/steam-on-mac/">Steam on Mac</a> · <a href="/guides/troubleshooting/">Troubleshooting</a></p>
+    <p class="muted"><small>Grand Theft Auto, GTA, Rockstar Games and BattlEye are trademarks of their owners. Portnaut is not affiliated with them. Compatibility facts come from Highball's database, checked on 2 November 2026.</small></p>
+  </div>
+</article>

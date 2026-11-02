@@ -7,7 +7,7 @@
  "description": "Install Wine on an Apple silicon Mac without Homebrew or Terminal: Portnaut sets up Wine 11 and the graphics renderers, and keeps each program in a bottle.",
  "faq": true,
  "jsonld": [
-  {"@type": "TechArticle", "@id": "{{site}}/guides/install-wine-on-mac/#article", "headline": "How to install Wine on a Mac, without Homebrew or Terminal", "url": "{{site}}/guides/install-wine-on-mac/", "inLanguage": "en", "datePublished": "2026-10-30", "dateModified": "2026-10-30", "image": ["{{site}}/assets/og-install-wine-on-mac.jpg", "{{site}}/assets/bottles-1600.jpg"], "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}, "about": {"@id": "{{site}}/#app"}, "isPartOf": {"@id": "{{site}}/#website"}},
+  {"@type": "TechArticle", "@id": "{{site}}/guides/install-wine-on-mac/#article", "headline": "How to install Wine on a Mac, without Homebrew or Terminal", "url": "{{site}}/guides/install-wine-on-mac/", "inLanguage": "en", "datePublished": "2026-10-30", "dateModified": "2026-11-01", "image": ["{{site}}/assets/og-install-wine-on-mac.jpg", "{{site}}/assets/bottles-1600.jpg"], "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}, "about": {"@id": "{{site}}/#app"}, "isPartOf": {"@id": "{{site}}/#website"}},
   {"@type": "BreadcrumbList", "itemListElement": [
    {"@type": "ListItem", "position": 1, "name": "Portnaut", "item": "{{site}}/"},
    {"@type": "ListItem", "position": 2, "name": "Guides", "item": "{{site}}/guides/"},
@@ -19,7 +19,7 @@
     <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Portnaut</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">Install Wine on a Mac</li></ol></nav>
     <h1>How to install Wine on a Mac, without Homebrew</h1>
     <p class="lead">Wine runs Windows programs on macOS. The usual instructions install it with Homebrew and run it from Terminal. Portnaut installs Wine for you, together with the graphics renderers games need, and runs everything from its own window.</p>
-    <p class="tested">Tested with Portnaut {{version}} on macOS 27.2 · Updated 30 October 2026</p>
+    <p class="tested">Tested with Portnaut {{version}} on macOS 27.2 · Updated 1 November 2026</p>
   </div>
 </div>
 
@@ -48,7 +48,7 @@
       <li><strong><a href="/download/">Download Portnaut</a></strong> and move it to your Applications folder. It needs a Mac with Apple silicon (M1 or later) and macOS 14.6 or later.</li>
       <li><strong>Open it.</strong> Portnaut isn't notarized by Apple yet, so you allow it once in <strong>System Settings › Privacy &amp; Security</strong>. <a href="/download/#open-anyway">How to allow it</a>.</li>
       <li><strong>Choose Prepare Portnaut.</strong> Portnaut downloads Wine 11 and the renderers once, checks each download against its published SHA-256 checksum, and installs them in its own folder. Nothing is installed system-wide, and no administrator password is needed. If Rosetta isn't installed yet, Portnaut says so first. <a href="/download/#rosetta">How to install Rosetta</a>.</li>
-      <li><strong>Create a bottle.</strong> A bottle is Portnaut's name for a Wine prefix: a separate Windows environment with its own C: drive. Choose <strong>Bottles › New Bottle…</strong> and pick Steam, the EA app or Ubisoft Connect, or <strong>Empty bottle</strong>.</li>
+      <li><strong>Create a bottle.</strong> A bottle is Portnaut's name for a Wine prefix: a separate Windows environment with its own C: drive. Choose <strong>Bottles › New Bottle…</strong> and pick a launcher, such as Steam or Epic Games, or <strong>Empty bottle</strong>.</li>
       <li><strong>Run Windows programs.</strong> Install games through the launcher, or choose <strong>Install from File…</strong> to run any .exe or .msi installer. <a href="/guides/open-exe-files-on-mac/">How to open .exe files on a Mac</a>.</li>
     </ol>
     {{shot bottles "A Portnaut bottle's graphics settings: DXMT selected, Portnaut's recommendation, and the MetalFX upscaling and DLSS switches"}}

@@ -12,7 +12,7 @@
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/assets/icon-512.png" type="image/png" sizes="512x512">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
-<link rel="stylesheet" href="/assets/style.css?v=9169c18739">
+<link rel="stylesheet" href="/assets/style.css?v=42220ad2fd">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Portnaut">
 <meta property="og:locale" content="en_US">
@@ -39,7 +39,7 @@
    "url": "https://portnaut.com/guides/troubleshooting/",
    "inLanguage": "en",
    "datePublished": "2026-10-30",
-   "dateModified": "2026-10-30",
+   "dateModified": "2026-11-01",
    "image": [
     "https://portnaut.com/assets/og-troubleshooting.jpg",
     "https://portnaut.com/assets/snapshots-1600.jpg"
@@ -103,7 +103,7 @@
     <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Portnaut</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">Troubleshooting</li></ol></nav>
     <h1>Troubleshooting Windows games on a Mac</h1>
     <p class="lead">Fixes for the problems people run into most with Portnaut, from the first start to a game that crashes. Find your problem below; each fix uses the same names you see in the app.</p>
-    <p class="tested">Tested with Portnaut 0.8.0 on macOS 27.2 · Updated 30 October 2026</p>
+    <p class="tested">Tested with Portnaut 0.12.0 on macOS 27.2 · Updated 1 November 2026</p>
   </div>
 </div>
 
@@ -158,11 +158,14 @@
       <li>If Portnaut says a game's Windows program could not be found, the game has been moved or uninstalled. Reinstall it through its launcher, or add it again with <strong>Add Game…</strong>.</li>
     </ul>
 
-    <h2 id="launchers">Steam, the EA app or Ubisoft Connect won't open or sign in</h2>
+    <h2 id="launchers">A launcher won't open or sign in</h2>
     <ul>
       <li><strong>Ubisoft Connect sign-in doesn't load:</strong> check the bottle isn't on DXVK, then open Ubisoft Connect again. <a href="/guides/ubisoft-connect-on-mac/">Ubisoft Connect guide</a>.</li>
       <li><strong>The EA app doesn't open or a game crashes at start:</strong> the EA app is the launcher Portnaut has tested least. Try the other recommended renderer in a second bottle, or turn on Advertise AVX instructions. <a href="/guides/ea-app-on-mac/">EA app guide</a>.</li>
       <li><strong>Steam:</strong> a Steam bottle starts on D3DMetal. If Steam itself misbehaves after a component update, roll back (see <a href="#after-update">after an update</a>). <a href="/guides/steam-on-mac/">Steam guide</a>.</li>
+      <li><strong>The Rockstar Games Launcher "failed to initialize":</strong> the bottle is on D3DMetal, which the launcher doesn't start on. Switch the bottle to DXMT in its <strong>Graphics</strong> settings.</li>
+      <li><strong>The Rockstar Games Launcher runs but its window is gone:</strong> closing the window keeps it running in the menu bar. Choose <strong>Stop Session</strong> in its bottle, then open it again.</li>
+      <li><strong>GOG Galaxy closes right after installing, or at once later:</strong> its first start after the installer always stops under Wine, so Portnaut opens it again by itself. Otherwise, open it with <strong>Open GOG Galaxy</strong> in its bottle: Portnaut clears what blocks it before every start.</li>
     </ul>
     <p>If a launcher worked before and stopped, <a href="#after-update">restore a snapshot</a> from before the problem started.</p>
 
@@ -225,14 +228,17 @@
       <nav aria-label="Guides">
         <p class="footer-title">Guides</p>
         <ul>
+          <li><a href="/guides/gta-5-on-mac/">GTA 5 on Mac</a></li>
+          <li><a href="/guides/red-dead-redemption-2-on-mac/">Red Dead Redemption 2 on Mac</a></li>
           <li><a href="/guides/steam-on-mac/">Steam on Mac</a></li>
-          <li><a href="/guides/ubisoft-connect-on-mac/">Ubisoft Connect on Mac</a></li>
+          <li><a href="/guides/epic-games-on-mac/">Epic Games on Mac</a></li>
           <li><a href="/guides/ea-app-on-mac/">EA app on Mac</a></li>
-          <li><a href="/guides/dxmt-vs-d3dmetal-vs-dxvk/">DXMT vs D3DMetal vs DXVK</a></li>
+          <li><a href="/guides/ubisoft-connect-on-mac/">Ubisoft Connect on Mac</a></li>
+          <li><a href="/guides/battle-net-on-mac/">Battle.net on Mac</a></li>
+          <li><a href="/guides/gog-games-on-mac/">GOG games on Mac</a></li>
           <li><a href="/guides/open-exe-files-on-mac/">Open .exe files on a Mac</a></li>
           <li><a href="/guides/windows-emulator-for-mac/">Windows emulator for Mac?</a></li>
-          <li><a href="/guides/game-porting-toolkit/">Game Porting Toolkit</a></li>
-          <li><a href="/guides/install-wine-on-mac/">Install Wine on a Mac</a></li>
+          <li><a href="/guides/dxmt-vs-d3dmetal-vs-dxvk/">DXMT vs D3DMetal vs DXVK</a></li>
           <li><a href="/guides/whisky-alternative/">Whisky alternatives</a></li>
           <li><a href="/guides/troubleshooting/" aria-current="page">Troubleshooting</a></li>
           <li><a href="/guides/">All guides</a></li>
@@ -248,7 +254,7 @@
         </ul>
       </div>
     </div>
-    <p class="legal">© 2026 Built by Argo. Portnaut is an independent project, not affiliated with or endorsed by Apple, Valve, Electronic Arts, Ubisoft, Microsoft, CodeWeavers, Highball or Sikarugir. Steam, EA, Ubisoft Connect, Assassin's Creed, Apple, Mac, macOS, Metal and MetalFX are trademarks of their owners.</p>
+    <p class="legal">© 2026 Built by Argo. Portnaut is an independent project, not affiliated with or endorsed by Apple, Valve, Electronic Arts, Ubisoft, Epic Games, Blizzard Entertainment, Rockstar Games, GOG, Amazon, Microsoft, CodeWeavers, Highball or Sikarugir. Steam, EA, Ubisoft Connect, Epic Games, Battle.net, Rockstar Games, GOG GALAXY, Amazon Games, Assassin's Creed, Apple, Mac, macOS, Metal and MetalFX are trademarks of their owners.</p>
   </div>
 </footer>
 </body>
