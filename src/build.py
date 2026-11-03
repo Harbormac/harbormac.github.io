@@ -27,13 +27,15 @@ DOWNLOAD_URL = "https://github.com/BuiltByArgo/Portnaut/releases/latest"
 SOURCE_URL = "https://github.com/BuiltByArgo/Portnaut"
 KOFI_URL = "https://ko-fi.com/A2H229BWWV"
 SUPPORT_EMAIL = "builtbyargo@proton.me"
-ZIP_SHA256 = "1e5f14000a7438b7224a69842ae75f1e138571ec32b02fa8a6f46bf8fe7ea2b3"
+ZIP_SHA256 = "35d95bf8925b98b22a4c7e0c8af2bbe3629ed3e8353cb5aae2704814b1d4ae95"
+ZIP_SIZE = "3.7 MB"
 # Google Search Console's HTML-tag verification code, once there is one (only the content="…" value).
 GOOGLE_VERIFICATION = ""
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "src")
 OUT = os.path.join(ROOT, "docs")
+RELEASE_ASSETS = os.path.join(os.path.dirname(ROOT), "portnaut-release", "release-assets")
 SHOT_SIZES = {"library": (1600, 1166), "bottles": (1600, 1166), "game-settings": (1600, 1166),
               "snapshots": (1600, 1166), "component-updates": (1600, 1166)}
 
@@ -83,7 +85,7 @@ def build():
         shutil.copy2(os.path.join(SRC, "root", name), os.path.join(OUT, name))
     layout = open(os.path.join(SRC, "layout.html"), encoding="utf-8").read()
     common = {"site": SITE, "version": VERSION, "download_url": DOWNLOAD_URL, "releases_url": RELEASES_URL, "source_url": SOURCE_URL,
-              "kofi_url": KOFI_URL, "support_email": SUPPORT_EMAIL, "zip_sha256": ZIP_SHA256}
+              "kofi_url": KOFI_URL, "support_email": SUPPORT_EMAIL, "zip_sha256": ZIP_SHA256, "zip_size": ZIP_SIZE}
     pages = read_pages()
     for page in pages:
         path = page["path"]
@@ -170,8 +172,29 @@ class Page(HTMLParser):
             self.jsonld[-1] += data
 
 
+def check_release():
+    """The download page's size and checksum must be those of the zip for VERSION."""
+    name = "Portnaut-%s.zip" % VERSION
+    path = os.path.join(RELEASE_ASSETS, name)
+    if not os.path.exists(path):
+        return ["%s is not in %s, so the download page's size and checksum can't be checked" % (name, RELEASE_ASSETS)]
+    with open(path, "rb") as f:
+        data = f.read()
+    problems = []
+    if hashlib.sha256(data).hexdigest() != ZIP_SHA256:
+        problems.append("ZIP_SHA256 is not the checksum of %s" % name)
+    if "%.1f MB" % (len(data) / 1e6) != ZIP_SIZE:
+        problems.append("ZIP_SIZE is not the size of %s" % name)
+    return problems
+
+
 def check(pages):
-    problems, parsed, titles, descriptions = [], {}, {}, {}
+    problems, parsed, titles, descriptions = check_release(), {}, {}, {}
+    for page in pages:
+        # A version filled in automatically would claim tests of a release nobody tested.
+        for line in re.findall(r'<p class="tested">(.*?)</p>', page["body"]):
+            if "{{version}}" in line and re.search(r"tested|played", line, re.I):
+                problems.append('%s: a "tested" line must name the version really tested, not {{version}}' % page["path"])
     for page in pages:
         parser = Page()
         parser.feed(open(page["output"], encoding="utf-8").read())

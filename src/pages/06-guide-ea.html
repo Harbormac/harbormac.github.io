@@ -6,7 +6,7 @@
  "image_alt": "Portnaut guide: the EA app on a Mac",
  "description": "Install the Windows EA app on an Apple silicon Mac or MacBook with Portnaut, for free, and learn which EA games can run under Wine and which cannot.",
  "jsonld": [
-  {"@type": "TechArticle", "@id": "{{site}}/guides/ea-app-on-mac/#article", "headline": "How to run the EA app on a Mac with Portnaut", "url": "{{site}}/guides/ea-app-on-mac/", "inLanguage": "en", "datePublished": "2026-10-28", "dateModified": "2026-10-29", "image": "{{site}}/assets/og-ea-app-on-mac.jpg", "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}, "about": {"@id": "{{site}}/#app"}, "isPartOf": {"@id": "{{site}}/#website"}},
+  {"@type": "TechArticle", "@id": "{{site}}/guides/ea-app-on-mac/#article", "headline": "How to run the EA app on a Mac with Portnaut", "url": "{{site}}/guides/ea-app-on-mac/", "inLanguage": "en", "datePublished": "2026-10-28", "dateModified": "2026-11-03", "image": "{{site}}/assets/og-ea-app-on-mac.jpg", "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}, "about": {"@id": "{{site}}/#app"}, "isPartOf": {"@id": "{{site}}/#website"}},
   {"@type": "BreadcrumbList", "itemListElement": [
    {"@type": "ListItem", "position": 1, "name": "Portnaut", "item": "{{site}}/"},
    {"@type": "ListItem", "position": 2, "name": "Guides", "item": "{{site}}/guides/"},
@@ -18,7 +18,7 @@
     <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Portnaut</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">EA app on Mac</li></ol></nav>
     <h1>How to run the EA app on a Mac</h1>
     <p class="lead">Portnaut installs the Windows EA app on an Apple silicon Mac in its own bottle, so you can play EA games that run under Wine, for free.</p>
-    <p class="tested">Tested with Portnaut {{version}} on macOS 27.2 · Updated 29 October 2026</p>
+    <p class="tested">EA's installer tested up to its agreement screen (October 2026); the EA app's sign-in and games haven't been tested yet · Updated 3 November 2026</p>
   </div>
 </div>
 
@@ -48,7 +48,7 @@
     <h2 id="troubleshooting">If something goes wrong</h2>
     <ul>
       <li><strong>A game isn't in the library:</strong> choose <strong>Programs › Find Programs</strong>, or <strong>Programs › Add Game…</strong> and pick its .exe.</li>
-      <li><strong>A game crashes at start:</strong> try the other recommended renderer in a second bottle, or turn on <strong>Advertise AVX instructions</strong> in the bottle's <strong>Performance &amp; input lag</strong> section.</li>
+      <li><strong>A game crashes at start:</strong> search it in <strong>Will It Run?</strong> (⌘K) to see the renderer it was tested on. In easy mode Portnaut picks the renderer each time you press Play; to try another one yourself, turn easy mode off in the bottle's settings and change the renderer in its <strong>Graphics</strong> section. You can also turn on <strong>Advertise AVX instructions</strong> in the bottle's <strong>Performance &amp; input lag</strong> section.</li>
       <li><strong>More fixes:</strong> <a href="/guides/troubleshooting/">troubleshooting</a> covers black screens, missing DLLs, controllers and slow games.</li>
       <li><strong>Still stuck:</strong> choose <strong>Diagnostics › Export diagnostics…</strong> and email the file to <a href="mailto:{{support_email}}">{{support_email}}</a> with what you were doing.</li>
     </ul>

@@ -10,7 +10,7 @@
 <meta name="theme-color" content="#111b20">
 <meta name="color-scheme" content="dark">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
-<link rel="icon" href="/assets/icon-512.png" type="image/png" sizes="512x512">
+<link rel="icon" href="/assets/icon-96.png" type="image/png" sizes="96x96">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="stylesheet" href="/assets/style.css?v=42220ad2fd">
 <meta property="og:type" content="website">
@@ -39,7 +39,7 @@
    "url": "https://portnaut.com/guides/troubleshooting/",
    "inLanguage": "en",
    "datePublished": "2026-10-30",
-   "dateModified": "2026-11-01",
+   "dateModified": "2026-11-03",
    "image": [
     "https://portnaut.com/assets/og-troubleshooting.jpg",
     "https://portnaut.com/assets/snapshots-1600.jpg"
@@ -88,7 +88,7 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <nav class="nav wrap" aria-label="Main">
-    <a class="brand" href="/"><img src="/assets/icon-512.png" width="30" height="30" alt=""><span>Portnaut</span></a>
+    <a class="brand" href="/"><img src="/assets/icon-96.png" width="30" height="30" alt=""><span>Portnaut</span></a>
     <ul class="nav-links">
       <li><a href="/#features">Features</a></li>
       <li><a href="/guides/">Guides</a></li>
@@ -103,7 +103,7 @@
     <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Portnaut</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">Troubleshooting</li></ol></nav>
     <h1>Troubleshooting Windows games on a Mac</h1>
     <p class="lead">Fixes for the problems people run into most with Portnaut, from the first start to a game that crashes. Find your problem below; each fix uses the same names you see in the app.</p>
-    <p class="tested">Tested with Portnaut 0.12.0 on macOS 27.2 · Updated 1 November 2026</p>
+    <p class="tested">Written for Portnaut 0.12.0 · Updated 3 November 2026</p>
   </div>
 </div>
 
@@ -134,7 +134,7 @@
     <h2 id="black-screen">A game shows a black screen or crashes at start</h2>
     <p>Most of the time the renderer is the cause. Try these in order:</p>
     <ol>
-      <li><strong>Try the other recommended renderer.</strong> Stop the session, then choose another renderer in the bottle's <strong>Graphics</strong> section. To keep the working setup untouched, try it in a second bottle instead. <a href="/guides/dxmt-vs-d3dmetal-vs-dxvk/">Which renderer suits which game</a>.</li>
+      <li><strong>Try another renderer.</strong> <strong>Will It Run?</strong> (⌘K) shows the one a game was tested on. Stop the session. In easy mode Portnaut picks the renderer each time you press Play, so turn easy mode off in the bottle's settings first. Then choose another renderer in the bottle's <strong>Graphics</strong> section. <a href="/guides/dxmt-vs-d3dmetal-vs-dxvk/">Which renderer suits which game</a>.</li>
       <li><strong>Check the game's bitness.</strong> DXMT and D3DMetal cover 64-bit games only. For 32-bit DirectX 9 to 11 games, DXVK is the fast option.</li>
       <li><strong>Turn on Advertise AVX instructions</strong> in the bottle's <strong>Performance &amp; input lag</strong> section. Some newer games refuse to start without AVX. Rosetta translates those instructions but only reports them when asked.</li>
       <li><strong>If the game hangs,</strong> turn off <strong>MSync</strong> in the bottle's <strong>Windows</strong> section to rule it out, and turn it back on if that doesn't help.</li>
@@ -161,7 +161,7 @@
     <h2 id="launchers">A launcher won't open or sign in</h2>
     <ul>
       <li><strong>Ubisoft Connect sign-in doesn't load:</strong> check the bottle isn't on DXVK, then open Ubisoft Connect again. <a href="/guides/ubisoft-connect-on-mac/">Ubisoft Connect guide</a>.</li>
-      <li><strong>The EA app doesn't open or a game crashes at start:</strong> the EA app is the launcher Portnaut has tested least. Try the other recommended renderer in a second bottle, or turn on Advertise AVX instructions. <a href="/guides/ea-app-on-mac/">EA app guide</a>.</li>
+      <li><strong>The EA app doesn't open or a game crashes at start:</strong> the EA app is the launcher Portnaut has tested least. <a href="#black-screen">Try another renderer</a>, or turn on Advertise AVX instructions. <a href="/guides/ea-app-on-mac/">EA app guide</a>.</li>
       <li><strong>Steam:</strong> a Steam bottle starts on D3DMetal. If Steam itself misbehaves after a component update, roll back (see <a href="#after-update">after an update</a>). <a href="/guides/steam-on-mac/">Steam guide</a>.</li>
       <li><strong>The Rockstar Games Launcher "failed to initialize":</strong> the bottle is on D3DMetal, which the launcher doesn't start on. Switch the bottle to DXMT in its <strong>Graphics</strong> settings.</li>
       <li><strong>The Rockstar Games Launcher runs but its window is gone:</strong> closing the window keeps it running in the menu bar. Choose <strong>Stop Session</strong> in its bottle, then open it again.</li>
@@ -211,7 +211,7 @@
   <div class="wrap">
     <div class="footer-grid">
       <div>
-        <a class="brand" href="/"><img src="/assets/icon-512.png" width="30" height="30" alt=""><span>Portnaut</span></a>
+        <a class="brand" href="/"><img src="/assets/icon-96.png" width="30" height="30" alt=""><span>Portnaut</span></a>
         <p>Play Windows games on your Mac. Free and open source, made by Built by Argo.</p>
       </div>
       <nav aria-label="Portnaut">

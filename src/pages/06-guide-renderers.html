@@ -7,7 +7,7 @@
  "description": "DXMT, D3DMetal, DXVK or Wine's own: what each renderer does for Windows games on an Apple silicon Mac, which DirectX versions it covers, and which to pick.",
  "faq": true,
  "jsonld": [
-  {"@type": "TechArticle", "@id": "{{site}}/guides/dxmt-vs-d3dmetal-vs-dxvk/#article", "headline": "DXMT vs D3DMetal vs DXVK: which renderer to use for Windows games on a Mac", "url": "{{site}}/guides/dxmt-vs-d3dmetal-vs-dxvk/", "inLanguage": "en", "datePublished": "2026-10-29", "dateModified": "2026-10-29", "image": ["{{site}}/assets/og-dxmt-vs-d3dmetal-vs-dxvk.jpg", "{{site}}/assets/bottles-1600.jpg"], "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}, "about": {"@id": "{{site}}/#app"}, "isPartOf": {"@id": "{{site}}/#website"}},
+  {"@type": "TechArticle", "@id": "{{site}}/guides/dxmt-vs-d3dmetal-vs-dxvk/#article", "headline": "DXMT vs D3DMetal vs DXVK: which renderer to use for Windows games on a Mac", "url": "{{site}}/guides/dxmt-vs-d3dmetal-vs-dxvk/", "inLanguage": "en", "datePublished": "2026-10-29", "dateModified": "2026-11-03", "image": ["{{site}}/assets/og-dxmt-vs-d3dmetal-vs-dxvk.jpg", "{{site}}/assets/bottles-1600.jpg"], "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}, "about": {"@id": "{{site}}/#app"}, "isPartOf": {"@id": "{{site}}/#website"}},
   {"@type": "BreadcrumbList", "itemListElement": [
    {"@type": "ListItem", "position": 1, "name": "Portnaut", "item": "{{site}}/"},
    {"@type": "ListItem", "position": 2, "name": "Guides", "item": "{{site}}/guides/"},
@@ -19,7 +19,7 @@
     <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Portnaut</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">DXMT vs D3DMetal vs DXVK</li></ol></nav>
     <h1>DXMT vs D3DMetal vs DXVK: which renderer to use</h1>
     <p class="lead">Windows games draw with Microsoft's DirectX, and a Mac only draws with Apple's Metal. A renderer translates one into the other. Portnaut ships four of them, and which one suits a game depends on its DirectX version and on whether it is 32-bit or 64-bit.</p>
-    <p class="tested">Tested with Portnaut {{version}} on macOS 27.2 · Updated 29 October 2026</p>
+    <p class="tested">DXMT played with Assassin's Creed III in October 2026; the other renderers checked with launcher windows, not games yet · Updated 3 November 2026</p>
   </div>
 </div>
 
@@ -110,7 +110,7 @@
     </details>
     <details>
       <summary>Can a Mac run DirectX 12 games?</summary>
-      <p>That is what D3DMetal, Apple's translation from the Game Porting Toolkit, is for, and Portnaut picks it for 64-bit DirectX 12 games. How well a particular game runs depends on the game; Portnaut hasn't tested a DirectX 12 game in depth yet. Games with kernel-level anti-cheat don't run under Wine at all, whichever renderer you choose.</p>
+      <p>That is what D3DMetal, Apple's translation from the Game Porting Toolkit, is for, and Portnaut picks it for 64-bit DirectX 12 games. How well a particular game runs depends on the game; Portnaut hasn't tested a DirectX 12 game yet. Games with kernel-level anti-cheat don't run under Wine at all, whichever renderer you choose.</p>
     </details>
     <details>
       <summary>Which renderer is best for older games?</summary>

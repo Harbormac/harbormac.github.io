@@ -35,7 +35,7 @@ for name in ["library", "bottles", "game-settings", "snapshots", "component-upda
 }
 
 let icon = load(root.appendingPathComponent("assets/icon-512.png"))
-for size in [32, 180, 512] {
+for size in [32, 96, 180, 512] {
     write(render(width: size, height: size, background: size == 180 ? page : nil) { $0.draw(icon, in: CGRect(x: 0, y: 0, width: size, height: size)) }, "icon-\(size).png", jpeg: false)
 }
 
