@@ -4,7 +4,7 @@
  "social_title": "What's new in Portnaut",
  "description": "Release notes for Portnaut, the free app for Windows games on Apple silicon Macs: what changed in each version, and how to update to the newest one.",
  "jsonld": [
-  {"@type": "WebPage", "@id": "{{site}}/whats-new/#page", "url": "{{site}}/whats-new/", "name": "What's new in Portnaut", "inLanguage": "en", "isPartOf": {"@id": "{{site}}/#website"}, "about": {"@id": "{{site}}/#app"}, "datePublished": "2026-10-30", "dateModified": "2026-11-01"},
+  {"@type": "WebPage", "@id": "{{site}}/whats-new/#page", "url": "{{site}}/whats-new/", "name": "What's new in Portnaut", "inLanguage": "en", "isPartOf": {"@id": "{{site}}/#website"}, "about": {"@id": "{{site}}/#app"}, "datePublished": "2026-10-30", "dateModified": "2026-11-03"},
   {"@type": "BreadcrumbList", "itemListElement": [
    {"@type": "ListItem", "position": 1, "name": "Portnaut", "item": "{{site}}/"},
    {"@type": "ListItem", "position": 2, "name": "What's new", "item": "{{site}}/whats-new/"}]}
@@ -15,24 +15,23 @@
     <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Portnaut</a></li><li aria-current="page">What's new</li></ol></nav>
     <h1>What's new in Portnaut</h1>
     <p class="lead">The changes in each version of Portnaut, newest first. Every release is also on GitHub, with its download and checksum.</p>
-    <p class="tested">Latest version: Portnaut {{version}} · 1 November 2026</p>
+    <p class="tested">Latest version: Portnaut {{version}} · 3 November 2026</p>
   </div>
 </div>
 
 <article class="prose">
   <div class="wrap narrow">
-    <h2 id="v0-12-0">Portnaut 0.12.0 · 1 November 2026</h2>
+    <h2 id="v0-12-0">Portnaut 0.12.0 · 3 November 2026</h2>
     <p><strong>Install a game and play: easy mode, Will It Run?, five more launchers and Couch Mode.</strong></p>
     <ul>
       <li><strong>Five more launchers:</strong> the Epic Games Launcher, Battle.net, the Rockstar Games Launcher, GOG Galaxy and Amazon Games, each installed from its publisher's own installer. Games from Epic, GOG and Amazon Games appear by themselves; Epic games start through the launcher, so they're signed in.</li>
       <li><strong>Easy mode,</strong> on for new bottles: when you press Play, Portnaut switches the bottle to the renderer that suits the game and backs up your saves first. Bottles from earlier versions keep working as they did until you turn it on.</li>
-      <li><strong>Will It Run?</strong> (Command-K): check about 13,000 games before you buy or download one, from Highball's open compatibility database. Games in your library show their verdict, and Portnaut warns you when Steam starts downloading a game that can't run.</li>
+      <li><strong>Will It Run?</strong> (Command-K): check about 13,000 games before you buy or download one, from Highball's open compatibility database. Only games played on a Mac show as “Tested on Apple silicon”. Games in your library show their verdict, and Portnaut warns you when Steam starts downloading a game that can't run.</li>
       <li><strong>Find My Best Setup:</strong> Portnaut plays a game once on each renderer it can use, measures every round on your Mac, and keeps the fastest.</li>
       <li><strong>Couch Mode</strong> (Shift-Command-T): your library full screen for a TV, driven by a controller.</li>
       <li><strong>Automatic save backups</strong> before every game, ten kept.</li>
       <li><strong>Launcher windows that draw:</strong> Battle.net, Rockstar's Social Club, GOG Galaxy and Amazon Games showed blank windows under Wine on a Mac. Portnaut sets each one up to draw in software. Rockstar bottles use DXMT, because the Rockstar Games Launcher doesn't start on D3DMetal.</li>
-      <li><strong>GTA V and Red Dead Redemption 2 from Steam:</strong> Rockstar's sign-in window now draws in every bottle, because these games open the Rockstar Games Launcher from Steam too. GTA V Legacy gets the launch option <code>-nobattleye</code> by itself, so its story mode starts; GTA Online needs BattlEye, which Wine can't run. <a href="/guides/gta-5-on-mac/">GTA 5 on a Mac</a> · <a href="/guides/red-dead-redemption-2-on-mac/">Red Dead Redemption 2 on a Mac</a>.</li>
-      <li><strong>Clearer verdicts:</strong> only games played on a Mac show as “Tested on Apple silicon”; a Wine release's notes now count as a report.</li>
+      <li><strong>GTA V and Red Dead Redemption 2 from Steam:</strong> Rockstar's sign-in window draws in every bottle, because these games open the Rockstar Games Launcher from Steam too. GTA V Legacy gets the launch option <code>-nobattleye</code> by itself, so its story mode can start; GTA Online needs BattlEye, which Wine can't run. <a href="/guides/gta-5-on-mac/">GTA 5 on a Mac</a> · <a href="/guides/red-dead-redemption-2-on-mac/">Red Dead Redemption 2 on a Mac</a>.</li>
     </ul>
     <p>Each new launcher is tested up to its sign-in screen. Not yet tried with real games: signing in and playing in the new launchers, Find My Best Setup's rounds, and Couch Mode with a controller. GTA V and Red Dead Redemption 2 haven't been played through Portnaut yet: their setup follows Highball's database, where both were played on a Mac. Reports are welcome at <a href="mailto:{{support_email}}">{{support_email}}</a>. <a href="/guides/troubleshooting/#launchers">If a launcher won't open</a>.</p>
     <p>New for privacy: when you open Component Updates, Portnaut also fetches the newest compatibility list. Will It Run? works on your Mac and never sends what you play. <a href="/privacy/">Privacy</a>.</p>
