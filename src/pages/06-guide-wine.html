@@ -1,13 +1,13 @@
 <!--page
 {"path": "/guides/install-wine-on-mac/",
- "title": "Install Wine on a Mac (M1 or Later) Without Homebrew – Portnaut",
+ "title": "How to Install Wine on a Mac (2026) – Portnaut",
  "social_title": "How to install Wine on a Mac, without Homebrew or Terminal",
  "image": "/assets/og-install-wine-on-mac.jpg",
  "image_alt": "Portnaut guide: install Wine on a Mac without Homebrew",
- "description": "Install Wine on an Apple silicon Mac without Homebrew or Terminal: Portnaut sets up Wine 11 and the graphics renderers, and keeps each program in a bottle.",
+ "description": "Homebrew disabled its Wine packages in September 2026. How to install Wine on an Apple silicon Mac today: free with Portnaut, with no Homebrew or Terminal.",
  "faq": true,
  "jsonld": [
-  {"@type": "TechArticle", "@id": "{{site}}/guides/install-wine-on-mac/#article", "headline": "How to install Wine on a Mac, without Homebrew or Terminal", "url": "{{site}}/guides/install-wine-on-mac/", "inLanguage": "en", "datePublished": "2026-10-30", "dateModified": "2026-11-03", "image": ["{{site}}/assets/og-install-wine-on-mac.jpg", "{{site}}/assets/bottles-1600.jpg"], "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}, "about": {"@id": "{{site}}/#app"}, "isPartOf": {"@id": "{{site}}/#website"}},
+  {"@type": "TechArticle", "@id": "{{site}}/guides/install-wine-on-mac/#article", "headline": "How to install Wine on a Mac, without Homebrew or Terminal", "url": "{{site}}/guides/install-wine-on-mac/", "inLanguage": "en", "datePublished": "2026-10-30", "dateModified": "2026-11-06", "image": ["{{site}}/assets/og-install-wine-on-mac.jpg", "{{site}}/assets/bottles-1600.jpg"], "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}, "about": {"@id": "{{site}}/#app"}, "isPartOf": {"@id": "{{site}}/#website"}},
   {"@type": "BreadcrumbList", "itemListElement": [
    {"@type": "ListItem", "position": 1, "name": "Portnaut", "item": "{{site}}/"},
    {"@type": "ListItem", "position": 2, "name": "Guides", "item": "{{site}}/guides/"},
@@ -18,8 +18,8 @@
   <div class="wrap narrow">
     <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Portnaut</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">Install Wine on a Mac</li></ol></nav>
     <h1>How to install Wine on a Mac, without Homebrew</h1>
-    <p class="lead">Wine runs Windows programs on macOS. The usual instructions install it with Homebrew and run it from Terminal. Portnaut installs Wine for you, together with the graphics renderers games need, and runs everything from its own window.</p>
-    <p class="tested">The Prepare Portnaut step tested with version 0.12.0 on macOS 27.2 · Updated 3 November 2026</p>
+    <p class="lead">Wine runs Windows programs on macOS. Most instructions still say to install it with Homebrew, but Homebrew has disabled its Wine packages. Portnaut installs Wine for you, free, together with the graphics renderers games need, and runs everything from its own window.</p>
+    <p class="tested">The Prepare Portnaut step tested with version 0.12.0 on macOS 27.2 · Updated 6 November 2026</p>
   </div>
 </div>
 
@@ -33,8 +33,9 @@
       <li><strong>A renderer</strong> translates a game's DirectX graphics to Apple's Metal. Wine has its own, and DXMT, D3DMetal and DXVK are faster for games. <a href="/guides/dxmt-vs-d3dmetal-vs-dxvk/">How the renderers compare</a>.</li>
     </ul>
 
-    <h2 id="homebrew">The usual way: Homebrew and Terminal</h2>
-    <p>Most instructions install Wine with Homebrew, a package manager you use from Terminal. That works, and it suits people who like the command line. After installing, though, it's up to you to:</p>
+    <h2 id="homebrew">Why the Homebrew instructions no longer work</h2>
+    <p>Most instructions install Wine with Homebrew, a package manager you use from Terminal. Homebrew now lists its Wine packages, <code>wine-stable</code>, <code>wine@staging</code> and <code>wine@devel</code>, as disabled since 1 September 2026, because they don't pass macOS's Gatekeeper check (<a href="https://formulae.brew.sh/cask/wine-stable">Homebrew's page</a>).</p>
+    <p>And with Wine installed by hand, it's up to you to:</p>
     <ul>
       <li>start each program with a command;</li>
       <li>create Wine prefixes, the separate Windows environments, and keep track of them;</li>
@@ -83,6 +84,14 @@
     <p>Quit Portnaut and move <code>~/Library/Application Support/Portnaut</code> to the Trash. That removes Wine, the renderers and your bottles, including installed games and their saves. <a href="/download/#uninstall">How to uninstall Portnaut completely</a>.</p>
 
     <h2 id="faq">Questions</h2>
+    <details>
+      <summary>How do I install Wine on a Mac?</summary>
+      <p>Download Portnaut and choose Prepare Portnaut. It downloads Wine 11 and the graphics renderers, checks them, and installs them in its own folder. It needs a Mac with Apple silicon, macOS 14.6 or later, and Rosetta.</p>
+    </details>
+    <details>
+      <summary>Can I still install Wine with Homebrew?</summary>
+      <p>Not with Homebrew's own packages: it lists wine-stable, wine@staging and wine@devel as disabled since 1 September 2026, because they don't pass macOS's Gatekeeper check.</p>
+    </details>
     <details>
       <summary>Is Wine free?</summary>
       <p>Yes. Wine is free and open source, under the LGPL. Portnaut is free and open source too, under the MIT licence.</p>

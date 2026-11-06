@@ -1,13 +1,13 @@
 <!--page
 {"path": "/guides/game-porting-toolkit/",
- "title": "How to Use Apple's Game Porting Toolkit (D3DMetal) – Portnaut",
+ "title": "Game Porting Toolkit and D3DMetal, No Terminal – Portnaut",
  "social_title": "How to use Apple's Game Porting Toolkit, without Terminal",
  "image": "/assets/og-game-porting-toolkit.jpg",
  "image_alt": "Portnaut guide: Apple's Game Porting Toolkit, without Terminal",
- "description": "Play DirectX 11 and 12 Windows games on a Mac with D3DMetal from Apple's Game Porting Toolkit: what GPTK is, and how Portnaut sets it up without Terminal.",
+ "description": "D3DMetal, from Apple's Game Porting Toolkit, runs DirectX 11 and 12 games on a Mac. What it is, and how to use it free through Portnaut, with no Terminal.",
  "faq": true,
  "jsonld": [
-  {"@type": "TechArticle", "@id": "{{site}}/guides/game-porting-toolkit/#article", "headline": "How to use Apple's Game Porting Toolkit (D3DMetal), without Terminal", "url": "{{site}}/guides/game-porting-toolkit/", "inLanguage": "en", "datePublished": "2026-10-30", "dateModified": "2026-11-03", "image": ["{{site}}/assets/og-game-porting-toolkit.jpg", "{{site}}/assets/component-updates-1600.jpg"], "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}, "about": {"@id": "{{site}}/#app"}, "isPartOf": {"@id": "{{site}}/#website"}},
+  {"@type": "TechArticle", "@id": "{{site}}/guides/game-porting-toolkit/#article", "headline": "How to use Apple's Game Porting Toolkit (D3DMetal), without Terminal", "url": "{{site}}/guides/game-porting-toolkit/", "inLanguage": "en", "datePublished": "2026-10-30", "dateModified": "2026-11-06", "image": ["{{site}}/assets/og-game-porting-toolkit.jpg", "{{site}}/assets/component-updates-1600.jpg"], "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}, "about": {"@id": "{{site}}/#app"}, "isPartOf": {"@id": "{{site}}/#website"}},
   {"@type": "BreadcrumbList", "itemListElement": [
    {"@type": "ListItem", "position": 1, "name": "Portnaut", "item": "{{site}}/"},
    {"@type": "ListItem", "position": 2, "name": "Guides", "item": "{{site}}/guides/"},
@@ -19,7 +19,7 @@
     <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Portnaut</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">Game Porting Toolkit</li></ol></nav>
     <h1>How to use Apple's Game Porting Toolkit, without Terminal</h1>
     <p class="lead">Apple's Game Porting Toolkit is made for game developers. The part gamers want from it is <strong>D3DMetal</strong>, Apple's translation that runs DirectX 11 and 12 games on a Mac. Portnaut sets D3DMetal up for you: no developer account, no Terminal, no Homebrew.</p>
-    <p class="tested">D3DMetal checked with Steam's window, not with a game yet · Updated 3 November 2026</p>
+    <p class="tested">D3DMetal checked with Steam's window, not with a game yet · Updated 6 November 2026</p>
   </div>
 </div>
 
@@ -43,7 +43,7 @@
       <li><strong><a href="/download/">Download Portnaut</a></strong>, open it, and choose <strong>Prepare Portnaut</strong>. It downloads Wine and the renderers once, D3DMetal included. That needs an Apple silicon Mac with macOS 14.6 or later and Rosetta.</li>
       <li><strong>Create a bottle</strong> with <strong>Bottles › New Bottle…</strong>. New Steam and EA app bottles start on D3DMetal, because most of their games use DirectX 11 or 12.</li>
       <li><strong>Install your launcher and a game</strong> in the bottle, as you would on a PC.</li>
-      <li><strong>Check the renderer.</strong> In the bottle's <strong>Graphics</strong> section, Portnaut shows the renderer it recommends for each game. It picks D3DMetal for 64-bit DirectX 12 games. You can switch between D3DMetal, DXMT, DXVK and Wine's own at any time.</li>
+      <li><strong>Check the renderer.</strong> In the bottle's <strong>Graphics</strong> section, Portnaut shows the renderer it recommends for each game. It picks D3DMetal for 64-bit DirectX 12 games. In easy mode it picks one when you press Play; to choose yourself, turn easy mode off in the bottle's settings, then switch between D3DMetal, DXMT, DXVK and Wine's own.</li>
       <li><strong>Play</strong> from Portnaut's library.</li>
     </ol>
     <p>For DirectX 11 games, DXMT is often the better first choice, and D3DMetal the one to try if a game misbehaves. Portnaut records the frame rate of every session, so you can compare the two. <a href="/guides/dxmt-vs-d3dmetal-vs-dxvk/">How the renderers compare</a>.</p>
@@ -68,6 +68,10 @@
     </ul>
 
     <h2 id="faq">Questions</h2>
+    <details>
+      <summary>What is D3DMetal?</summary>
+      <p>D3DMetal is Apple's translation that turns a Windows game's DirectX 11 and 12 graphics into Metal. It's part of the Game Porting Toolkit, works for 64-bit games, and is the way to run DirectX 12 games on a Mac.</p>
+    </details>
     <details>
       <summary>Do I need to download the Game Porting Toolkit myself?</summary>
       <p>No. Portnaut downloads D3DMetal for you when you prepare it, and keeps it up to date through Component Updates. You don't need a developer account or Terminal.</p>

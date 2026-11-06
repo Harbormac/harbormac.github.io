@@ -1,13 +1,13 @@
 <!--page
 {"path": "/guides/dxmt-vs-d3dmetal-vs-dxvk/",
- "title": "DXMT vs D3DMetal vs DXVK: Which Renderer on a Mac? – Portnaut",
+ "title": "DXMT vs D3DMetal vs DXVK: Which to Use on a Mac – Portnaut",
  "social_title": "DXMT vs D3DMetal vs DXVK: which renderer for Windows games on a Mac",
  "image": "/assets/og-dxmt-vs-d3dmetal-vs-dxvk.jpg",
  "image_alt": "Portnaut guide: DXMT, D3DMetal or DXVK?",
- "description": "DXMT, D3DMetal, DXVK or Wine's own: what each renderer does for Windows games on an Apple silicon Mac, which DirectX versions it covers, and which to pick.",
+ "description": "Use DXMT for 64-bit DirectX 11 games, D3DMetal for DirectX 12 and DXVK for 32-bit games. What each one does on an Apple silicon Mac, and how to choose.",
  "faq": true,
  "jsonld": [
-  {"@type": "TechArticle", "@id": "{{site}}/guides/dxmt-vs-d3dmetal-vs-dxvk/#article", "headline": "DXMT vs D3DMetal vs DXVK: which renderer to use for Windows games on a Mac", "url": "{{site}}/guides/dxmt-vs-d3dmetal-vs-dxvk/", "inLanguage": "en", "datePublished": "2026-10-29", "dateModified": "2026-11-03", "image": ["{{site}}/assets/og-dxmt-vs-d3dmetal-vs-dxvk.jpg", "{{site}}/assets/bottles-1600.jpg"], "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}, "about": {"@id": "{{site}}/#app"}, "isPartOf": {"@id": "{{site}}/#website"}},
+  {"@type": "TechArticle", "@id": "{{site}}/guides/dxmt-vs-d3dmetal-vs-dxvk/#article", "headline": "DXMT vs D3DMetal vs DXVK: which renderer to use for Windows games on a Mac", "url": "{{site}}/guides/dxmt-vs-d3dmetal-vs-dxvk/", "inLanguage": "en", "datePublished": "2026-10-29", "dateModified": "2026-11-06", "image": ["{{site}}/assets/og-dxmt-vs-d3dmetal-vs-dxvk.jpg", "{{site}}/assets/bottles-1600.jpg"], "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}, "about": {"@id": "{{site}}/#app"}, "isPartOf": {"@id": "{{site}}/#website"}},
   {"@type": "BreadcrumbList", "itemListElement": [
    {"@type": "ListItem", "position": 1, "name": "Portnaut", "item": "{{site}}/"},
    {"@type": "ListItem", "position": 2, "name": "Guides", "item": "{{site}}/guides/"},
@@ -18,8 +18,8 @@
   <div class="wrap narrow">
     <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Portnaut</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">DXMT vs D3DMetal vs DXVK</li></ol></nav>
     <h1>DXMT vs D3DMetal vs DXVK: which renderer to use</h1>
-    <p class="lead">Windows games draw with Microsoft's DirectX, and a Mac only draws with Apple's Metal. A renderer translates one into the other. Portnaut ships four of them, and which one suits a game depends on its DirectX version and on whether it is 32-bit or 64-bit.</p>
-    <p class="tested">DXMT played with Assassin's Creed III in October 2026; the other renderers checked with launcher windows, not games yet · Updated 3 November 2026</p>
+    <p class="lead">Use DXMT for 64-bit DirectX 11 games, D3DMetal for DirectX 12, and DXVK for 32-bit DirectX 10 and 11 games. Windows games draw with Microsoft's DirectX and a Mac draws with Apple's Metal, and these renderers translate between them. In easy mode, Portnaut picks one for you.</p>
+    <p class="tested">DXMT played with Assassin's Creed III in October 2026; the other renderers checked with launcher windows, not games yet · Updated 6 November 2026</p>
   </div>
 </div>
 
@@ -90,10 +90,10 @@
     <h2 id="compare">Switch and compare</h2>
     <ol>
       <li><strong>Play a while on the recommended renderer.</strong> Portnaut records every session you start from its library: average and low frame rate, GPU time per frame, and the delay to the screen.</li>
-      <li><strong>Switch.</strong> Pick another renderer in the bottle's Graphics section, or use the <strong>Not tried yet</strong> buttons in the game's Performance panel.</li>
+      <li><strong>Switch.</strong> Turn easy mode off in the bottle's settings first, because it picks the renderer each time you press Play. Then pick another renderer in the bottle's Graphics section, or use the <strong>Not tried yet</strong> buttons in the game's Performance panel.</li>
       <li><strong>Play the same part again</strong> and compare the numbers side by side in the Performance panel.</li>
     </ol>
-    <p>If a game crashes or shows a black screen, trying the other renderer that Portnaut lists for it is the first thing to do.</p>
+    <p><strong>Find My Best Setup</strong> does this for you: it plays a game on each renderer it can use, measures every round on your Mac, and keeps the fastest. If a game crashes or shows a black screen, trying the other renderer that Portnaut lists for it is the first thing to do.</p>
 
     <h2 id="metalfx-dlss">MetalFX and DLSS</h2>
     <p><strong>MetalFX upscaling</strong> (in DXMT bottles) lets a game render fewer pixels and scales the image up with Apple's MetalFX, for a higher frame rate at a small cost in sharpness.</p>
@@ -101,8 +101,24 @@
 
     <h2 id="faq">Questions</h2>
     <details>
+      <summary>What is DXMT?</summary>
+      <p>DXMT is an open-source translation layer that turns a Windows game's DirectX 10 and 11 graphics into Apple's Metal in one step. It works for 64-bit programs, and it's Portnaut's first choice for 64-bit DirectX 11 games.</p>
+    </details>
+    <details>
+      <summary>What is D3DMetal?</summary>
+      <p>D3DMetal is Apple's own translation from DirectX 11 and 12 to Metal, from its Game Porting Toolkit. It works for 64-bit programs and isn't open source. <a href="/guides/game-porting-toolkit/">How to use it without Terminal</a>.</p>
+    </details>
+    <details>
       <summary>Is DXMT better than D3DMetal?</summary>
       <p>For 64-bit DirectX 10 and 11 games, DXMT is usually the first choice, and it is the renderer Portnaut has tested most. D3DMetal is the one for DirectX 12 games, and the one to try when a DirectX 11 game misbehaves on DXMT.</p>
+    </details>
+    <details>
+      <summary>DXMT or DXVK?</summary>
+      <p>For 64-bit DirectX 10 and 11 games, start with DXMT, which goes straight to Metal. DXVK takes two steps, through Vulkan and MoltenVK, but it also runs 32-bit games, which DXMT doesn't.</p>
+    </details>
+    <details>
+      <summary>D3DMetal or DXVK?</summary>
+      <p>For DirectX 12 games, D3DMetal: DXVK here covers DirectX 11 at most. For 32-bit games, DXVK: D3DMetal is 64-bit only.</p>
     </details>
     <details>
       <summary>Does DXVK work on a Mac?</summary>

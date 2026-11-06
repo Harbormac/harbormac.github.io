@@ -1,12 +1,13 @@
 <!--page
 {"path": "/guides/steam-on-mac/",
- "title": "How to Play Steam PC Games on a Mac or MacBook – Portnaut",
- "social_title": "How to play Windows Steam games on a Mac",
+ "title": "Steam on Apple Silicon Macs: Play Windows Games – Portnaut",
+ "social_title": "How to play Steam games on an Apple silicon Mac",
  "image": "/assets/og-steam-on-mac.jpg",
  "image_alt": "Portnaut guide: Steam games on a Mac",
- "description": "Run Windows Steam on an Apple silicon Mac or MacBook with Portnaut, free: install Steam, sign in, and play the Windows games in your Steam library.",
+ "description": "Steam runs on Apple silicon. Use its Mac app for Mac games, and Portnaut, free, for Steam games that are for Windows: how to set it up and what's tested.",
+ "faq": true,
  "jsonld": [
-  {"@type": "TechArticle", "@id": "{{site}}/guides/steam-on-mac/#article", "headline": "How to play Steam games on a Mac with Portnaut", "url": "{{site}}/guides/steam-on-mac/", "inLanguage": "en", "datePublished": "2026-10-28", "dateModified": "2026-11-03", "image": "{{site}}/assets/og-steam-on-mac.jpg", "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}, "about": {"@id": "{{site}}/#app"}, "isPartOf": {"@id": "{{site}}/#website"}},
+  {"@type": "TechArticle", "@id": "{{site}}/guides/steam-on-mac/#article", "headline": "How to play Steam games on an Apple silicon Mac", "url": "{{site}}/guides/steam-on-mac/", "inLanguage": "en", "datePublished": "2026-10-28", "dateModified": "2026-11-06", "image": "{{site}}/assets/og-steam-on-mac.jpg", "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}, "about": {"@id": "{{site}}/#app"}, "isPartOf": {"@id": "{{site}}/#website"}},
   {"@type": "BreadcrumbList", "itemListElement": [
    {"@type": "ListItem", "position": 1, "name": "Portnaut", "item": "{{site}}/"},
    {"@type": "ListItem", "position": 2, "name": "Guides", "item": "{{site}}/guides/"},
@@ -16,14 +17,22 @@
 <div class="page-head">
   <div class="wrap narrow">
     <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Portnaut</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">Steam on Mac</li></ol></nav>
-    <h1>How to play Steam games on a Mac</h1>
+    <h1>How to play Steam games on an Apple silicon Mac</h1>
     <p class="lead">Steam has its own Mac app, and for games with a Mac version that's the one to use. For the Windows-only games in your library, Portnaut runs the Windows version of Steam on a Mac or MacBook with Apple silicon, for free.</p>
-    <p class="tested">Steam tested up to its sign-in page (October 2026); no Steam game played through Portnaut yet · Updated 3 November 2026</p>
+    <p class="tested">Steam tested up to its sign-in page (October 2026); no Steam game played through Portnaut yet · Updated 6 November 2026</p>
   </div>
 </div>
 
 <article class="prose">
   <div class="wrap narrow">
+    <h2 id="apple-silicon">Does Steam run on Apple silicon?</h2>
+    <p>Yes, and the app and its games are separate questions:</p>
+    <ul>
+      <li><strong>Steam's Mac app:</strong> Valve added a native Apple silicon version in <a href="https://www.macrumors.com/2025/06/13/steam-beta-adds-native-apple-silicon-support/">a June 2025 beta</a>; before that it needed Rosetta. In Activity Monitor, the <strong>Kind</strong> column shows whether your copy runs as Apple or Intel.</li>
+      <li><strong>Mac games:</strong> each game is native or needs Rosetta on its own, whichever way Steam itself runs.</li>
+      <li><strong>Windows games:</strong> these need Wine, which Portnaut sets up. Wine runs through Rosetta, so Portnaut needs it.</li>
+    </ul>
+
     <h2 id="mac-version">First: does the game have a Mac version?</h2>
     <p>On a game's Steam store page, look at the system icons next to the price. An Apple logo means it has a Mac version: install it with <a href="https://store.steampowered.com/about/">Steam's Mac app</a>, which usually runs it better than any Windows version could. If there's only a Windows logo, the game is Windows only, and that's what Portnaut is for.</p>
     <p>You can use both with the same Steam account: the Mac app for your Mac games, and Steam in Portnaut for the rest.</p>
@@ -31,7 +40,7 @@
     <h2 id="before-you-start">Before you start</h2>
     <p><a href="/download/">Download and install Portnaut</a>, open it, and choose <strong>Prepare Portnaut</strong>. That needs a Mac with Apple silicon, macOS 14.6 or later, and Rosetta.</p>
 
-    <h2 id="steps">Install Steam in Portnaut</h2>
+    <h2 id="steps">Play Steam games that are for Windows</h2>
     <ol>
       <li><strong>Create a Steam bottle.</strong> Choose <strong>Bottles › New Bottle…</strong>, select <strong>Steam</strong>, keep the recommended renderer, and choose <strong>Create</strong>. A bottle is a separate Windows environment, so Steam and its games stay apart from your other launchers.</li>
       <li><strong>Install Steam.</strong> Choose <strong>Install Steam</strong>. Portnaut downloads Valve's own installer and installs Steam without further questions.</li>
@@ -66,6 +75,20 @@
       <li><strong>More fixes:</strong> <a href="/guides/troubleshooting/">troubleshooting</a> covers black screens, missing DLLs, controllers and slow games.</li>
       <li><strong>Still stuck:</strong> choose <strong>Diagnostics › Export diagnostics…</strong> and email the file to <a href="mailto:{{support_email}}">{{support_email}}</a> with what you were doing.</li>
     </ul>
+    <h2 id="faq">Questions</h2>
+    <details>
+      <summary>Does Steam run on Apple silicon?</summary>
+      <p>Yes. Steam's Mac app runs on Macs with Apple silicon, and Valve added a native version in a June 2025 beta. Activity Monitor's Kind column shows whether your copy runs as Apple or Intel.</p>
+    </details>
+    <details>
+      <summary>Do I need Rosetta for Steam?</summary>
+      <p>Not necessarily for a native copy of Steam's Mac app, though some Mac games still need it. Portnaut does need it for Windows games, because Wine runs through Rosetta. Portnaut tells you if it's missing.</p>
+    </details>
+    <details>
+      <summary>How do I play Steam games on a Mac that are for Windows?</summary>
+      <p>Run the Windows version of Steam in Portnaut, sign in, and install the game there. We've tested this up to Steam's sign-in page and haven't played a game this way yet, so check the game in Will It Run? first.</p>
+    </details>
+
     <p>Games with a guide: <a href="/guides/gta-5-on-mac/">GTA 5</a> · <a href="/guides/red-dead-redemption-2-on-mac/">Red Dead Redemption 2</a> · <a href="/guides/guardians-of-the-galaxy-on-mac/">Guardians of the Galaxy</a> · <a href="/guides/metaphor-refantazio-on-mac/">Metaphor: ReFantazio</a></p>
     <p>Next: <a href="/guides/play-pc-games-on-mac/">How to play PC games on a Mac</a> · <a href="/guides/epic-games-on-mac/">Epic Games on Mac</a> · <a href="/faq/">FAQ</a></p>
   </div>
