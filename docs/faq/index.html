@@ -12,7 +12,7 @@
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/assets/icon-96.png" type="image/png" sizes="96x96">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
-<link rel="stylesheet" href="/assets/style.css?v=42220ad2fd">
+<link rel="stylesheet" href="/assets/style.css?v=9b068a7b9b">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Portnaut">
 <meta property="og:locale" content="en_US">
@@ -105,7 +105,7 @@
      "name": "Which Macs does Portnaut run on?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Macs with Apple silicon (M1 or later) running macOS 14.6 or later. Intel Macs are not supported. Portnaut also needs Rosetta, which it tells you how to install if it is missing."
+      "text": "Macs with Apple silicon (M1 or later) running macOS 14.6 or later. Intel Macs are not supported. Portnaut also needs Rosetta, which it tells you how to install if it is missing. The MacBook Neo, with its A18 Pro chip, should work too, but Portnaut hasn't been tested on one yet."
      }
     },
     {
@@ -129,7 +129,7 @@
      "name": "Which games work?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Many Windows games using DirectX 9, 10, 11 or 12 can run, but every game is different. Portnaut has been tested most with Assassin's Creed III Remastered through Ubisoft Connect, which plays through missions at about 60 fps on an M4 Pro. The story modes of GTA V and Red Dead Redemption 2 have been played on Macs with the same Wine. Games with kernel-level anti-cheat do not run. Check a game with Will It Run? in Portnaut first."
+      "text": "Players report hundreds: see the list of Windows games that run on a Mac. Many Windows games using DirectX 9, 10, 11 or 12 can run, but every game is different. Portnaut has been tested most with Assassin's Creed III Remastered through Ubisoft Connect, which plays through missions at about 60 fps on an M4 Pro. The story modes of GTA V and Red Dead Redemption 2 have been played on Macs with the same Wine. Games with kernel-level anti-cheat do not run. Check a game with Will It Run? in Portnaut first."
      }
     },
     {
@@ -248,7 +248,7 @@
   <nav class="nav wrap" aria-label="Main">
     <a class="brand" href="/"><img src="/assets/icon-96.png" width="30" height="30" alt=""><span>Portnaut</span></a>
     <ul class="nav-links">
-      <li><a href="/#features">Features</a></li>
+      <li><a href="/games/">Games</a></li>
       <li><a href="/guides/">Guides</a></li>
       <li><a href="/faq/" aria-current="page">FAQ</a></li>
       <li><a class="button primary" href="/download/">Download</a></li>
@@ -259,7 +259,7 @@
 <div class="page-head">
   <div class="wrap narrow">
     <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Portnaut</a></li><li aria-current="page">FAQ</li></ol></nav>
-    <h1>Questions and answers</h1>
+    <h1>Portnaut FAQ: PC games on a Mac</h1>
     <p class="lead">About playing Windows games on a Mac with Portnaut. Not answered here? Email <a href="mailto:builtbyargo@proton.me">builtbyargo@proton.me</a>.</p>
   </div>
 </div>
@@ -273,12 +273,12 @@
     <details id="exe-files"><summary>Can Portnaut open .exe files?</summary><p>Yes. Choose Install from File… or drop an .exe or .msi file on Portnaut's window. Portnaut runs it in a bottle and lists the programs it installed, which you can then add to your library. Most Windows installers and games work this way; programs that need Windows drivers, such as kernel-level anti-cheat, do not. <a href="/guides/open-exe-files-on-mac/">Step by step: how to open .exe files on a Mac</a>.</p></details>
     <details id="windows-licence"><summary>Do I need a copy of Windows?</summary><p>No. Wine is not Windows and needs no Windows licence. You only need the games themselves, from Steam, EA, Ubisoft or elsewhere.</p></details>
     <details id="macbook"><summary>Can I play PC games on my MacBook?</summary><p>Many, yes. Any MacBook Air or MacBook Pro with Apple silicon (M1 or later) runs Portnaut, and Windows PC games run if the game itself works under Wine. Games with kernel-level anti-cheat don't, and some games run only their single-player part. Check a game with Will It Run? before you buy or download it. A MacBook Air has no fan, so a demanding game can slow down after a while. <a href="/guides/play-pc-games-on-mac/">How to play PC games on a Mac</a>.</p></details>
-    <details id="which-macs"><summary>Which Macs does Portnaut run on?</summary><p>Macs with Apple silicon (M1 or later) running macOS 14.6 or later. Intel Macs are not supported. Portnaut also needs Rosetta, which it tells you how to install if it is missing.</p></details>
+    <details id="which-macs"><summary>Which Macs does Portnaut run on?</summary><p>Macs with Apple silicon (M1 or later) running macOS 14.6 or later. Intel Macs are not supported. Portnaut also needs Rosetta, which it tells you how to install if it is missing. The <a href="/guides/macbook-neo-pc-games/">MacBook Neo</a>, with its A18 Pro chip, should work too, but Portnaut hasn't been tested on one yet.</p></details>
     <details id="easy-mode"><summary>What is easy mode?</summary><p>In easy mode, which new bottles start in, Portnaut sets each game up for you: when you press Play it switches the bottle to the renderer that suits the game (the one measured fastest on your Mac, else the one it was tested on, else the one its files suggest) and backs up your saves first. You can turn it off in the bottle's settings.</p></details>
     <details id="bottle"><summary>What is a bottle?</summary><p>A bottle is a separate Windows environment with its own programs, settings and renderer. Portnaut keeps each launcher in its own bottle, so launchers don't affect each other.</p></details>
 
     <h2 id="games">Games</h2>
-    <details id="which-games"><summary>Which games work?</summary><p>Many Windows games using DirectX 9, 10, 11 or 12 can run, but every game is different. Portnaut has been tested most with Assassin's Creed III Remastered through Ubisoft Connect, which plays through missions at about 60 fps on an M4 Pro. The story modes of <a href="/guides/gta-5-on-mac/">GTA V</a> and <a href="/guides/red-dead-redemption-2-on-mac/">Red Dead Redemption 2</a> have been played on Macs with the same Wine. Games with kernel-level anti-cheat do not run. Check a game with Will It Run? in Portnaut first.</p></details>
+    <details id="which-games"><summary>Which games work?</summary><p>Players report hundreds: see <a href="/games/">the list of Windows games that run on a Mac</a>. Many Windows games using DirectX 9, 10, 11 or 12 can run, but every game is different. Portnaut has been tested most with Assassin's Creed III Remastered through Ubisoft Connect, which plays through missions at about 60 fps on an M4 Pro. The story modes of <a href="/guides/gta-5-on-mac/">GTA V</a> and <a href="/guides/red-dead-redemption-2-on-mac/">Red Dead Redemption 2</a> have been played on Macs with the same Wine. Games with kernel-level anti-cheat do not run. Check a game with Will It Run? in Portnaut first.</p></details>
     <details id="will-it-run"><summary>How do I know if a game will run?</summary><p>Search it in Will It Run? (in the Library, or Command-K). Portnaut checks about 13,000 games from Highball's open compatibility database: games tested on a Mac, games Mac players report working, predictions from Linux players' results, and games blocked by kernel anti-cheat. The check happens on your Mac. Portnaut also warns you when Steam starts downloading a game that can't run.</p></details>
     <details id="launchers"><summary>Which launchers does Portnaut support?</summary><p>Steam, the EA app, Ubisoft Connect, the Epic Games Launcher, Battle.net, the Rockstar Games Launcher, GOG Galaxy and Amazon Games are set up in a few clicks. Any other Windows installer (.exe or .msi) can be run in a bottle with Install from File.</p></details>
     <details id="anti-cheat"><summary>Do online games with anti-cheat work?</summary><p>Games with kernel-level anti-cheat, such as EA Sports FC and Battlefield, do not run under Wine, in Portnaut or elsewhere. Some games run, but only offline: GTA V's story mode has been played on a Mac, while GTA Online needs BattlEye's kernel anti-cheat and doesn't work. Will It Run? names a game's anti-cheat. Some online games also don't allow Wine in their terms, so check a game's rules before playing it online.</p></details>
@@ -311,6 +311,7 @@
         <p class="footer-title">Portnaut</p>
         <ul>
           <li><a href="/download/">Download</a></li>
+          <li><a href="/games/">Games that run on a Mac</a></li>
           <li><a href="/whats-new/">What's new</a></li>
           <li><a href="/#features">Features</a></li>
           <li><a href="/faq/">FAQ</a></li>
@@ -330,6 +331,8 @@
           <li><a href="/guides/ubisoft-connect-on-mac/">Ubisoft Connect on Mac</a></li>
           <li><a href="/guides/battle-net-on-mac/">Battle.net on Mac</a></li>
           <li><a href="/guides/gog-games-on-mac/">GOG games on Mac</a></li>
+          <li><a href="/guides/macbook-air-pc-games/">PC games on a MacBook Air</a></li>
+          <li><a href="/guides/macbook-neo-pc-games/">PC games on a MacBook Neo</a></li>
           <li><a href="/guides/boot-camp-apple-silicon/">Boot Camp on Apple silicon?</a></li>
           <li><a href="/guides/windows-emulator-for-mac/">Windows emulator for Mac?</a></li>
           <li><a href="/guides/open-exe-files-on-mac/">Open .exe files on a Mac</a></li>

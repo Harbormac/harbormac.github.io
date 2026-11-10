@@ -1,0 +1,136 @@
+<!--page
+{
+ "path": "/guides/macbook-neo-pc-games/",
+ "title": "PC Games on a MacBook Neo: What Players Report – Portnaut",
+ "social_title": "PC games on a MacBook Neo: what players report",
+ "image": "/assets/og-macbook-neo-pc-games.jpg",
+ "image_alt": "Portnaut guide: PC games on a MacBook Neo",
+ "description": "Can a MacBook Neo play PC games? 10 Windows games that players report running on its A18 Pro chip through Wine, and what 8 GB and no fan mean.",
+ "faq": true,
+ "jsonld": [
+  {
+   "@type": "TechArticle",
+   "@id": "{{site}}/guides/macbook-neo-pc-games/#article",
+   "headline": "PC games on a MacBook Neo: what players report",
+   "url": "{{site}}/guides/macbook-neo-pc-games/",
+   "inLanguage": "en",
+   "datePublished": "2026-11-10",
+   "dateModified": "2026-11-10",
+   "image": "{{site}}/assets/og-macbook-neo-pc-games.jpg",
+   "author": {
+    "@id": "{{site}}/#builtbyargo"
+   },
+   "publisher": {
+    "@id": "{{site}}/#builtbyargo"
+   },
+   "about": {
+    "@id": "{{site}}/#app"
+   },
+   "isPartOf": {
+    "@id": "{{site}}/#website"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Portnaut",
+     "item": "{{site}}/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Guides",
+     "item": "{{site}}/guides/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "PC games on a MacBook Neo",
+     "item": "{{site}}/guides/macbook-neo-pc-games/"
+    }
+   ]
+  }
+ ]
+}
+-->
+<div class="page-head">
+  <div class="wrap narrow">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Portnaut</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">PC games on a MacBook Neo</li></ol></nav>
+    <h1>PC games on a MacBook Neo</h1>
+    <p class="lead">Yes, a MacBook Neo can play Windows PC games through Wine, within limits. Players report 10 games running on its A18 Pro chip. It has 8 GB of memory and no fan, so lighter games and low settings suit it best.</p>
+    <p class="tested">From players' reports in Highball's compatibility database; Portnaut hasn't been tested on a MacBook Neo yet · Updated 10 November 2026</p>
+  </div>
+</div>
+
+<article class="prose">
+  <div class="wrap narrow">
+    <h2 id="short-answer">The short answer</h2>
+    <ul>
+      <li><strong>It works.</strong> Wine, Rosetta and the graphics renderers run on the A18 Pro: players have sent 20 reports from it to <a href="https://github.com/gauthierpiarrette/highball-db">Highball's open compatibility database</a>.</li>
+      <li><strong>Portnaut should run on it,</strong> because it uses the same Wine and renderers and needs only Apple silicon, macOS 14.6 or later and Rosetta. Nobody has tested Portnaut on a MacBook Neo yet, so we'd like to hear how it goes: <a href="mailto:{{support_email}}">{{support_email}}</a>.</li>
+      <li><strong>Expect to lower settings.</strong> Reviewers found its 8 GB of memory the main limit, and without a fan it slows down as it warms up.</li>
+    </ul>
+
+    <h2 id="games">Games players report running on a MacBook Neo</h2>
+    <p>Each game's best report from an A18 Pro Mac, rated 4 (playable, minor issues) or 5 (perfect) out of 5 after ten minutes or more:</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th scope="col">Game</th><th scope="col">Rating</th><th scope="col">Renderer</th><th scope="col">What the player noted</th></tr></thead>
+        <tbody>
+          <tr><td><strong>CloverPit</strong></td><td>4/5</td><td>DXMT</td><td>Runs, but slowly and with heavy battery use</td></tr>
+          <tr><td><strong>Counter-Strike 2</strong></td><td>4/5</td><td>D3DMetal</td><td>At a low resolution, with a few frame drops; has VAC anti-cheat</td></tr>
+          <tr><td><strong>Devil May Cry HD Collection</strong></td><td>5/5</td><td>DXMT</td><td>One player's controller wasn't recognised</td></tr>
+          <tr><td><strong>Five Nights at Frickbear's 3</strong></td><td>5/5</td><td>DXMT</td><td>–</td></tr>
+          <tr><td><strong>Freddy Fazbear's Pizzeria Simulator</strong></td><td>4/5</td><td>DXMT</td><td>Text is missing in some minigames</td></tr>
+          <tr><td><strong>NieR Replicant ver.1.22474487139...</strong></td><td>5/5</td><td>DXMT</td><td>With the frame rate capped at 30</td></tr>
+          <tr><td><strong>sobosuba Demo</strong></td><td>5/5</td><td>DXMT</td><td>–</td></tr>
+          <tr><td><strong>STORY OF SEASONS: Friends of Mineral Town</strong></td><td>4/5</td><td>DXMT</td><td>–</td></tr>
+          <tr><td><strong>Trailmakers</strong></td><td>4/5</td><td>DXMT</td><td>About 50 to 60 fps on the lowest graphics setting</td></tr>
+          <tr><td><strong>Train Simulator Classic</strong></td><td>5/5</td><td>DXMT</td><td>Low preset, a two-hour session; about 30 to 40 fps once the Mac warmed up</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>8 other games had a lower rating or a session under ten minutes, and are left out. These are single reports, most after short sessions, so take them as a starting point. <a href="/games/">The full list for all Macs</a> has 459 games.</p>
+
+    <h2 id="limits">What limits the MacBook Neo</h2>
+    <ul>
+      <li><strong>8 GB of memory.</strong> A Windows game, Wine and macOS share it. Large open-world games want more: on a 16 GB Mac, Red Dead Redemption 2 alone used about 14 GB.</li>
+      <li><strong>No fan.</strong> In a two-hour Train Simulator Classic session, the frame rate settled at about 30 to 40 fps once the Mac had warmed up.</li>
+      <li><strong>A phone-class graphics chip.</strong> The A18 Pro is the iPhone 16 Pro's chip. Older and lighter games run well; recent demanding ones need the lowest settings or won't be comfortable.</li>
+      <li><strong>Anti-cheat,</strong> as on every Mac: games with kernel-level anti-cheat don't run through Wine at all.</li>
+    </ul>
+
+    <h2 id="steps">How to try it</h2>
+    <ol>
+      <li><strong>Check for a Mac version of the game first.</strong> It'll run better than a Windows version.</li>
+      <li><strong><a href="/download/">Download Portnaut</a></strong>, open it, and choose <strong>Prepare Portnaut</strong>.</li>
+      <li><strong>Create a bottle</strong> for your game store, such as Steam, and keep <strong>easy mode</strong> on.</li>
+      <li><strong>Start with a light or older game,</strong> at a low resolution and the lowest preset, then raise settings while it stays smooth.</li>
+    </ol>
+    <p><a href="/guides/play-pc-games-on-mac/">How to play PC games on a Mac</a> has every step.</p>
+
+    <h2 id="faq">Questions</h2>
+    <details>
+      <summary>Can a MacBook Neo play PC games?</summary>
+      <p>Yes, lighter ones. Players report 10 Windows games running on its A18 Pro chip through Wine. Its 8 GB of memory and fanless design limit demanding games.</p>
+    </details>
+    <details>
+      <summary>Can a MacBook Neo run Steam?</summary>
+      <p>Steam's Mac app runs on Apple silicon. For Steam games that are Windows only, the Windows version of Steam runs through Wine; the reports above came from games started that way with Highball. Portnaut sets up the same, but hasn't been tested on a MacBook Neo.</p>
+    </details>
+    <details>
+      <summary>Does Portnaut work on a MacBook Neo?</summary>
+      <p>It should: Portnaut needs Apple silicon, macOS 14.6 or later and Rosetta, and the same Wine runs on the A18 Pro. It hasn't been tested on one yet.</p>
+    </details>
+    <details>
+      <summary>Is 8 GB enough for gaming on a Mac?</summary>
+      <p>For lighter and older games, yes. Demanding games use more than that by themselves, and macOS then slows down as it moves memory to disk.</p>
+    </details>
+
+    <p>Next: <a href="/guides/macbook-air-pc-games/">PC games on a MacBook Air</a> · <a href="/games/">Games that run on a Mac</a> · <a href="/guides/steam-on-mac/">Steam on a Mac</a></p>
+    <p class="muted"><small>MacBook Neo, MacBook Air and Apple silicon are trademarks of Apple Inc.; game names are trademarks of their owners. Portnaut is not affiliated with them. The MacBook Neo's memory, chip and fanless design as reported by <a href="https://www.notebookcheck.net/Apple-MacBook-Neo-can-run-games-surprisingly-well-but-8-GB-RAM-is-reportedly-a-bottleneck.1248649.0.html">Notebookcheck</a>. Reports from Highball's database, read on 10 November 2026.</small></p>
+  </div>
+</article>

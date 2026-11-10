@@ -1,0 +1,43 @@
+# Portnaut
+
+> Portnaut is a free, open-source Mac app for playing Windows PC games on Apple silicon through Wine. It sets up Steam, Epic Games, the EA app, Ubisoft Connect, Battle.net, the Rockstar Games Launcher, GOG Galaxy and Amazon Games, and picks a graphics renderer (DXMT, D3DMetal, DXVK or Wine's own) for each game. Version 0.12.0, public beta, by Built by Argo.
+
+Games with kernel-level anti-cheat don't run. Pages say what was tested with Portnaut and what comes from players' reports.
+
+## Portnaut
+
+- [Portnaut: play Windows games on your Mac](https://portnaut.com/): Portnaut is a free app for playing Windows PC games on an Apple silicon Mac or MacBook: Steam, Epic, Battle.net, Ubisoft Connect and more. No Windows needed.
+- [Download Portnaut for Mac – Free Windows Game Launcher](https://portnaut.com/download/): Download Portnaut 0.12.0, the free app for playing Windows games on Apple silicon Macs. Requirements, install steps, first launch, and how to uninstall.
+- [Portnaut FAQ – PC Games on a Mac or MacBook, Answered](https://portnaut.com/faq/): Is Portnaut free, and is it an emulator? Which Macs and games work, can it open .exe files, and is it safe? Answers about Windows games on a Mac.
+- [What's new in Portnaut](https://portnaut.com/whats-new/): Release notes for Portnaut, the free app for Windows games on Apple silicon Macs: what changed in each version, and how to update to the newest one.
+- [Privacy – Portnaut, the Free Windows Game Launcher for Mac](https://portnaut.com/privacy/): Portnaut's website and app have no accounts, no analytics and no tracking. What the site and the app connect to, and what is stored where.
+- [About Portnaut: Who Makes It and How It's Tested](https://portnaut.com/about/): Who makes Portnaut, why it is free and open source, how games and launchers are tested, and what “tested” and “players report” mean on this site.
+
+## Games
+
+- [450+ Windows games that run on a Mac](https://portnaut.com/games/): A searchable list of 459 Windows games that players report running on Apple silicon Macs through Wine, with the renderer and Mac each was played on.
+- [How to play GTA 5's story mode on a Mac](https://portnaut.com/guides/gta-5-on-mac/): Play GTA 5's story mode on an Apple silicon Mac or MacBook with Portnaut, free. What works, what doesn't (GTA Online), and the steps, from setup to playing.
+- [How to play Marvel's Guardians of the Galaxy on a Mac](https://portnaut.com/guides/guardians-of-the-galaxy-on-mac/): Marvel's Guardians of the Galaxy has no Mac version, but it has been played on Apple silicon Macs. What was tested, the settings that help, and the steps.
+- [How to play Metaphor: ReFantazio on a Mac](https://portnaut.com/guides/metaphor-refantazio-on-mac/): Metaphor: ReFantazio has no Mac version. Its free demo has been played on an Apple silicon Mac: what was tested, what wasn't yet, and the steps.
+- [How to play Red Dead Redemption 2 on a Mac](https://portnaut.com/guides/red-dead-redemption-2-on-mac/): Play Red Dead Redemption 2's story on an Apple silicon Mac or MacBook with Portnaut, free: what has been tested, the one update it needs, and the steps.
+
+## Guides
+
+- [Guides: Play PC Games on a Mac or MacBook – Portnaut](https://portnaut.com/guides/): Step-by-step guides to playing Windows PC games on an Apple silicon Mac or MacBook: GTA 5, Red Dead Redemption 2, Steam, Epic, EA, Battle.net, GOG and more.
+- [How to play Steam games on an Apple silicon Mac](https://portnaut.com/guides/steam-on-mac/): Steam runs on Apple silicon. Use its Mac app for Mac games, and Portnaut, free, for Steam games that are for Windows: how to set it up and what's tested.
+- [How to play Ubisoft Connect games on a Mac](https://portnaut.com/guides/ubisoft-connect-on-mac/): Run Ubisoft Connect on an Apple silicon Mac with Portnaut, with working sign-in, and play games like Assassin's Creed III Remastered at about 60 fps.
+- [Battle.net on an Apple silicon Mac: what works](https://portnaut.com/guides/battle-net-on-mac/): Blizzard's Battle.net Mac app runs on Apple silicon through Rosetta; World of Warcraft is native. For Windows-only Blizzard games, use Portnaut, free.
+- [Boot Camp on an M1 or later Mac? What to use instead](https://portnaut.com/guides/boot-camp-apple-silicon/): Boot Camp only works on Intel Macs. For games and Windows apps on an M1, M2, M3, M4 or M5 Mac, here's what to use instead, and what each option can't do.
+- [How to run the EA app on a Mac](https://portnaut.com/guides/ea-app-on-mac/): Install the Windows EA app on an Apple silicon Mac or MacBook with Portnaut, for free, and learn which EA games can run under Wine and which cannot.
+- [How to play Windows games from the Epic Games Store on a Mac](https://portnaut.com/guides/epic-games-on-mac/): Run the Windows Epic Games Launcher on an Apple silicon Mac or MacBook with Portnaut, for free, and play the Windows games in your Epic library.
+- [How to open .exe files on a Mac, free](https://portnaut.com/guides/open-exe-files-on-mac/): Run Windows .exe and .msi files on an Apple silicon Mac for free: why macOS can't open them, and how to run installers and games with Portnaut.
+- [How to play Windows GOG games on a Mac](https://portnaut.com/guides/gog-games-on-mac/): Play Windows-only GOG games on an Apple silicon Mac or MacBook with Portnaut, for free: with GOG Galaxy, or straight from GOG's offline installers.
+- [How to use Apple's Game Porting Toolkit, without Terminal](https://portnaut.com/guides/game-porting-toolkit/): D3DMetal, from Apple's Game Porting Toolkit, runs DirectX 11 and 12 games on a Mac. What it is, and how to use it free through Portnaut, with no Terminal.
+- [Can a MacBook Air play PC games? What players report](https://portnaut.com/guides/macbook-air-pc-games/): Yes: 85% of 572 player reports from Macs with the MacBook Air's chips (M1 to M5) rate a Windows game playable or perfect. The games, and the limits.
+- [PC games on a MacBook Neo: what players report](https://portnaut.com/guides/macbook-neo-pc-games/): Can a MacBook Neo play PC games? 10 Windows games that players report running on its A18 Pro chip through Wine, and what 8 GB and no fan mean.
+- [How to play PC games on a Mac](https://portnaut.com/guides/play-pc-games-on-mac/): Play Windows PC games on an Apple silicon Mac or MacBook, step by step: check for a Mac version, set up your game store in Portnaut, and know what won't run.
+- [DXMT vs D3DMetal vs DXVK: which renderer for Windows games on a Mac](https://portnaut.com/guides/dxmt-vs-d3dmetal-vs-dxvk/): Use DXMT for 64-bit DirectX 11 games, D3DMetal for DirectX 12 and DXVK for 32-bit games. What each one does on an Apple silicon Mac, and how to choose.
+- [Windows games on a Mac not working? Fixes for common problems](https://portnaut.com/guides/troubleshooting/): Fixes for common problems with Windows games on a Mac in Portnaut: the app won't open, Rosetta, black screens, crashes, launchers, controllers and slow games.
+- [Whisky is no longer maintained: free alternatives for Windows games on a Mac](https://portnaut.com/guides/whisky-alternative/): Whisky is no longer maintained. Compare the free alternatives for playing Windows games on an Apple silicon Mac, and how to move your games to Portnaut.
+- [Is there a Windows emulator for Mac? What actually works for games](https://portnaut.com/guides/windows-emulator-for-mac/): Looking for a Windows emulator for Mac? Compare the real ways to play Windows games on Apple silicon: Wine with Portnaut, virtual machines and cloud gaming.
+- [How to install Wine on a Mac, without Homebrew or Terminal](https://portnaut.com/guides/install-wine-on-mac/): Homebrew disabled its Wine packages in September 2026. How to install Wine on an Apple silicon Mac today: free with Portnaut, with no Homebrew or Terminal.

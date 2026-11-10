@@ -1,12 +1,13 @@
 <!--page
 {"path": "/guides/ubisoft-connect-on-mac/",
- "title": "How to Play Ubisoft Connect Games on a Mac or MacBook – Portnaut",
+ "title": "Ubisoft Connect Games on a Mac or MacBook – Portnaut",
  "social_title": "How to play Ubisoft Connect games on a Mac",
  "image": "/assets/og-ubisoft-connect-on-mac.jpg",
  "image_alt": "Portnaut guide: Ubisoft Connect games on a Mac",
  "description": "Run Ubisoft Connect on an Apple silicon Mac with Portnaut, with working sign-in, and play games like Assassin's Creed III Remastered at about 60 fps.",
+ "faq": true,
  "jsonld": [
-  {"@type": "TechArticle", "@id": "{{site}}/guides/ubisoft-connect-on-mac/#article", "headline": "How to play Ubisoft Connect games on a Mac with Portnaut", "url": "{{site}}/guides/ubisoft-connect-on-mac/", "inLanguage": "en", "datePublished": "2026-10-28", "dateModified": "2026-11-03", "image": ["{{site}}/assets/og-ubisoft-connect-on-mac.jpg", "{{site}}/assets/bottles-1600.jpg"], "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}, "about": {"@id": "{{site}}/#app"}, "isPartOf": {"@id": "{{site}}/#website"}},
+  {"@type": "TechArticle", "@id": "{{site}}/guides/ubisoft-connect-on-mac/#article", "headline": "How to play Ubisoft Connect games on a Mac with Portnaut", "url": "{{site}}/guides/ubisoft-connect-on-mac/", "inLanguage": "en", "datePublished": "2026-10-28", "dateModified": "2026-11-10", "image": ["{{site}}/assets/og-ubisoft-connect-on-mac.jpg", "{{site}}/assets/bottles-1600.jpg"], "author": {"@id": "{{site}}/#builtbyargo"}, "publisher": {"@id": "{{site}}/#builtbyargo"}, "about": {"@id": "{{site}}/#app"}, "isPartOf": {"@id": "{{site}}/#website"}},
   {"@type": "BreadcrumbList", "itemListElement": [
    {"@type": "ListItem", "position": 1, "name": "Portnaut", "item": "{{site}}/"},
    {"@type": "ListItem", "position": 2, "name": "Guides", "item": "{{site}}/guides/"},
@@ -18,12 +19,16 @@
     <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Portnaut</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">Ubisoft Connect on Mac</li></ol></nav>
     <h1>How to play Ubisoft Connect games on a Mac</h1>
     <p class="lead">Portnaut runs Ubisoft Connect on Apple silicon with working sign-in. It is the setup Portnaut has been tested with most: Assassin's Creed III Remastered plays through missions at about 60 fps on an M4 Pro.</p>
-    <p class="tested">Assassin's Creed III Remastered played on an M4 Pro in October 2026 with an earlier Portnaut; not replayed on 0.12.0 yet · Updated 3 November 2026</p>
+    <p class="tested">Assassin's Creed III Remastered played on an M4 Pro in October 2026 with an earlier Portnaut; not replayed on 0.12.0 yet · Updated 10 November 2026</p>
   </div>
 </div>
 
 <article class="prose">
   <div class="wrap narrow">
+    <h2 id="mac">Is there Ubisoft Connect for Mac?</h2>
+    <p>No. Ubisoft Connect, Ubisoft's launcher, is made for Windows only, so the games in your Ubisoft library can't be installed on a Mac the usual way. A few Ubisoft games are sold separately for Mac in the Mac App Store; if yours is one of them, that version is the one to use.</p>
+    <p>For everything else, Portnaut runs the Windows version of Ubisoft Connect through Wine. The hard part on a Mac is signing in: Ubisoft's sign-in page stays blank or refuses the login under a normal Wine setup. Portnaut starts Connect with the settings that make it work, and that is the setup this guide describes.</p>
+
     <h2 id="before-you-start">Before you start</h2>
     <p><a href="/download/">Download and install Portnaut</a>, open it, and choose <strong>Prepare Portnaut</strong>.</p>
 
@@ -58,6 +63,24 @@
       <li><strong>More fixes:</strong> <a href="/guides/troubleshooting/">troubleshooting</a> covers black screens, missing DLLs, controllers and slow games.</li>
       <li><strong>Still stuck:</strong> choose <strong>Diagnostics › Export diagnostics…</strong> and email the file to <a href="mailto:{{support_email}}">{{support_email}}</a> with what you were doing.</li>
     </ul>
-    <p>Next: <a href="/guides/steam-on-mac/">Steam on Mac</a> · <a href="/guides/ea-app-on-mac/">the EA app on Mac</a> · <a href="/faq/">FAQ</a></p>
+    <h2 id="faq">Questions</h2>
+    <details>
+      <summary>Can I play Ubisoft games on a Mac?</summary>
+      <p>Windows-only Ubisoft games run through the Windows version of Ubisoft Connect in Portnaut, if the game itself runs under Wine. Assassin's Creed III Remastered has been played that way at about 60 fps on an M4 Pro. Games with kernel-level anti-cheat don't run.</p>
+    </details>
+    <details>
+      <summary>Can I play Assassin's Creed on a Mac?</summary>
+      <p>Assassin's Creed III Remastered, yes: it's the game Portnaut has been tested with most, played through missions on the DXMT renderer. Other Assassin's Creed games haven't been tested with Portnaut yet; check each one in Will It Run? first.</p>
+    </details>
+    <details>
+      <summary>Why doesn't Ubisoft Connect's sign-in load on a Mac?</summary>
+      <p>Under Wine, Ubisoft's sign-in page needs its built-in browser to draw a particular way. Portnaut starts Ubisoft Connect with those settings. If the page still doesn't load, check that the bottle isn't on DXVK, then open Ubisoft Connect again.</p>
+    </details>
+    <details>
+      <summary>Do I need Windows or a second Ubisoft account?</summary>
+      <p>No. Wine needs no copy of Windows, and you sign in with the Ubisoft account you already have. Your password goes to Ubisoft; Portnaut never sees it.</p>
+    </details>
+
+    <p>Next: <a href="/guides/steam-on-mac/">Steam on Mac</a> · <a href="/guides/ea-app-on-mac/">the EA app on Mac</a> · <a href="/games/">Games that run on a Mac</a></p>
   </div>
 </article>

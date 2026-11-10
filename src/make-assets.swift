@@ -1,6 +1,7 @@
 // Makes the site's images in src/assets/generated from the app's screenshots and icon:
 // screenshots as JPEG at 1600 and 800 px on the page colour, icons at 32, 180 and 512 px, and the
 // 1200x630 cards that link previews show (one for the site, one per guide). Run: swift src/make-assets.swift <screenshots folder>
+// Then make the screenshots' WebP copies: for f in src/assets/generated/*-{800,1600}.jpg; do cwebp -quiet -q 80 "$f" -o "${f%.jpg}.webp"; done
 import AppKit
 import ImageIO
 import UniformTypeIdentifiers
@@ -75,7 +76,10 @@ let guides = [("steam-on-mac", "Steam games on a Mac", "game-settings"),
               ("play-pc-games-on-mac", "How to play PC games on a Mac", "library"),
               ("boot-camp-apple-silicon", "Boot Camp on an Apple silicon Mac?", "bottles"),
               ("guardians-of-the-galaxy-on-mac", "Guardians of the Galaxy on a Mac", "game-settings"),
-              ("metaphor-refantazio-on-mac", "Metaphor: ReFantazio on a Mac", "library")]
+              ("metaphor-refantazio-on-mac", "Metaphor: ReFantazio on a Mac", "library"),
+              ("games", "Windows games that run on a Mac", "library"),
+              ("macbook-neo-pc-games", "PC games on a MacBook Neo", "game-settings"),
+              ("macbook-air-pc-games", "PC games on a MacBook Air", "bottles")]
 for (slug, title, shot) in guides {
     let image = load(shots.appendingPathComponent("\(shot).png"))
     let guideCard = render(width: 1200, height: 630, background: page) { ctx in

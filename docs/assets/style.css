@@ -82,6 +82,10 @@ section.tight { padding: 56px 0; }
 .hero .actions { justify-content: center; }
 .hero .facts { margin: 18px 0 0; color: var(--muted); font-size: 0.92rem; }
 .shot { border-radius: var(--radius); }
+picture { display: block; }
+.filter { font: inherit; color: var(--text); background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 9px 12px; width: min(100%, 320px); }
+.filter:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+td small { display: inline-block; margin-top: 2px; line-height: 1.35; }
 .hero-shot { margin: 54px auto 0; max-width: 1040px; position: relative; }
 .hero-shot::before { content: ""; position: absolute; inset: 12% 8% -4%; background: radial-gradient(closest-side, rgba(255, 138, 61, 0.28), transparent); filter: blur(30px); z-index: -1; }
 

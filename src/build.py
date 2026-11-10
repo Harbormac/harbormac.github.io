@@ -10,7 +10,7 @@ Each page in src/pages/ starts with its settings in a comment:
     -->
 
 and the rest is the page's <main> content. The script puts every page in src/layout.html, fills in
-the placeholders below, writes docs/<path>index.html, the sitemap, robots.txt and the assets, and
+the placeholders below, writes docs/<path>index.html, the sitemap, robots.txt, llms.txt and the assets, and
 then checks what search engines and visitors rely on: one <h1> per page, unique titles and
 descriptions of a sensible length, alt text and dimensions on every image, internal links and anchors
 that resolve, and structured data that parses. It stops with a list of problems if any check fails.
@@ -45,9 +45,12 @@ def shot(match):
     name, alt, eager = match.group(1), match.group(2), bool(match.group(3))
     width, height = SHOT_SIZES[name]
     loading = 'loading="eager" fetchpriority="high"' if eager else 'loading="lazy"'
-    return ('<img class="shot" src="/assets/%s-1600.jpg" srcset="/assets/%s-800.jpg 800w, /assets/%s-1600.jpg 1600w" '
-            'sizes="(max-width: 1080px) 100vw, 1040px" width="%d" height="%d" alt="%s" %s decoding="async">'
-            % (name, name, name, width, height, html.escape(alt, quote=True), loading))
+    sizes = "(max-width: 1080px) 100vw, 1040px"
+    # WebP for browsers that take it (about a third of the JPEG's size), JPEG for the rest.
+    return ('<picture><source type="image/webp" srcset="/assets/%s-800.webp 800w, /assets/%s-1600.webp 1600w" sizes="%s">'
+            '<img class="shot" src="/assets/%s-1600.jpg" srcset="/assets/%s-800.jpg 800w, /assets/%s-1600.jpg 1600w" '
+            'sizes="%s" width="%d" height="%d" alt="%s" %s decoding="async"></picture>'
+            % (name, name, sizes, name, name, name, sizes, width, height, html.escape(alt, quote=True), loading))
 
 
 def fill(text, values):
@@ -122,12 +125,28 @@ def build():
         os.makedirs(os.path.dirname(target), exist_ok=True)
         open(target, "w", encoding="utf-8").write(out)
         page["output"] = target
-    today = datetime.date.today().isoformat()
-    urls = "".join("  <url><loc>%s%s</loc><lastmod>%s</lastmod></url>\n" % (SITE, p["path"], today)
+    # Each page's own date of change: its structured data's dateModified, or "modified" in its settings.
+    def modified(page):
+        found = re.search(r'"dateModified": "(\d{4}-\d\d-\d\d)"', json.dumps(page.get("jsonld", [])))
+        return found.group(1) if found else page.get("modified")
+    urls = "".join("  <url><loc>%s%s</loc>%s</url>\n" % (SITE, p["path"], "<lastmod>%s</lastmod>" % modified(p) if modified(p) else "")
                    for p in pages if not p.get("noindex"))
     open(os.path.join(OUT, "sitemap.xml"), "w").write(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n%s</urlset>\n' % urls)
     open(os.path.join(OUT, "robots.txt"), "w").write("User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n" % SITE)
+    # llms.txt: the site's pages as a short Markdown index, for AI assistants that read one.
+    listed = [p for p in pages if not p.get("noindex")]
+    def entry(p):
+        return "- [%s](%s%s): %s" % (fill(p.get("social_title", p["title"]), common), SITE, p["path"], fill(p["description"], common))
+    groups = [("Portnaut", [p for p in listed if not p["path"].startswith("/guides/") and p["path"] != "/games/"]),
+              ("Games", [p for p in listed if p["path"] == "/games/" or p["file"].startswith("06-game-")]),
+              ("Guides", [p for p in listed if p["path"].startswith("/guides/") and not p["file"].startswith("06-game-")])]
+    open(os.path.join(OUT, "llms.txt"), "w", encoding="utf-8").write(
+        "# Portnaut\n\n> Portnaut is a free, open-source Mac app for playing Windows PC games on Apple silicon through Wine. "
+        "It sets up Steam, Epic Games, the EA app, Ubisoft Connect, Battle.net, the Rockstar Games Launcher, GOG Galaxy and Amazon Games, "
+        "and picks a graphics renderer (DXMT, D3DMetal, DXVK or Wine's own) for each game. Version %s, public beta, by Built by Argo.\n\n"
+        "Games with kernel-level anti-cheat don't run. Pages say what was tested with Portnaut and what comes from players' reports.\n\n%s"
+        % (VERSION, "\n".join("## %s\n\n%s\n" % (name, "\n".join(entry(p) for p in group)) for name, group in groups if group)))
     # Plain files: GitHub Pages must not run them through Jekyll.
     open(os.path.join(OUT, ".nojekyll"), "w").close()
     return pages

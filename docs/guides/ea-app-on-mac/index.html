@@ -12,7 +12,7 @@
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/assets/icon-96.png" type="image/png" sizes="96x96">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
-<link rel="stylesheet" href="/assets/style.css?v=42220ad2fd">
+<link rel="stylesheet" href="/assets/style.css?v=9b068a7b9b">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Portnaut">
 <meta property="og:locale" content="en_US">
@@ -39,7 +39,7 @@
    "url": "https://portnaut.com/guides/ea-app-on-mac/",
    "inLanguage": "en",
    "datePublished": "2026-10-28",
-   "dateModified": "2026-11-07",
+   "dateModified": "2026-11-10",
    "image": "https://portnaut.com/assets/og-ea-app-on-mac.jpg",
    "author": {
     "@id": "https://portnaut.com/#builtbyargo"
@@ -76,6 +76,35 @@
      "item": "https://portnaut.com/guides/ea-app-on-mac/"
     }
    ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Can I play EA games on a Mac?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Games with a Mac version, through EA's own Mac app. Windows-only EA games can run through the Windows EA app under Wine if the game has no kernel-level anti-cheat. Portnaut sets the EA app up, but it's the launcher it has tested least."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does the EA app work on Apple silicon?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "EA's Mac app runs on Macs with Apple silicon. The Windows EA app has been run on Apple silicon through Wine 11 with Highball; Portnaut's own EA app setup hasn't been tested past EA's installer yet."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do I need Windows or a second EA account?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Wine needs no copy of Windows, and you sign in with the EA account you already have. Your password goes to EA; Portnaut never sees it."
+     }
+    }
+   ]
   }
  ]
 }
@@ -87,7 +116,7 @@
   <nav class="nav wrap" aria-label="Main">
     <a class="brand" href="/"><img src="/assets/icon-96.png" width="30" height="30" alt=""><span>Portnaut</span></a>
     <ul class="nav-links">
-      <li><a href="/#features">Features</a></li>
+      <li><a href="/games/">Games</a></li>
       <li><a href="/guides/">Guides</a></li>
       <li><a href="/faq/">FAQ</a></li>
       <li><a class="button primary" href="/download/">Download</a></li>
@@ -100,12 +129,21 @@
     <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Portnaut</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">EA app on Mac</li></ol></nav>
     <h1>How to run the EA app on a Mac</h1>
     <p class="lead">Portnaut installs the Windows EA app on an Apple silicon Mac in its own bottle, so you can play EA games that run under Wine, for free.</p>
-    <p class="tested">EA's installer tested up to its agreement screen (October 2026); the EA app's sign-in and games haven't been tested yet · Updated 7 November 2026</p>
+    <p class="tested">EA's installer tested up to its agreement screen (October 2026); the EA app's sign-in and games haven't been tested yet · Updated 10 November 2026</p>
   </div>
 </div>
 
 <article class="prose">
   <div class="wrap narrow">
+    <h2 id="mac">Is there an EA app for Mac?</h2>
+    <p>Yes. EA makes a Mac version of the EA app for its games that have a Mac version, such as The Sims 4. If your game is one of those, use EA's Mac app: it runs better than a Windows version could.</p>
+    <p>For EA's Windows-only games, the Windows EA app has to run through Wine. Here's what is known, honestly:</p>
+    <ul>
+      <li><strong>It can work.</strong> The maintainer of <a href="https://github.com/gauthierpiarrette/highball-db">Highball's open compatibility database</a> installed and played The Sims 4 through the Windows EA app on an M1 Pro, on Highball's Wine 11, the line Portnaut installs too, with settings Highball applies for the EA app.</li>
+      <li><strong>Portnaut's own setup is the least tested.</strong> EA's installer has been run up to its agreement screen; signing in and playing haven't been tested with Portnaut yet.</li>
+      <li><strong>EA's biggest online games don't run</strong> on any Mac through Wine, because of their anti-cheat. See below.</li>
+    </ul>
+
     <h2 id="before-you-start">Before you start</h2>
     <p><a href="/download/">Download and install Portnaut</a>, open it, and choose <strong>Prepare Portnaut</strong>.</p>
 
@@ -134,7 +172,21 @@
       <li><strong>More fixes:</strong> <a href="/guides/troubleshooting/">troubleshooting</a> covers black screens, missing DLLs, controllers and slow games.</li>
       <li><strong>Still stuck:</strong> choose <strong>Diagnostics › Export diagnostics…</strong> and email the file to <a href="mailto:builtbyargo@proton.me">builtbyargo@proton.me</a> with what you were doing.</li>
     </ul>
-    <p>Next: <a href="/guides/steam-on-mac/">Steam on Mac</a> · <a href="/guides/ubisoft-connect-on-mac/">Ubisoft Connect on Mac</a> · <a href="/faq/">FAQ</a></p>
+    <h2 id="faq">Questions</h2>
+    <details>
+      <summary>Can I play EA games on a Mac?</summary>
+      <p>Games with a Mac version, through EA's own Mac app. Windows-only EA games can run through the Windows EA app under Wine if the game has no kernel-level anti-cheat. Portnaut sets the EA app up, but it's the launcher it has tested least.</p>
+    </details>
+    <details>
+      <summary>Does the EA app work on Apple silicon?</summary>
+      <p>EA's Mac app runs on Macs with Apple silicon. The Windows EA app has been run on Apple silicon through Wine 11 with Highball; Portnaut's own EA app setup hasn't been tested past EA's installer yet.</p>
+    </details>
+    <details>
+      <summary>Do I need Windows or a second EA account?</summary>
+      <p>No. Wine needs no copy of Windows, and you sign in with the EA account you already have. Your password goes to EA; Portnaut never sees it.</p>
+    </details>
+
+    <p>Next: <a href="/guides/steam-on-mac/">Steam on Mac</a> · <a href="/guides/ubisoft-connect-on-mac/">Ubisoft Connect on Mac</a> · <a href="/games/">Games that run on a Mac</a></p>
   </div>
 </article>
 </main>
@@ -149,6 +201,7 @@
         <p class="footer-title">Portnaut</p>
         <ul>
           <li><a href="/download/">Download</a></li>
+          <li><a href="/games/">Games that run on a Mac</a></li>
           <li><a href="/whats-new/">What's new</a></li>
           <li><a href="/#features">Features</a></li>
           <li><a href="/faq/">FAQ</a></li>
@@ -168,6 +221,8 @@
           <li><a href="/guides/ubisoft-connect-on-mac/">Ubisoft Connect on Mac</a></li>
           <li><a href="/guides/battle-net-on-mac/">Battle.net on Mac</a></li>
           <li><a href="/guides/gog-games-on-mac/">GOG games on Mac</a></li>
+          <li><a href="/guides/macbook-air-pc-games/">PC games on a MacBook Air</a></li>
+          <li><a href="/guides/macbook-neo-pc-games/">PC games on a MacBook Neo</a></li>
           <li><a href="/guides/boot-camp-apple-silicon/">Boot Camp on Apple silicon?</a></li>
           <li><a href="/guides/windows-emulator-for-mac/">Windows emulator for Mac?</a></li>
           <li><a href="/guides/open-exe-files-on-mac/">Open .exe files on a Mac</a></li>

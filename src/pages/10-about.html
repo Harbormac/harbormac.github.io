@@ -1,9 +1,9 @@
 <!--page
 {"path": "/about/",
- "title": "About Portnaut – Free, Open-Source Windows Game Launcher for Mac",
- "description": "Who makes Portnaut, why it is free and open source, and the open-source projects it builds on to run Windows games on Apple silicon Macs.",
+ "title": "About Portnaut: Who Makes It and How It's Tested",
+ "description": "Who makes Portnaut, why it is free and open source, how games and launchers are tested, and what “tested” and “players report” mean on this site.",
  "jsonld": [
-  {"@type": "AboutPage", "@id": "{{site}}/about/#page", "url": "{{site}}/about/", "name": "About Portnaut", "isPartOf": {"@id": "{{site}}/#website"}, "about": {"@id": "{{site}}/#app"}, "dateModified": "2026-11-03"},
+  {"@type": "AboutPage", "@id": "{{site}}/about/#page", "url": "{{site}}/about/", "name": "About Portnaut", "isPartOf": {"@id": "{{site}}/#website"}, "about": {"@id": "{{site}}/#app"}, "dateModified": "2026-11-10"},
   {"@type": "BreadcrumbList", "itemListElement": [
    {"@type": "ListItem", "position": 1, "name": "Portnaut", "item": "{{site}}/"},
    {"@type": "ListItem", "position": 2, "name": "About", "item": "{{site}}/about/"}]}
@@ -25,6 +25,21 @@
     <h2 id="open-source">Free and open source</h2>
     <p>Portnaut costs nothing and has no accounts, ads or tracking. Its <a href="{{source_url}}" rel="noopener">source code is on GitHub</a>, so anyone can check what it does, report a problem or suggest a change. If Portnaut is useful to you, you can <a href="{{kofi_url}}" rel="noopener">support it on Ko-fi</a>.</p>
 
+    <h2 id="testing">How things are tested, and what the labels mean</h2>
+    <p>A page about running games is only useful if you can tell what was really tried. Every guide here says so under its title, in one of three ways:</p>
+    <ul>
+      <li><strong>Tested with Portnaut:</strong> we did it ourselves, on our own Mac (a MacBook Pro with an M4 Pro), and the page names the Portnaut version or the month. So far that covers Assassin's Creed III Remastered through Ubisoft Connect, and each launcher up to its sign-in page.</li>
+      <li><strong>Played on a Mac, as recorded in Highball's database:</strong> the maintainer of <a href="https://github.com/gauthierpiarrette/highball-db">Highball's open compatibility database</a> played it, with the Wine build Portnaut also installs or one close to it. We haven't played it through Portnaut.</li>
+      <li><strong>Players report:</strong> Mac players sent a report with their chip, macOS version and a rating. Nobody has verified it. <a href="/games/">The games list</a> is made from these.</li>
+    </ul>
+    <p>What you won't find here:</p>
+    <ul>
+      <li><strong>Games that don't run.</strong> There's no guide for a game that doesn't work on a Mac, and where a game runs only offline, the guide says so first.</li>
+      <li><strong>Paid placement, affiliate links or ads.</strong> The only money link is the optional Ko-fi donation, which unlocks nothing.</li>
+      <li><strong>Guesses presented as results.</strong> Frame rates are quoted with the Mac they were measured on and who measured them.</li>
+    </ul>
+    <p>Found something wrong or out of date? Write to <a href="mailto:{{support_email}}">{{support_email}}</a> and it gets corrected.</p>
+
     <h2 id="built-on">What Portnaut builds on</h2>
     <p>Portnaut is the app around a set of open-source projects, each under its own licence:</p>
     <ul>
@@ -35,6 +50,6 @@
     <p>Portnaut downloads these when you prepare it. The <a href="/download/#what-portnaut-downloads">download page</a> lists where each one comes from and its licence.</p>
 
     <h2 id="who">Who makes Portnaut</h2>
-    <p>Portnaut is made by Built by Argo, an independent developer. It is not affiliated with Apple, Valve, Electronic Arts, Ubisoft, Epic Games, Blizzard Entertainment, Rockstar Games, GOG, Amazon, Microsoft or Highball. Questions, bug reports and ideas go to <a href="mailto:{{support_email}}">{{support_email}}</a>.</p>
+    <p>Portnaut is made by Built by Argo, an independent developer. It started as a way to play Assassin's Creed III Remastered on a Mac without setting Wine up by hand. The app is written in Swift, and <a href="/whats-new/">every release</a> is published with its source code and a checksum. It is not affiliated with Apple, Valve, Electronic Arts, Ubisoft, Epic Games, Blizzard Entertainment, Rockstar Games, GOG, Amazon, Microsoft or Highball. Questions, bug reports and ideas go to <a href="mailto:{{support_email}}">{{support_email}}</a>.</p>
   </div>
 </article>
